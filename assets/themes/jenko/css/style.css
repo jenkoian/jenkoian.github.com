@@ -1,0 +1,145 @@
+/* General Styles (all sizes)
+
+/* General Typography ------------------------------ */
+
+body {
+	font-family: 'Crimson Text', Georgia, Times, 'Times New Roman', serif;
+	font-size: 21px;
+	font-size: 2.1rem;
+	line-height: 30px;
+	line-height: 3rem;
+	color: rgb(98,98,98);
+}
+
+h1 {
+	font-size: 44px;
+	font-size: 4.4rem;
+	line-height: 40px;
+	line-height: 4rem;
+	font-weight: 700;
+	color: rgb(56,56,56);
+	margin-top: 40px;
+	margin-bottom: 40px;
+	padding-bottom: 20px;
+	text-transform: uppercase;
+	font-family: 'Open Sans', sans-serif;
+	display: block;
+}
+
+h1 small {
+	font-weight: 300;
+	color: #888;
+}
+
+article h1 {
+	line-height: 40px;
+	line-height: 4rem;
+	font-weight: 400;
+	text-transform: none;
+	font-family: 'Crimson Text', Georgia, Times, 'Times New Roman', serif;
+	margin-top: 0;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+}
+
+h1 a {
+	color: #111;
+}
+
+h2 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 700;
+	color: rgb(56,56,56);
+}
+
+h3 {
+	font-size: 24px;
+	font-size: 2.4rem;
+	font-weight: 400;
+	color: rgb(56,56,56);
+	font-style: italic;
+}
+
+p {
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+}
+
+h4 {
+	font-style: italic;
+	font-weight: 400;
+	margin-bottom: 0;
+	color: rgb(56,56,56);
+}
+
+blockquote {
+	margin: 0 2em 1em;
+	color: #333;
+}
+
+cite {
+	display: block;
+}
+
+h2 + p, h3 + p, h4 + p {
+	margin-top: 0;
+}
+
+a {
+	color: #ff0066;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #cc0033;
+	text-decoration: underline;
+}
+
+/* Layout ------------------------------ */
+
+.container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+header {
+	text-align: center;
+}
+
+article header {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+article {
+	margin-bottom: 70px;
+}
+
+.date {
+	font-style: italic;
+	color: #999;
+}
+
+.category {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	float: left;
+	width: 48%;
+	text-align: left;
+}
+
+.time {
+	font-size: 16px;
+	float: right;
+	width: 48%;
+	text-align: right;
+	color: #999;
+}
+
+footer {
+	background-color: rgb(56,56,56);
+	padding:10px 5%;
+	color: #f8f8f1;
+}
