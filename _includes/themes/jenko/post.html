@@ -2,9 +2,10 @@
   <span class="date">{{ page.date | date_to_long_string }}</span>
   <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ page.title }}</a></h1>
   <span class="category"><a href="{{ BASE_PATH }}/categories.html#{{ post.category }}-ref">{{ page.category }}</a></span>
-  <span class="time">{{ page.content | readingtime }} minutes</span>
+  <span class="time">{{ content | strip_html | readingtime }}</span>
 </header>
 
+{{ content }}
 
 <hr />
 {% include JB/comments %}

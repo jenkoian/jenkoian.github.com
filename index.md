@@ -10,7 +10,7 @@ tagline: Words & Code and Words about Code
     <span class="date">{{ post.date | date_to_long_string }}</span>
     <h1><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h1>
     <span class="category"><a href="{{ BASE_PATH }}/categories.html#{{ post.category }}-ref">{{ post.category }}</a></span>
-    <span class="time">{{ post.content | readingtime }}</span>
+    <span class="time">{{ post.content | strip_html | readingtime }}</span>
   </header>
   {{ post.content }}        
 {% endfor %}
