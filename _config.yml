@@ -10,7 +10,7 @@ pygments: true
 # so be sure to set them if your theme uses them.
 #
 title : Jenko
-tagline: words and code
+tagline: Words & Code
 author :
   name : Ian jenkins
   email : ian@jenkins-web.co.uk
@@ -26,7 +26,7 @@ author :
 # Else if you are pushing to username.github.com, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://jenkoian.github.com
+production_url : http://jenko.me
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -82,15 +82,6 @@ JB :
     provider : disqus
     disqus :
       short_name : jenko
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -111,7 +102,7 @@ JB :
   # Set 'provider' to false to turn sharing off globally.
   #
   sharing :
-    provider : false
+    provider : twitter
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
