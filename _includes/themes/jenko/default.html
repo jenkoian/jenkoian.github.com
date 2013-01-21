@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }}: {{ site.tagline }}</title>
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
 
@@ -22,7 +22,7 @@
     <div class="container">
 
       <header>
-        <a href="{{ HOME_PATH }}"><h1>{{ site.title }} {% if site.tagline %} <small>{{ site.tagline }}</small>{% endif %}</h1></a>
+        <h1><a href="{{ HOME_PATH }}">{{ site.title }} {% if site.tagline %} <small>{{ site.tagline }}</small>{% endif %}</a></h1>
       </header>
 
       <div class="content">
@@ -34,7 +34,12 @@
     </div> <!-- /container -->
 
     <footer>
-      <p>&copy; {{ site.author.name }} {{ 'now' | date: "%Y" }}</p>
+      <article>
+        <span class="left"><a href="http://github.com/jenkoian/jenkoian.github.com" target="_blank">View on Github</a></span>
+        <span class="right">&copy; {{ site.author.name }} {{ 'now' | date: "%Y" }}</span>
+        <br />
+        <span class="right"><a href="http://twitter.com/jenko" target="_blank">@jenko</a></span>
+      </article>
     </footer>    
 
     {% include JB/analytics %}

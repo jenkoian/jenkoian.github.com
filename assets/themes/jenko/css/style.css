@@ -43,7 +43,11 @@ article h1 {
 }
 
 h1 a {
-	color: #111;
+	color: #111;	
+}
+
+h1 a:hover {
+	text-decoration: none;
 }
 
 h2 {
@@ -107,9 +111,17 @@ header {
 	text-align: center;
 }
 
+header h1 a:hover {
+	color: inherit;
+}
+
 article header {
 	border-bottom: 1px solid #ccc;
 	margin-bottom: 20px;
+}
+
+article header h1 a:hover {
+	color: #cc0033;
 }
 
 article {
@@ -140,6 +152,38 @@ article {
 
 footer {
 	background-color: rgb(56,56,56);
-	padding:10px 5%;
+	padding:10px 0 0 0;
 	color: #f8f8f1;
+	float: left;
+	width: 100%;
+}
+
+footer article {
+	padding: 10px 5%;
+}
+
+footer .left {
+	float: left;
+}
+
+footer .right {
+	float: right;
+}
+
+footer a {
+	color: #FFF;
+}
+
+/* Lists */
+
+ul.listing {
+	list-style: none;
+}
+
+ul.listing li {
+	margin-bottom: 0.6em;
+}
+
+ul.listing time {
+	margin-right: 20px;
 }
