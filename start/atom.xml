@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2013-03-08T21:04:22+00:00</updated>
+ <updated>2013-03-08T20:38:43+00:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
@@ -21,7 +21,7 @@
 
 &lt;p&gt;Some of the data I was retrieving from this legacy database was quite large and quite complex, one particular endpoint for example would take approx. 10 seconds to load. This is simply far to slow to service the client that would be consuming this data and so it soon became obvious that some caching was required to ensure that data was loaded quickly.&lt;/p&gt;
 
-&lt;p&gt;I knew I needed some kind of data caching, and I had planned to take full advantage of the expiration model of HTTP caching as much as possible, however due to the dynamic nature of the data, I knew I needed a flexible validation model of HTTP caching to ensure maximum efficiency from the API.&lt;/p&gt;
+&lt;p&gt;My initial thought was to add some kind of data caching so we wouldn&amp;#8217;t need to hit the old legacy database for each request, makes sense right? Well, yep, that is a valid option, however, I decided I didn&amp;#8217;t need to do this.&lt;/p&gt;
 
 &lt;p&gt;I was in the fortunate position that the client consuming this endpoint was being developed by our team also. Therefore, as long as the Rest API returned appropriate caching headers, I could also set the appropriate caching headers to make use of these within my client. HTTP Caching was a go.&lt;/p&gt;
 
@@ -45,7 +45,7 @@
 
 &lt;p&gt;The problem I had now was how to look up this date and alter the response if necessary.&lt;/p&gt;
 
-&lt;p&gt;I could have done what they have in &lt;a href='http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header'&gt;the example on the Symfony docs&lt;/a&gt; however this wasn&amp;#8217;t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something much more flexible. I wanted to make a controller cacheable with minimum effort required.&lt;/p&gt;
+&lt;p&gt;I could have done what they have in &lt;a href='http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header'&gt;the example on the Symfony docs&lt;/a&gt; however this wasn&amp;#8217;t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something something much more flexible. I wanted to make controller cacheable with minimum effort required.&lt;/p&gt;
 
 &lt;p&gt;My solution for this was to use a listener:&lt;/p&gt;
 &lt;script src='https://gist.github.com/4668158.js'&gt; &lt;/script&gt;
