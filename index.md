@@ -15,4 +15,4 @@ tagline: Words & Code and Words about Code
   {{ post.content }}        
 {% endfor %}
 
-<a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">&laquo; other posts</a>
+<a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">&laquo; all posts</a>
