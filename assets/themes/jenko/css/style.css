@@ -187,3 +187,8 @@ ul.listing li {
 ul.listing time {
 	margin-right: 20px;
 }
+
+/* Code listings */
+.gist {
+	font-size: 0.75em;
+}
