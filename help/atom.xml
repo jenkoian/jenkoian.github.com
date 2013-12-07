@@ -4,95 +4,13 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2013-12-07T00:03:05+00:00</updated>
+ <updated>2013-12-06T23:23:24+00:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
    <email>ian@jenkins-web.co.uk</email>
  </author>
 
- 
- <entry>
-   <title>Using Bower in a Symfony2 app</title>
-   <link href="http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app"/>
-   <updated>2013-12-06T00:00:00+00:00</updated>
-   <id>http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</id>
-   <content type="html">&lt;p&gt;I&amp;#8217;ve been hearing good things about &lt;a href='http://bower.io'&gt;bower&lt;/a&gt; for a while now but never really had the chance to try it. So having recently started a new Symfony2 side project I thought I would take a look at integrating it. It turned out to be very very easy.&lt;/p&gt;
-
-&lt;h2 id='setting_up'&gt;Setting up&lt;/h2&gt;
-
-&lt;p&gt;Well, obviously I needed to install it first. Pretty easy:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;npm install -g bower&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Cool. Next up I needed to create a &lt;code&gt;bower.json&lt;/code&gt; file. This is basically &lt;code&gt;composer.json&lt;/code&gt; for front end assets.&lt;/p&gt;
-
-&lt;p&gt;Bower has a nice interactive way of creating this file by simply running:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;bower init&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This will take you through each step of adding the necessary fields, much like the composer equivalent (&lt;code&gt;composer init&lt;/code&gt; naturally).&lt;/p&gt;
-
-&lt;p&gt;Once I had done that, I had a bower.json file looking something like:&lt;/p&gt;
-&lt;script src='https://gist.github.com/jenkoian/7833778.js'&gt; &lt;/script&gt;
-&lt;p&gt;I won&amp;#8217;t go in to too much detail about how bower works, there is some pretty decent docs &lt;a href='http://bower.io'&gt;on the website&lt;/a&gt; but essentially it is &lt;code&gt;composer&lt;/code&gt; for your front end dependencies.&lt;/p&gt;
-
-&lt;h2 id='integrating_bower_with_symfony2'&gt;Integrating bower with Symfony2&lt;/h2&gt;
-
-&lt;p&gt;So how did I set this all up in a Symfony2 app? Well very easily, probably easy enough that it doesn&amp;#8217;t really require a blog post, but hey, I need to blog more and had some free time.&lt;/p&gt;
-
-&lt;p&gt;So my &lt;code&gt;bower.json&lt;/code&gt; file I simply placed in the root of my project (right there alongside &lt;code&gt;composer.json&lt;/code&gt;) then to get my front end assets, I simply needed to run:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;bower install&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Sweet, that was easy! Wait though, what is this &lt;code&gt;bower_components&lt;/code&gt; nonsense. I could do without this littering the root of my project. Particularly as the standard in Symfony2 apps is to install front end assets in a &lt;code&gt;Resources/public&lt;/code&gt; location.&lt;/p&gt;
-
-&lt;p&gt;I needed to tell bower to install my assets somewhere else. This was actually really easy too. I needed another file in the root of my project, this time a &lt;code&gt;.bowerrc&lt;/code&gt; file. Here it is:&lt;/p&gt;
-&lt;script src='https://gist.github.com/jenkoian/7833818.js'&gt; &lt;/script&gt;
-&lt;p&gt;Pretty neat!&lt;/p&gt;
-
-&lt;p&gt;I was a bit torn as to which was the correct directory for this. I ended up going with &lt;code&gt;src/Acme/Bundle/DemoBundle/Resources/public/vendor&lt;/code&gt; in my main website bundle, but you may decide to put it in &lt;code&gt;app/Resources/public/vendor&lt;/code&gt; or somewhere else altogether, i.e. YMMV.&lt;/p&gt;
-
-&lt;p&gt;So deleting that &lt;code&gt;bower_components&lt;/code&gt; folder and running &lt;code&gt;bower install&lt;/code&gt; again downloaded all the assets in the directory I was happy with. I then realised I wanted to include &lt;a href='http://getbootstrap.com'&gt;bootstrap&lt;/a&gt; too. Rather than edit the &lt;code&gt;bower.json&lt;/code&gt; though (although that would work) I simply ran:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;bower install bootstrap --save&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;This works more or less exactly like &lt;code&gt;composer require&lt;/code&gt;. It will install the dependency into your specified directory. The &lt;code&gt;--save&lt;/code&gt; switch will ensure it will be added as a dependency to your &lt;code&gt;bower.json&lt;/code&gt; also (I&amp;#8217;m not sure why you &lt;em&gt;wouldn&amp;#8217;t&lt;/em&gt; want this?!). You can specify a version, but if omitted the latest version will be assumed.&lt;/p&gt;
-
-&lt;h2 id='using_your_front_end_dependencies'&gt;Using your front end dependencies&lt;/h2&gt;
-
-&lt;p&gt;So we have bower all set up, let&amp;#8217;s see how we include these things within our templates.&lt;/p&gt;
-
-&lt;p&gt;Well, pretty much just how you would include CSS/JS normally.&lt;/p&gt;
-&lt;script src='https://gist.github.com/jenkoian/7833806.js'&gt; &lt;/script&gt;
-&lt;h2 id='summing_up'&gt;Summing up&lt;/h2&gt;
-
-&lt;p&gt;That&amp;#8217;s pretty much all there is too it. One thing that I was wondering about at first was the lack of &lt;code&gt;bower.lock&lt;/code&gt; file or equivalent. Without this it means that you can&amp;#8217;t rely on libraries being the same versions on different environments (ok you can set exact version numbers, but still). This is a bit of a problem if you want to use bower in production as part of a deploy script for example. &lt;a href='https://github.com/bower/bower/issues/505'&gt;There is some discussion on this&lt;/a&gt;, but if this is an issue for you, you essentially have 3 options:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Use exact version numbers&lt;/li&gt;
-
-&lt;li&gt;Commit front end assets&lt;/li&gt;
-
-&lt;li&gt;Just accept the possibility of a variation in assets across environments&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;For my side project, option 3 is fine and I happily set the assets directory in my .gitignore file, but I do think a .lock file function is a must for bower going forward.&lt;/p&gt;
-
-&lt;p&gt;All in all though, I think bower is very nice. It does exactly for front end development what composer does for PHP development. It makes managing front end dependencies much much nicer. Hopefully gone are the days of downloading zip files and boshing into your web app.&lt;/p&gt;
-
-&lt;h2 id='going_further'&gt;Going further&lt;/h2&gt;
-
-&lt;p&gt;There is an interesting looking Symfony2 bundle for bower, called &lt;a href='https://github.com/Spea/SpBowerBundle'&gt;SpBowerBundle&lt;/a&gt;. I didn&amp;#8217;t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle.&lt;/p&gt;
-
-&lt;p&gt;However, having taken a quick look, the bundle looks very nice. I can see it being particularly useful if you want to manage front end dependencies across multiple bundles. The assetic integration also looks good.&lt;/p&gt;
-
-&lt;p&gt;Finally, there was a recent discussion started about the state of the front end and Symfony2 which ultimately led to &lt;a href='https://github.com/kriswallsmith/assetic/issues/529'&gt;this github issue&lt;/a&gt; so definitely worth keeping your eye on that if you&amp;#8217;re interested in this.&lt;/p&gt;
-
-&lt;h2 id='related_links'&gt;Related links:&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href='http://bower.io'&gt;http://bower.io&lt;/a&gt; &lt;br /&gt;&lt;a href='http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/'&gt;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&lt;/a&gt; &lt;br /&gt;&lt;a href='https://github.com/Spea/SpBowerBundle'&gt;https://github.com/Spea/SpBowerBundle&lt;/a&gt;&lt;/p&gt;</content>
- </entry>
  
  <entry>
    <title>Symfony2: Caching a Rest API</title>
