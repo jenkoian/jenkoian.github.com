@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Jenko</title>
+ <link href="http://jenko.me/atom.xml" rel="self"/>
+ <link href="http://jenko.me"/>
+ <updated>2013-12-06T23:23:24+00:00</updated>
+ <id>http://jenko.me</id>
+ <author>
+   <name>Ian jenkins</name>
+   <email>ian@jenkins-web.co.uk</email>
+ </author>
+
+ 
+ <entry>
+   <title>Symfony2: Caching a Rest API</title>
+   <link href="http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api"/>
+   <updated>2013-01-29T00:00:00+00:00</updated>
+   <id>http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</id>
+   <content type="html">&lt;p&gt;As part of a project I&amp;#8217;m currently working on, I needed to create a Rest API as a facade into an old legacy database.&lt;/p&gt;
+
+&lt;p&gt;Some of the data I was retrieving from this legacy database was quite large and quite complex, one particular endpoint for example would take approx. 10 seconds to load. This is simply far to slow to service the client that would be consuming this data and so it soon became obvious that some caching was required to ensure that data was loaded quickly.&lt;/p&gt;
+
+&lt;p&gt;I knew I needed some kind of data caching, and I had planned to take full advantage of the expiration model of HTTP caching as much as possible, however due to the dynamic nature of the data, I knew I needed a flexible validation model of HTTP caching to ensure maximum efficiency from the API.&lt;/p&gt;
+
+&lt;p&gt;I was in the fortunate position that the client consuming this endpoint was being developed by our team also. Therefore, as long as the Rest API returned appropriate caching headers, I could also set the appropriate caching headers to make use of these within my client. HTTP Caching was a go.&lt;/p&gt;
+
+&lt;p&gt;Symfony2 has excellent support for HTTP Caching. If you haven&amp;#8217;t done so already, I would highly recommend &lt;a href='http://symfony.com/doc/current/book/http_cache.html'&gt;reading the (f****ng) manual on it&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;What I wanted was to cache a particular endpoint &amp;#8220;forever&amp;#8221; until a record within the result set of the endpoint was updated. So for example, if you hit the following endpoint:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;http://acme.com/things&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;It should &lt;strong&gt;always&lt;/strong&gt; return a cached version of &lt;em&gt;things&lt;/em&gt;, unless a &lt;em&gt;thing&lt;/em&gt; has been updated since the last time the endpoint was called.&lt;/p&gt;
+
+&lt;p&gt;So what I needed to do was to work out when a &lt;em&gt;thing&lt;/em&gt; was last updated &lt;strong&gt;before&lt;/strong&gt; the main query was run and change the response.&lt;/p&gt;
+
+&lt;h2 id='getting_the_last_modified_date'&gt;Getting the last modified date&lt;/h2&gt;
+
+&lt;p&gt;This was simple enough, just add something along the lines of the following to the appropriate repository class:&lt;/p&gt;
+&lt;script src='https://gist.github.com/4667994.js'&gt; &lt;/script&gt;
+&lt;p&gt;So now we have a cheap way of getting the the last modified thing, or a last modified date for our endpoint.&lt;/p&gt;
+
+&lt;h2 id='using_last_modified_date_to_alter_the_response'&gt;Using last modified date to alter the response&lt;/h2&gt;
+
+&lt;p&gt;The problem I had now was how to look up this date and alter the response if necessary.&lt;/p&gt;
+
+&lt;p&gt;I could have done what they have in &lt;a href='http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header'&gt;the example on the Symfony docs&lt;/a&gt; however this wasn&amp;#8217;t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something much more flexible. I wanted to make a controller cacheable with minimum effort required.&lt;/p&gt;
+
+&lt;p&gt;My solution for this was to use a listener:&lt;/p&gt;
+&lt;script src='https://gist.github.com/4668158.js'&gt; &lt;/script&gt;
+&lt;p&gt;What this does is before the controller is used, checks to see if it implements &amp;#8220;Cacheable&amp;#8221; and if it does will check the last modified date and then change the action it will call on the controller (and thus the response) accordingly.&lt;/p&gt;
+
+&lt;p&gt;Here is the code for the interface:&lt;/p&gt;
+&lt;script src='https://gist.github.com/4668261.js'&gt; &lt;/script&gt;
+&lt;p&gt;So all that&amp;#8217;s left to do then is to add three methods as stipulated in our interface - isNotModified(), getLastModifiedDate() and getLastModifiedResponse().&lt;/p&gt;
+
+&lt;p&gt;It makes sense for isNotModified() and getLastModifiedResponse() to live in an abstract parent class as these are unlikely to change across multiple controllers:&lt;/p&gt;
+&lt;script src='https://gist.github.com/4668398.js'&gt; &lt;/script&gt;
+&lt;p&gt;It is simply then a case of adding a getLastModifiedDate() to the children controllers, for example:&lt;/p&gt;
+&lt;script src='https://gist.github.com/4668420.js'&gt; &lt;/script&gt;
+&lt;p&gt;You should now have an unobtrusive way of setting a 304 response for endpoints on your API. Of course this relies on the appropriate headers being sent by the client consuming this service. This is easy using something like Guzzle, but more on that in another post.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>Silicon Valleys?</title>
+   <link href="http://jenko.me/opinion/2013/01/20/silicon-valleys"/>
+   <updated>2013-01-20T00:00:00+00:00</updated>
+   <id>http://jenko.me/opinion/2013/01/20/silicon-valleys</id>
+   <content type="html">&lt;p&gt;A little while ago (ok a long while ago, I procrastinate a lot) &lt;a href='https://twitter.com/drewm/status/265523881446629376'&gt;I noticed someone from the web industry crowd sourcing for somewhere to live&lt;/a&gt;. I looked at the responses they received and noticed a few &lt;a href='https://twitter.com/emmaboulton/status/265534744857550848'&gt;people recommend South Wales&lt;/a&gt;. As a born and bred South Walian it obviously perked my interest, but it also got me thinking; would South Wales be a good place to live for a web professional? In this post I aim to answer that very question and to also reflect on why I enjoy living and working in South Wales as a web professional.&lt;/p&gt;
+
+&lt;h2 id='the_people'&gt;The people&lt;/h2&gt;
+
+&lt;p&gt;The welsh are renowned for there passion, and I could talk about how this is true and even drop a mention for the great welsh rugby team, but as this is a techy blog I will try and keep it relevant.&lt;/p&gt;
+
+&lt;p&gt;There are hard working people all over the world. I&amp;#8217;m sure you will be able to find people who work hard wherever you are, nothing here sets Wales apart from the rest. However, nothing should set other places above Wales in this regard either. There is a wide net of passionate developers and designers (UX&amp;#8217;ers, content writers, marketeers, managers etc. etc.) throughout South Wales. You will not be short of good people when looking for someone to help you work on that idea you have or when arranging a meet up to discuss that new bit of tech you&amp;#8217;ve been experimenting with.&lt;/p&gt;
+
+&lt;h2 id='the_community'&gt;The community&lt;/h2&gt;
+
+&lt;p&gt;Speaking of meet ups there are a number available for whatever you&amp;#8217;re interest may be. Speaking as a developer, there is an excellent meet up called &lt;a href='http://unifieddiff.co.uk/'&gt;Unified.Diff&lt;/a&gt;, which I&amp;#8217;ve had the pleasure of speaking at and would recommend whole heartedly for anyone wanting to learn/speak about software development. If you&amp;#8217;re a designer there are a number of conferences and smaller meet ups available, the recent emergence of the &lt;a href='http://port80events.co.uk/'&gt;Port80&lt;/a&gt; and &lt;a href='http://www.handheldconf.com/'&gt;Handheld&lt;/a&gt; conferences, both of which received excellent feedback, stand out. There is also the Port80 localhost events and the &lt;a href='http://www.meetup.com/Cardiff-UX-Bookclub/'&gt;UX book club&lt;/a&gt; if you&amp;#8217;re looking for something on a smaller scale.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;#8217;re a freelancer you may be looking for co-working space or people in a similar situation as you to have some community when seemingly working alone. The excellent &lt;a href='http://indycube.com/'&gt;indyCube&lt;/a&gt; is just what you need. &lt;a href='http://indycube.com/'&gt;IndyCube&lt;/a&gt; is a set of premises set up for freelancers to pay a small fee to use as their office, you get internet access, a desk, chair, the all important tea and coffee facilities and more importantly, people just like you to share an office with and who knows, maybe make new friends/acquaintances/colleagues.&lt;/p&gt;
+
+&lt;h2 id='the_company'&gt;The company&lt;/h2&gt;
+
+&lt;p&gt;You may have heard about &lt;a href='http://www.bbc.co.uk/news/business-13969338'&gt;Specific Media buying Myspace with a little help from a certain Mr. Timberlake&lt;/a&gt;. As part of this take over, it was decided that much of &lt;a href='https://new.myspace.com/'&gt;the new Myspace&lt;/a&gt; development was to be undertaken in the UK. In London you may think, isn&amp;#8217;t there some kind of silicon roundabout or something? Well no, a large chunk of the new myspace is being developed right here in South Wales. If it&amp;#8217;s good enough for Timberlake, it may just be good enough for you too?&lt;/p&gt;
+
+&lt;p&gt;Of course it&amp;#8217;s not just celebrities and world famous brands choosing to innovate and develop right here in South Wales, there are lot of outstanding, industry leading agencies right here in the heart of the country.&lt;/p&gt;
+
+&lt;p&gt;From &lt;a href='http://markboultondesign.com/'&gt;influential designers&lt;/a&gt;, to &lt;a href='http://boxuk.com'&gt;innovative developers&lt;/a&gt; it really is no coincidence that &lt;a href='http://www.cs.cf.ac.uk/movies/'&gt;one of the most famous websites started right here in the capital city&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='the_infrastructure'&gt;The infrastructure&lt;/h2&gt;
+
+&lt;p&gt;This is a crucial area as to why South Wales and in particular Cardiff is a great place to start a new chapter in your digital career. As well as being among one of the &lt;a href='http://yourcardiff.walesonline.co.uk/2012/07/03/cardiff-to-get-fibre-broadband-on-demandif-there-is-any/'&gt;first cities in the UK to get super fast, fibre optic broadband&lt;/a&gt;, Cardiff was also listed among the &lt;a href='http://www.walesonline.co.uk/news/wales-news/2012/10/30/superfast-4g-mobile-phone-technology-to-be-launched-in-cardiff-today-91466-32128590/'&gt;first cities in the UK to have 4G internet access&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Where as perhaps neglected before, Cardiff is now firmly established as one of the brightest cities in the UK and certainly one of the most digitally enhanced. The infrastructure here is first class in aiding you do your online business.&lt;/p&gt;
+
+&lt;p&gt;Of course, if you should be without internet access but badly need it, there is that ever present &lt;a href='https://itunes.apple.com/gb/app/cdf-hotspots/id558826581?mt=8'&gt;community I was talking about earlier to help you out&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id='conclusion'&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;I&amp;#8217;m sure working in South Wales is not perfect, it is probably still some way off San Francisco or possibly even &lt;a href='http://www.siliconroundabout.org.uk/about/'&gt;Shoreditch&lt;/a&gt;, however I think it should be given a lot of consideration if you work in the web and are looking for somewhere to setup home in the UK.&lt;/p&gt;
+
+&lt;p&gt;If you don&amp;#8217;t mind having to see everything in Welsh as well as English, like being surrounded by passionate people and want a digital infrastructure that&amp;#8217;s first class, then come on over, we&amp;#8217;ll get the kettle on.&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>

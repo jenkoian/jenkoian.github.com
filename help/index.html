@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jenko: Words & Code</title>
+    
+    <meta name="author" content="Ian jenkins">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/assets/themes/jenko/css/reset.css" rel="stylesheet">
+    <link href="/assets/themes/jenko/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic' rel='stylesheet' type='text/css'>    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header>
+        <h1><a href="/">Jenko  <small>Words & Code</small></a></h1>
+      </header>
+
+      <div class="content">
+        <article>
+          
+
+
+<header class='clearfix'>
+    <span class='date'>29 January 2013</span>
+    <h1><a href='/symfony2/2013/01/29/symfony2-caching-a-rest-api'>Symfony2: Caching a Rest API</a></h1>
+    <span class='category'><a href='/categories.html#symfony2-ref'>symfony2</a></span>
+    <span class='time'>3 minutes and 6 seconds</span>
+  </header><p>As part of a project I&#8217;m currently working on, I needed to create a Rest API as a facade into an old legacy database.</p><p>Some of the data I was retrieving from this legacy database was quite large and quite complex, one particular endpoint for example would take approx. 10 seconds to load. This is simply far to slow to service the client that would be consuming this data and so it soon became obvious that some caching was required to ensure that data was loaded quickly.</p><p>I knew I needed some kind of data caching, and I had planned to take full advantage of the expiration model of HTTP caching as much as possible, however due to the dynamic nature of the data, I knew I needed a flexible validation model of HTTP caching to ensure maximum efficiency from the API.</p><p>I was in the fortunate position that the client consuming this endpoint was being developed by our team also. Therefore, as long as the Rest API returned appropriate caching headers, I could also set the appropriate caching headers to make use of these within my client. HTTP Caching was a go.</p><p>Symfony2 has excellent support for HTTP Caching. If you haven&#8217;t done so already, I would highly recommend <a href='http://symfony.com/doc/current/book/http_cache.html'>reading the (f****ng) manual on it</a>.</p><p>What I wanted was to cache a particular endpoint &#8220;forever&#8221; until a record within the result set of the endpoint was updated. So for example, if you hit the following endpoint:</p><p><code>http://acme.com/things</code></p><p>It should <strong>always</strong> return a cached version of <em>things</em>, unless a <em>thing</em> has been updated since the last time the endpoint was called.</p><p>So what I needed to do was to work out when a <em>thing</em> was last updated <strong>before</strong> the main query was run and change the response.</p><h2 id='getting_the_last_modified_date'>Getting the last modified date</h2><p>This was simple enough, just add something along the lines of the following to the appropriate repository class:</p><script src='https://gist.github.com/4667994.js'> </script><p>So now we have a cheap way of getting the the last modified thing, or a last modified date for our endpoint.</p><h2 id='using_last_modified_date_to_alter_the_response'>Using last modified date to alter the response</h2><p>The problem I had now was how to look up this date and alter the response if necessary.</p><p>I could have done what they have in <a href='http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header'>the example on the Symfony docs</a> however this wasn&#8217;t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something much more flexible. I wanted to make a controller cacheable with minimum effort required.</p><p>My solution for this was to use a listener:</p><script src='https://gist.github.com/4668158.js'> </script><p>What this does is before the controller is used, checks to see if it implements &#8220;Cacheable&#8221; and if it does will check the last modified date and then change the action it will call on the controller (and thus the response) accordingly.</p><p>Here is the code for the interface:</p><script src='https://gist.github.com/4668261.js'> </script><p>So all that&#8217;s left to do then is to add three methods as stipulated in our interface - isNotModified(), getLastModifiedDate() and getLastModifiedResponse().</p><p>It makes sense for isNotModified() and getLastModifiedResponse() to live in an abstract parent class as these are unlikely to change across multiple controllers:</p><script src='https://gist.github.com/4668398.js'> </script><p>It is simply then a case of adding a getLastModifiedDate() to the children controllers, for example:</p><script src='https://gist.github.com/4668420.js'> </script><p>You should now have an unobtrusive way of setting a 304 response for endpoints on your API. Of course this relies on the appropriate headers being sent by the client consuming this service. This is easy using something like Guzzle, but more on that in another post.</p><a href='/archive.html'>&laquo; all posts</a>
+
+        </article>
+      </div>
+
+    </div> <!-- /container -->
+
+    <footer>
+      <article>
+        <span class="left"><a href="http://github.com/jenkoian/jenkoian.github.com" target="_blank">View on Github</a></span>
+        <span class="right">&copy; Ian jenkins 2013</span>
+        <br />
+        <span class="right"><a href="http://twitter.com/jenko" target="_blank">@jenko</a></span>
+      </article>
+    </footer>    
+
+    <!--  -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39144556-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
+
