@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2014-08-08T17:30:59+01:00</updated>
+ <updated>2014-08-08T17:33:10+01:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
@@ -31,7 +31,7 @@
 
 &lt;p&gt;It’s this Scrum approach I’m going to be talking most about in the rest of this post.&lt;/p&gt;
 
-&lt;h1 id=&quot;user_stories_are_king&quot;&gt;User Stories are king&lt;/h1&gt;
+&lt;h2 id=&quot;user_stories_are_king&quot;&gt;User Stories are king&lt;/h2&gt;
 
 &lt;p&gt;In my experience, the user stories are &lt;em&gt;the&lt;/em&gt; most important part of the entire process. Without good user stories it makes it really difficult to estimate, get a good idea of velocity and deliver features ready to demonstrate.&lt;/p&gt;
 
