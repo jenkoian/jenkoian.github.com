@@ -6,11 +6,11 @@ category: opinion
 tags: [opinion, agile, scrum]
 ---
 
-# Some thoughts on Agile
+## Some thoughts on Agile
 
 I would in no way describe myself as an evangelist of Agile practices, I'm not a certified scrum master and I've never had any formal training or anything on Agile practices. However, over the last few years the company I've worked for has adopted an agile methodology and so I've had no choice but to have had some experience with Agile. Here are some of my thoughts on 'Agile', or working with 'Agility' or whatever the hell you wanna call it.
 
-# Kanban and Scrum
+## Kanban and Scrum
 
 It took me ages to work out what these terms exactly meant. I'm still not 100% sure, but this is my take.
 
@@ -26,7 +26,7 @@ In my experience, the user stories are *the* most important part of the entire p
 
 User stories are difficult. When you read one, a good one, it will not appear that way. It will appear as almost too simplistic. Getting to that point however, can be very hard.
 
-## What makes a good user story?
+### What makes a good user story?
 
 This is in my opinion what makes a user story a good one.
 
@@ -34,6 +34,7 @@ This is in my opinion what makes a user story a good one.
 * Should have no hard dependencies.
 * Should have a list of Acceptance Criteria (AC).
 * Should be short and concise.
+
 
 Let's go into a bit more detail, with some example user stories.
 
@@ -60,11 +61,12 @@ I think this kind of dependency, which I'd call a 'soft' dependency is inevitabl
 1. Be  mindful when planning that some tickets are undoubtedly going to need to come after others. Although avoid this if possible.
 2. Allow user stories to have a Background. If anyone reading this (hi Mum!) has experience with BDD they will likely be familiar with features having a Background, which is basically where you set up the environment for the test. I see these kind of soft dependencies as similar. In our example, the Background would simply be: I have a dashboard in place.
 
+
 *I want to see a list of notifications at the top of the page*
 
 Again, this implies some kind of soft dependency, so the background for this ticket may be: There is a notification mechanism in place. The other questions surrounding this part of the story relate to the Acceptance Criteria. How should the notifications look? How many should there be? What determines the *top* of the page? These questions should all be answered within the AC for the story.
 
-## Example of good Acceptance Criteria
+### Example of good Acceptance Criteria
 
 * Notifications should appear in an unordered list.
 * The list should appear at the top of the page, directly beneath the fixed menu.
@@ -75,7 +77,7 @@ You get the idea. The level of detail here is up to the product owner. Some may 
 
 **The key point is that a good User Story can be understood by the developer and tested against by QA and the product owner/client.**
 
-# Planning
+## Planning
 
 I don't have too much to say on planning. I think if you have good user stories planning is a lot easier. Planning should be short and simple if you're doing it right. If your stories aren't good, then planning can end up taking a long time and be fairly painful.
 
@@ -83,7 +85,7 @@ Estimation can probably be seen as a part of planning. For my money the best way
 
 Planning is all about green fields, so try and have some fun with it if you can. Fun sprint names, a sense of competitiveness in increasing velocity are all ok in my eyes.
 
-# It's all about the big game
+## It's all about the big game
 
 For me, as a developer, the demo is *the* most important part of the entire process. It is your chance to show off to the product owner and/or client what you have done this sprint. As a keen Football (Soccer) fan I see this very much like the big game at the end of a week of rigorous training.
 
@@ -91,7 +93,7 @@ I think each sprint should be focussed on the demo. It is where you are shipping
 
 If you can't demonstrate something which you feel is good, working software then you're sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn't deliver. Perhaps you're sprint period was too little, 2 weeks seem to be the norm but if you're features are too big, consider increasing this period? More likely, you're user stories were poor, which comes back to why User Stories are king.
 
-# Retrospectives are vital
+## Retrospectives are vital
 
 Sometimes when you feel there is a lot to do, it can be tempting to skip the retrospectives. It's often seen as a non mandatory part of the process where we all just pat ourselves on the back or if things haven't gone right, play the blame game. I disagree with this.
 
@@ -101,13 +103,13 @@ They should be fun and action focussed.
 
 I would highly recommend taking a look at [plans-for-retrospectives.com](http://www.plans-for-retrospectives.com) for some ideas of fun 'games' you can play in your retrospective. We've bought some of the hard copies for the office and they've been brilliant. The best thing I like about them is that they're fun but very action focussed. So you don't just feel like you're wasting time gassing about the project, you're actually put down actions as to how to make things better.
 
-# Jira is actually pretty great
+## Jira is actually pretty great
 
 It almost pains me to say it because it's so frickin expensive, but Jira is actually pretty great. Well, more accurately the Agile (formerly Greenhopper) plugin for Jira is great.
 
 I think you could probably get a similar experience with something like Trello and a bit of admin work on your side, but Jira just makes it all fit together so nicely. It's the various reports, especially the burn down charts which I think are it's greatest features. It's really excellent, if you can afford it (and can work out the mental user roles management?!) then I would definitely recommend it.
 
-# Conclusion
+## Conclusion
 
 I have no real conclusions, just some of my thoughts on working Agile. My thoughts are changing all the time, but after a few years working in an Agile way, this is what I think works best.
 
@@ -117,6 +119,7 @@ I have a habit of waffling, so I hope this all makes sense, I can probably sum u
 * Each sprint should focus on the demo, which for me is the most important part of the process.
 * Retrospectives are important.
 * Use Jira (if you can)
+
 
 Of course, your experiences may be different, and I would love to hear about them.
 
