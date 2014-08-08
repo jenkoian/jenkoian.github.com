@@ -20,7 +20,7 @@ Scrum for me is the fuller version of Kanban. So you still have the board and th
 
 It's this Scrum approach I'm going to be talking most about in the rest of this post.
 
-#User Stories are king
+## User Stories are king
 
 In my experience, the user stories are *the* most important part of the entire process. Without good user stories it makes it really difficult to estimate, get a good idea of velocity and deliver features ready to demonstrate.
 
