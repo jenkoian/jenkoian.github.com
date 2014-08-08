@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2014-08-08T17:33:10+01:00</updated>
+ <updated>2014-08-08T17:35:53+01:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
@@ -17,9 +17,7 @@
    <link href="http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile"/>
    <updated>2014-08-08T00:00:00+01:00</updated>
    <id>http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</id>
-   <content type="html">&lt;h2 id=&quot;some_thoughts_on_agile&quot;&gt;Some thoughts on Agile&lt;/h2&gt;
-
-&lt;p&gt;I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.&lt;/p&gt;
+   <content type="html">&lt;p&gt;I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.&lt;/p&gt;
 
 &lt;h2 id=&quot;kanban_and_scrum&quot;&gt;Kanban and Scrum&lt;/h2&gt;
 
