@@ -13,9 +13,9 @@ tagline: Words & Code and Words about Code
     <span class="time">{{ post.content | strip_html | readingtime }}</span>
   </header>
   {{ post.content }}
-	
+
   <p><a href="{{ BASE_PATH }}{{ post.url }}#disqus_thread">Add comment</a></p>
 
 {% endfor %}
 
-<a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">&laquo; all posts</a>
+<a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">all posts</a>

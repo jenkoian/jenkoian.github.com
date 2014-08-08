@@ -6,8 +6,6 @@ category: opinion
 tags: [opinion, agile, scrum]
 ---
 
-## Some thoughts on Agile
-
 I would in no way describe myself as an evangelist of Agile practices, I'm not a certified scrum master and I've never had any formal training or anything on Agile practices. However, over the last few years the company I've worked for has adopted an agile methodology and so I've had no choice but to have had some experience with Agile. Here are some of my thoughts on 'Agile', or working with 'Agility' or whatever the hell you wanna call it.
 
 ## Kanban and Scrum
