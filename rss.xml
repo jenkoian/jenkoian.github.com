@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Jenko</title>
+    <link>http://jenko.me</link>
+    <description>Words &amp; Code</description>
+    <pubDate>Fri, 08 Aug 2014 00:00:00 +0100</pubDate>
+    <item>
+      <title>Some thoughts on Agile</title>
+      <link>http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</link>
+      <description>&lt;h1 id=&quot;some_thoughts_on_agile&quot;&gt;Some thoughts on Agile&lt;/h1&gt;</description>
+      <pubDate>Fri, 08 Aug 2014 00:00:00 +0100</pubDate>
+      <dc:date>2014-08-08T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Using Bower in a Symfony2 app</title>
+      <link>http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</link>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <pubDate>Fri, 06 Dec 2013 00:00:00 +0000</pubDate>
+      <dc:date>2013-12-06T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Symfony2: Caching a Rest API</title>
+      <link>http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</link>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate>
+      <dc:date>2013-01-29T00:00:00+00:00</dc:date>
+    </item>
+    <item>
+      <title>Silicon Valleys?</title>
+      <link>http://jenko.me/opinion/2013/01/20/silicon-valleys</link>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+      <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
+      <dc:date>2013-01-20T00:00:00+00:00</dc:date>
+    </item>
+    <dc:date>2014-08-08T00:00:00+01:00</dc:date>
+  </channel>
+</rss>
