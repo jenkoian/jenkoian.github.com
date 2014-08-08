@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2014-08-08T14:09:48+01:00</updated>
+ <updated>2014-08-08T17:30:59+01:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
@@ -17,11 +17,11 @@
    <link href="http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile"/>
    <updated>2014-08-08T00:00:00+01:00</updated>
    <id>http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</id>
-   <content type="html">&lt;h1 id=&quot;some_thoughts_on_agile&quot;&gt;Some thoughts on Agile&lt;/h1&gt;
+   <content type="html">&lt;h2 id=&quot;some_thoughts_on_agile&quot;&gt;Some thoughts on Agile&lt;/h2&gt;
 
 &lt;p&gt;I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.&lt;/p&gt;
 
-&lt;h1 id=&quot;kanban_and_scrum&quot;&gt;Kanban and Scrum&lt;/h1&gt;
+&lt;h2 id=&quot;kanban_and_scrum&quot;&gt;Kanban and Scrum&lt;/h2&gt;
 
 &lt;p&gt;It took me ages to work out what these terms exactly meant. I’m still not 100% sure, but this is my take.&lt;/p&gt;
 
@@ -37,7 +37,7 @@
 
 &lt;p&gt;User stories are difficult. When you read one, a good one, it will not appear that way. It will appear as almost too simplistic. Getting to that point however, can be very hard.&lt;/p&gt;
 
-&lt;h2 id=&quot;what_makes_a_good_user_story&quot;&gt;What makes a good user story?&lt;/h2&gt;
+&lt;h3 id=&quot;what_makes_a_good_user_story&quot;&gt;What makes a good user story?&lt;/h3&gt;
 
 &lt;p&gt;This is in my opinion what makes a user story a good one.&lt;/p&gt;
 
@@ -83,7 +83,7 @@
 
 &lt;p&gt;Again, this implies some kind of soft dependency, so the background for this ticket may be: There is a notification mechanism in place. The other questions surrounding this part of the story relate to the Acceptance Criteria. How should the notifications look? How many should there be? What determines the &lt;em&gt;top&lt;/em&gt; of the page? These questions should all be answered within the AC for the story.&lt;/p&gt;
 
-&lt;h2 id=&quot;example_of_good_acceptance_criteria&quot;&gt;Example of good Acceptance Criteria&lt;/h2&gt;
+&lt;h3 id=&quot;example_of_good_acceptance_criteria&quot;&gt;Example of good Acceptance Criteria&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Notifications should appear in an unordered list.&lt;/li&gt;
@@ -99,7 +99,7 @@
 
 &lt;p&gt;&lt;strong&gt;The key point is that a good User Story can be understood by the developer and tested against by QA and the product owner/client.&lt;/strong&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;planning&quot;&gt;Planning&lt;/h1&gt;
+&lt;h2 id=&quot;planning&quot;&gt;Planning&lt;/h2&gt;
 
 &lt;p&gt;I don’t have too much to say on planning. I think if you have good user stories planning is a lot easier. Planning should be short and simple if you’re doing it right. If your stories aren’t good, then planning can end up taking a long time and be fairly painful.&lt;/p&gt;
 
@@ -107,7 +107,7 @@
 
 &lt;p&gt;Planning is all about green fields, so try and have some fun with it if you can. Fun sprint names, a sense of competitiveness in increasing velocity are all ok in my eyes.&lt;/p&gt;
 
-&lt;h1 id=&quot;its_all_about_the_big_game&quot;&gt;It’s all about the big game&lt;/h1&gt;
+&lt;h2 id=&quot;its_all_about_the_big_game&quot;&gt;It’s all about the big game&lt;/h2&gt;
 
 &lt;p&gt;For me, as a developer, the demo is &lt;em&gt;the&lt;/em&gt; most important part of the entire process. It is your chance to show off to the product owner and/or client what you have done this sprint. As a keen Football (Soccer) fan I see this very much like the big game at the end of a week of rigorous training.&lt;/p&gt;
 
@@ -115,7 +115,7 @@
 
 &lt;p&gt;If you can’t demonstrate something which you feel is good, working software then you’re sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn’t deliver. Perhaps you’re sprint period was too little, 2 weeks seem to be the norm but if you’re features are too big, consider increasing this period? More likely, you’re user stories were poor, which comes back to why User Stories are king.&lt;/p&gt;
 
-&lt;h1 id=&quot;retrospectives_are_vital&quot;&gt;Retrospectives are vital&lt;/h1&gt;
+&lt;h2 id=&quot;retrospectives_are_vital&quot;&gt;Retrospectives are vital&lt;/h2&gt;
 
 &lt;p&gt;Sometimes when you feel there is a lot to do, it can be tempting to skip the retrospectives. It’s often seen as a non mandatory part of the process where we all just pat ourselves on the back or if things haven’t gone right, play the blame game. I disagree with this.&lt;/p&gt;
 
@@ -125,13 +125,13 @@
 
 &lt;p&gt;I would highly recommend taking a look at &lt;a href=&quot;http://www.plans-for-retrospectives.com&quot;&gt;plans-for-retrospectives.com&lt;/a&gt; for some ideas of fun ‘games’ you can play in your retrospective. We’ve bought some of the hard copies for the office and they’ve been brilliant. The best thing I like about them is that they’re fun but very action focussed. So you don’t just feel like you’re wasting time gassing about the project, you’re actually put down actions as to how to make things better.&lt;/p&gt;
 
-&lt;h1 id=&quot;jira_is_actually_pretty_great&quot;&gt;Jira is actually pretty great&lt;/h1&gt;
+&lt;h2 id=&quot;jira_is_actually_pretty_great&quot;&gt;Jira is actually pretty great&lt;/h2&gt;
 
 &lt;p&gt;It almost pains me to say it because it’s so frickin expensive, but Jira is actually pretty great. Well, more accurately the Agile (formerly Greenhopper) plugin for Jira is great.&lt;/p&gt;
 
 &lt;p&gt;I think you could probably get a similar experience with something like Trello and a bit of admin work on your side, but Jira just makes it all fit together so nicely. It’s the various reports, especially the burn down charts which I think are it’s greatest features. It’s really excellent, if you can afford it (and can work out the mental user roles management?!) then I would definitely recommend it.&lt;/p&gt;
 
-&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
 &lt;p&gt;I have no real conclusions, just some of my thoughts on working Agile. My thoughts are changing all the time, but after a few years working in an Agile way, this is what I think works best.&lt;/p&gt;
 
