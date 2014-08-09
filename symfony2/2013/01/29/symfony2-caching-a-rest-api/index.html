@@ -37,8 +37,9 @@
   <span class="date">29 January 2013</span>
   <h1><a href="">Symfony2: Caching a Rest API</a></h1>
   <span class="category"><a href="/categories.html#-ref">symfony2</a></span>
-  <span class="time">3 minutes and 3 seconds</span>
+  <span class="time">2 minutes and 57 seconds</span>
 </header>
+
 
 <p>As part of a project I’m currently working on, I needed to create a Rest API as a facade into an old legacy database.</p>
 
@@ -56,33 +57,44 @@
 
 <p>It should <strong>always</strong> return a cached version of <em>things</em>, unless a <em>thing</em> has been updated since the last time the endpoint was called.</p>
 
-<p>So what I needed to do was to work out when a <em>thing</em> was last updated <strong>before</strong> the main query was run and change the response.</p>
+<p>So what I needed to do was to work out when a <em>thing</em> was last updated <strong>before</strong> the main query was run and change the response. </p>
 
-<h2 id="getting_the_last_modified_date">Getting the last modified date</h2>
+<h2 id="getting-the-last-modified-date">Getting the last modified date</h2>
 
 <p>This was simple enough, just add something along the lines of the following to the appropriate repository class:</p>
-<script src='https://gist.github.com/4667994.js'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/4667994.js"> </script>
+
 <p>So now we have a cheap way of getting the the last modified thing, or a last modified date for our endpoint.</p>
 
-<h2 id="using_last_modified_date_to_alter_the_response">Using last modified date to alter the response</h2>
+<h2 id="using-last-modified-date-to-alter-the-response">Using last modified date to alter the response</h2>
 
-<p>The problem I had now was how to look up this date and alter the response if necessary.</p>
+<p>The problem I had now was how to look up this date and alter the response if necessary. </p>
 
 <p>I could have done what they have in <a href="http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header">the example on the Symfony docs</a> however this wasn’t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something much more flexible. I wanted to make a controller cacheable with minimum effort required.</p>
 
 <p>My solution for this was to use a listener:</p>
-<script src='https://gist.github.com/4668158.js'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/4668158.js"> </script>
+
 <p>What this does is before the controller is used, checks to see if it implements “Cacheable” and if it does will check the last modified date and then change the action it will call on the controller (and thus the response) accordingly.</p>
 
 <p>Here is the code for the interface:</p>
-<script src='https://gist.github.com/4668261.js'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/4668261.js"> </script>
+
 <p>So all that’s left to do then is to add three methods as stipulated in our interface - isNotModified(), getLastModifiedDate() and getLastModifiedResponse().</p>
 
 <p>It makes sense for isNotModified() and getLastModifiedResponse() to live in an abstract parent class as these are unlikely to change across multiple controllers:</p>
-<script src='https://gist.github.com/4668398.js'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/4668398.js"> </script>
+
 <p>It is simply then a case of adding a getLastModifiedDate() to the children controllers, for example:</p>
-<script src='https://gist.github.com/4668420.js'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/4668420.js"> </script>
+
 <p>You should now have an unobtrusive way of setting a 304 response for endpoints on your API. Of course this relies on the appropriate headers being sent by the client consuming this service. This is easy using something like Guzzle, but more on that in another post.</p>
+
 
 <hr />
 

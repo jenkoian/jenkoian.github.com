@@ -37,12 +37,12 @@
   <span class="date">08 August 2014</span>
   <h1><a href="">Some thoughts on Agile</a></h1>
   <span class="category"><a href="/categories.html#-ref">opinion</a></span>
-  <span class="time">8 minutes and 38 seconds</span>
+  <span class="time">8 minutes and 33 seconds</span>
 </header>
 
 <p>I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.</p>
 
-<h2 id="kanban_and_scrum">Kanban and Scrum</h2>
+<h2 id="kanban-and-scrum">Kanban and Scrum</h2>
 
 <p>It took me ages to work out what these terms exactly meant. I’m still not 100% sure, but this is my take.</p>
 
@@ -52,24 +52,21 @@
 
 <p>It’s this Scrum approach I’m going to be talking most about in the rest of this post.</p>
 
-<h2 id="user_stories_are_king">User Stories are king</h2>
+<h2 id="user-stories-are-king">User Stories are king</h2>
 
 <p>In my experience, the user stories are <em>the</em> most important part of the entire process. Without good user stories it makes it really difficult to estimate, get a good idea of velocity and deliver features ready to demonstrate.</p>
 
 <p>User stories are difficult. When you read one, a good one, it will not appear that way. It will appear as almost too simplistic. Getting to that point however, can be very hard.</p>
 
-<h3 id="what_makes_a_good_user_story">What makes a good user story?</h3>
+<h3 id="what-makes-a-good-user-story">What makes a good user story?</h3>
 
 <p>This is in my opinion what makes a user story a good one.</p>
 
 <ul>
-<li>Describes exactly what the feature should do.</li>
-
-<li>Should have no hard dependencies.</li>
-
-<li>Should have a list of Acceptance Criteria (AC).</li>
-
-<li>Should be short and concise.</li>
+  <li>Describes exactly what the feature should do.</li>
+  <li>Should have no hard dependencies.</li>
+  <li>Should have a list of Acceptance Criteria (AC).</li>
+  <li>Should be short and concise.</li>
 </ul>
 
 <p>Let’s go into a bit more detail, with some example user stories.</p>
@@ -95,25 +92,21 @@
 <p>I think this kind of dependency, which I’d call a ‘soft’ dependency is inevitable. You will undoubtedly come up against situations like this. I think there are two things we can do to help here.</p>
 
 <ol>
-<li>Be mindful when planning that some tickets are undoubtedly going to need to come after others. Although avoid this if possible.</li>
-
-<li>Allow user stories to have a Background. If anyone reading this (hi Mum!) has experience with BDD they will likely be familiar with features having a Background, which is basically where you set up the environment for the test. I see these kind of soft dependencies as similar. In our example, the Background would simply be: I have a dashboard in place.</li>
+  <li>Be  mindful when planning that some tickets are undoubtedly going to need to come after others. Although avoid this if possible.</li>
+  <li>Allow user stories to have a Background. If anyone reading this (hi Mum!) has experience with BDD they will likely be familiar with features having a Background, which is basically where you set up the environment for the test. I see these kind of soft dependencies as similar. In our example, the Background would simply be: I have a dashboard in place.</li>
 </ol>
 
 <p><em>I want to see a list of notifications at the top of the page</em></p>
 
 <p>Again, this implies some kind of soft dependency, so the background for this ticket may be: There is a notification mechanism in place. The other questions surrounding this part of the story relate to the Acceptance Criteria. How should the notifications look? How many should there be? What determines the <em>top</em> of the page? These questions should all be answered within the AC for the story.</p>
 
-<h3 id="example_of_good_acceptance_criteria">Example of good Acceptance Criteria</h3>
+<h3 id="example-of-good-acceptance-criteria">Example of good Acceptance Criteria</h3>
 
 <ul>
-<li>Notifications should appear in an unordered list.</li>
-
-<li>The list should appear at the top of the page, directly beneath the fixed menu.</li>
-
-<li>There should be a maximum of 5 notifications displayed.</li>
-
-<li>The text of the notifications should be black using the default font of the site.</li>
+  <li>Notifications should appear in an unordered list.</li>
+  <li>The list should appear at the top of the page, directly beneath the fixed menu.</li>
+  <li>There should be a maximum of 5 notifications displayed.</li>
+  <li>The text of the notifications should be black using the default font of the site.</li>
 </ul>
 
 <p>You get the idea. The level of detail here is up to the product owner. Some may want complete control over their definition of done, down to pixel sizes and font styles. Others may simply be happy with something a bit more high level.</p>
@@ -124,19 +117,19 @@
 
 <p>I don’t have too much to say on planning. I think if you have good user stories planning is a lot easier. Planning should be short and simple if you’re doing it right. If your stories aren’t good, then planning can end up taking a long time and be fairly painful.</p>
 
-<p>Estimation can probably be seen as a part of planning. For my money the best way of estimating is affinity estimation. Whether you do this against the backlog at the beginning of the project or in planning at the beginning of each sprint, I don’t think matters too much. I think it makes more sense to do it before each sprint as you will gain more insight of the product and your estimations are likely to be more realistic. However, I can understand that sometimes you need to do it before the project to get an idea of scope.</p>
+<p>Estimation can probably be seen as a part of planning. For my money the best way of estimating is <a href="http://www.boxuk.com/blog/affinity-estimation-what-is-it/">affinity estimation</a>. Whether you do this against the backlog at the beginning of the project or in planning at the beginning of each sprint, I don’t think matters too much. I think it makes more sense to do it before each sprint as you will gain more insight of the product and your estimations are likely to be more realistic. However, I can understand that sometimes you need to do it before the project to get an idea of scope.</p>
 
 <p>Planning is all about green fields, so try and have some fun with it if you can. Fun sprint names, a sense of competitiveness in increasing velocity are all ok in my eyes.</p>
 
-<h2 id="its_all_about_the_big_game">It’s all about the big game</h2>
+<h2 id="its-all-about-the-big-game">It’s all about the big game</h2>
 
 <p>For me, as a developer, the demo is <em>the</em> most important part of the entire process. It is your chance to show off to the product owner and/or client what you have done this sprint. As a keen Football (Soccer) fan I see this very much like the big game at the end of a week of rigorous training.</p>
 
 <p>I think each sprint should be focussed on the demo. It is where you are shipping the features you’ve been working on. Take pride in this time slot you have, show off a little, be enthusiastic, encourage questions, engage with the audience. I’ve been into demo’s embarrassed at how little there was to show, or worried that something is unfinished, worried it will undoubtedly break in front of an audience. I’m now firmly of the belief that if you find yourself in that situation, you’re doing things wrong.</p>
 
-<p>If you can’t demonstrate something which you feel is good, working software then you’re sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn’t deliver. Perhaps you’re sprint period was too little, 2 weeks seem to be the norm but if you’re features are too big, consider increasing this period? More likely, you’re user stories were poor, which comes back to why User Stories are king.</p>
+<p>If you can’t demonstrate something which you feel is good, working software then your sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn’t deliver. Perhaps your sprint period was too little, 2 weeks seem to be the norm but if you’re features are too big, consider increasing this period? More likely, your user stories were poor, which comes back to why User Stories are king.</p>
 
-<h2 id="retrospectives_are_vital">Retrospectives are vital</h2>
+<h2 id="retrospectives-are-vital">Retrospectives are vital</h2>
 
 <p>Sometimes when you feel there is a lot to do, it can be tempting to skip the retrospectives. It’s often seen as a non mandatory part of the process where we all just pat ourselves on the back or if things haven’t gone right, play the blame game. I disagree with this.</p>
 
@@ -144,9 +137,9 @@
 
 <p>They should be fun and action focussed.</p>
 
-<p>I would highly recommend taking a look at <a href="http://www.plans-for-retrospectives.com">plans-for-retrospectives.com</a> for some ideas of fun ‘games’ you can play in your retrospective. We’ve bought some of the hard copies for the office and they’ve been brilliant. The best thing I like about them is that they’re fun but very action focussed. So you don’t just feel like you’re wasting time gassing about the project, you’re actually put down actions as to how to make things better.</p>
+<p>I would highly recommend taking a look at <a href="http://www.plans-for-retrospectives.com">plans-for-retrospectives.com</a> for some ideas of fun ‘games’ you can play in your retrospective. We’ve bought some of the hard copies for the office and they’ve been brilliant. The best thing I like about them is that they’re fun but very action focussed. So you don’t just feel like you’re wasting time gassing about the project, you’re actually putting down actions as to how to make things better.</p>
 
-<h2 id="jira_is_actually_pretty_great">Jira is actually pretty great</h2>
+<h2 id="jira-is-actually-pretty-great">Jira is actually pretty great</h2>
 
 <p>It almost pains me to say it because it’s so frickin expensive, but Jira is actually pretty great. Well, more accurately the Agile (formerly Greenhopper) plugin for Jira is great.</p>
 
@@ -159,16 +152,15 @@
 <p>I have a habit of waffling, so I hope this all makes sense, I can probably sum up with the following bullet points:</p>
 
 <ul>
-<li>User stories are king.</li>
-
-<li>Each sprint should focus on the demo, which for me is the most important part of the process.</li>
-
-<li>Retrospectives are important.</li>
-
-<li>Use Jira (if you can)</li>
+  <li>User stories are king.</li>
+  <li>Each sprint should focus on the demo, which for me is the most important part of the process.</li>
+  <li>Retrospectives are important.</li>
+  <li>Use Jira (if you can)</li>
 </ul>
 
-<p>Of course, your experiences may be different, and I would love to hear about them.</p>
+<p>Of course, your experiences may be different, and I would love to hear about them!</p>
+
+
 
 <hr />
 

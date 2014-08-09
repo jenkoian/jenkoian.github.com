@@ -37,12 +37,13 @@
   <span class="date">06 December 2013</span>
   <h1><a href="">Using Bower in a Symfony2 app</a></h1>
   <span class="category"><a href="/categories.html#-ref">symfony2</a></span>
-  <span class="time">4 minutes and 12 seconds</span>
+  <span class="time">4 minutes and 11 seconds</span>
 </header>
+
 
 <p>I’ve been hearing good things about <a href="http://bower.io">bower</a> for a while now but never really had the chance to try it. So having recently started a new Symfony2 side project I thought I would take a look at integrating it. It turned out to be very very easy.</p>
 
-<h2 id="setting_up">Setting up</h2>
+<h2 id="setting-up">Setting up</h2>
 
 <p>Well, obviously I needed to install it first. Pretty easy:</p>
 
@@ -57,10 +58,12 @@
 <p>This will take you through each step of adding the necessary fields, much like the composer equivalent (<code>composer init</code> naturally).</p>
 
 <p>Once I had done that, I had a bower.json file looking something like:</p>
-<script src='https://gist.github.com/jenkoian/7833778.js'><![CDATA[ ]]></script>
+
+<script src="https://gist.github.com/jenkoian/7833778.js"> </script>
+
 <p>I won’t go in to too much detail about how bower works, there is some pretty decent docs <a href="http://bower.io">on the website</a> but essentially it is <code>composer</code> for your front end dependencies.</p>
 
-<h2 id="integrating_bower_with_symfony2">Integrating bower with Symfony2</h2>
+<h2 id="integrating-bower-with-symfony2">Integrating bower with Symfony2</h2>
 
 <p>So how did I set this all up in a Symfony2 app? Well very easily, probably easy enough that it doesn’t really require a blog post, but hey, I need to blog more and had some free time.</p>
 
@@ -71,8 +74,10 @@
 <p>Sweet, that was easy! Wait though, what is this <code>bower_components</code> nonsense. I could do without this littering the root of my project. Particularly as the standard in Symfony2 apps is to install front end assets in a <code>Resources/public</code> location.</p>
 
 <p>I needed to tell bower to install my assets somewhere else. This was actually really easy too. I needed another file in the root of my project, this time a <code>.bowerrc</code> file. Here it is:</p>
-<script src='https://gist.github.com/jenkoian/7833818.js'><![CDATA[ ]]></script>
-<p>Pretty neat!</p>
+
+<script src="https://gist.github.com/jenkoian/7833818.js"> </script>
+
+<p>Pretty neat! </p>
 
 <p>I was a bit torn as to which was the correct directory for this. I ended up going with <code>src/Acme/Bundle/DemoBundle/Resources/public/vendor</code> in my main website bundle, but you may decide to put it in <code>app/Resources/public/vendor</code> or somewhere else altogether, i.e. YMMV.</p>
 
@@ -82,39 +87,41 @@
 
 <p>This works more or less exactly like <code>composer require</code>. It will install the dependency into your specified directory. The <code>--save</code> switch will ensure it will be added as a dependency to your <code>bower.json</code> also (I’m not sure why you <em>wouldn’t</em> want this?!). You can specify a version, but if omitted the latest version will be assumed.</p>
 
-<h2 id="using_your_front_end_dependencies">Using your front end dependencies</h2>
+<h2 id="using-your-front-end-dependencies">Using your front end dependencies</h2>
 
 <p>So we have bower all set up, let’s see how we include these things within our templates.</p>
 
 <p>Well, pretty much just how you would include CSS/JS normally.</p>
-<script src='https://gist.github.com/jenkoian/7833806.js'><![CDATA[ ]]></script>
-<h2 id="summing_up">Summing up</h2>
+
+<script src="https://gist.github.com/jenkoian/7833806.js"> </script>
+
+<h2 id="summing-up">Summing up</h2>
 
 <p>That’s pretty much all there is too it. One thing that I was wondering about at first was the lack of <code>bower.lock</code> file or equivalent. Without this it means that you can’t rely on libraries being the same versions on different environments (ok you can set exact version numbers, but still). This is a bit of a problem if you want to use bower in production as part of a deploy script for example. <a href="https://github.com/bower/bower/issues/505">There is some discussion on this</a>, but if this is an issue for you, you essentially have 3 options:</p>
 
 <ol>
-<li>Use exact version numbers</li>
-
-<li>Commit front end assets</li>
-
-<li>Just accept the possibility of a variation in assets across environments</li>
+  <li>Use exact version numbers</li>
+  <li>Commit front end assets</li>
+  <li>Just accept the possibility of a variation in assets across environments</li>
 </ol>
 
 <p>For my side project, option 3 is fine and I happily set the assets directory in my .gitignore file, but I do think a .lock file function is a must for bower going forward.</p>
 
 <p>All in all though, I think bower is very nice. It does exactly for front end development what composer does for PHP development. It makes managing front end dependencies much much nicer. Hopefully gone are the days of downloading zip files and boshing into your web app.</p>
 
-<h2 id="going_further">Going further</h2>
+<h2 id="going-further">Going further</h2>
 
-<p>There is an interesting looking Symfony2 bundle for bower, called <a href="https://github.com/Spea/SpBowerBundle">SpBowerBundle</a>. I didn’t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle.</p>
+<p>There is an interesting looking Symfony2 bundle for bower, called <a href="https://github.com/Spea/SpBowerBundle">SpBowerBundle</a>. I didn’t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle. </p>
 
 <p>However, having taken a quick look, the bundle looks very nice. I can see it being particularly useful if you want to manage front end dependencies across multiple bundles. The assetic integration also looks good.</p>
 
 <p>Finally, there was a recent discussion started about the state of the front end and Symfony2 which ultimately led to <a href="https://github.com/kriswallsmith/assetic/issues/529">this github issue</a> so definitely worth keeping your eye on that if you’re interested in this.</p>
 
-<h2 id="related_links">Related links:</h2>
+<h2 id="related-links">Related links:</h2>
+<p><a href="http://bower.io">http://bower.io</a> <br />
+<a href="http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/">http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/</a> <br />
+<a href="https://github.com/Spea/SpBowerBundle">https://github.com/Spea/SpBowerBundle</a>   </p>
 
-<p><a href="http://bower.io">http://bower.io</a> <br /><a href="http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/">http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/</a> <br /><a href="https://github.com/Spea/SpBowerBundle">https://github.com/Spea/SpBowerBundle</a></p>
 
 <hr />
 

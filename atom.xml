@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2014-08-08T17:35:53+01:00</updated>
+ <updated>2014-08-09T11:55:26+01:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
@@ -19,7 +19,7 @@
    <id>http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</id>
    <content type="html">&lt;p&gt;I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.&lt;/p&gt;
 
-&lt;h2 id=&quot;kanban_and_scrum&quot;&gt;Kanban and Scrum&lt;/h2&gt;
+&lt;h2 id=&quot;kanban-and-scrum&quot;&gt;Kanban and Scrum&lt;/h2&gt;
 
 &lt;p&gt;It took me ages to work out what these terms exactly meant. I’m still not 100% sure, but this is my take.&lt;/p&gt;
 
@@ -29,24 +29,21 @@
 
 &lt;p&gt;It’s this Scrum approach I’m going to be talking most about in the rest of this post.&lt;/p&gt;
 
-&lt;h2 id=&quot;user_stories_are_king&quot;&gt;User Stories are king&lt;/h2&gt;
+&lt;h2 id=&quot;user-stories-are-king&quot;&gt;User Stories are king&lt;/h2&gt;
 
 &lt;p&gt;In my experience, the user stories are &lt;em&gt;the&lt;/em&gt; most important part of the entire process. Without good user stories it makes it really difficult to estimate, get a good idea of velocity and deliver features ready to demonstrate.&lt;/p&gt;
 
 &lt;p&gt;User stories are difficult. When you read one, a good one, it will not appear that way. It will appear as almost too simplistic. Getting to that point however, can be very hard.&lt;/p&gt;
 
-&lt;h3 id=&quot;what_makes_a_good_user_story&quot;&gt;What makes a good user story?&lt;/h3&gt;
+&lt;h3 id=&quot;what-makes-a-good-user-story&quot;&gt;What makes a good user story?&lt;/h3&gt;
 
 &lt;p&gt;This is in my opinion what makes a user story a good one.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Describes exactly what the feature should do.&lt;/li&gt;
-
-&lt;li&gt;Should have no hard dependencies.&lt;/li&gt;
-
-&lt;li&gt;Should have a list of Acceptance Criteria (AC).&lt;/li&gt;
-
-&lt;li&gt;Should be short and concise.&lt;/li&gt;
+  &lt;li&gt;Describes exactly what the feature should do.&lt;/li&gt;
+  &lt;li&gt;Should have no hard dependencies.&lt;/li&gt;
+  &lt;li&gt;Should have a list of Acceptance Criteria (AC).&lt;/li&gt;
+  &lt;li&gt;Should be short and concise.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Let’s go into a bit more detail, with some example user stories.&lt;/p&gt;
@@ -72,25 +69,21 @@
 &lt;p&gt;I think this kind of dependency, which I’d call a ‘soft’ dependency is inevitable. You will undoubtedly come up against situations like this. I think there are two things we can do to help here.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Be mindful when planning that some tickets are undoubtedly going to need to come after others. Although avoid this if possible.&lt;/li&gt;
-
-&lt;li&gt;Allow user stories to have a Background. If anyone reading this (hi Mum!) has experience with BDD they will likely be familiar with features having a Background, which is basically where you set up the environment for the test. I see these kind of soft dependencies as similar. In our example, the Background would simply be: I have a dashboard in place.&lt;/li&gt;
+  &lt;li&gt;Be  mindful when planning that some tickets are undoubtedly going to need to come after others. Although avoid this if possible.&lt;/li&gt;
+  &lt;li&gt;Allow user stories to have a Background. If anyone reading this (hi Mum!) has experience with BDD they will likely be familiar with features having a Background, which is basically where you set up the environment for the test. I see these kind of soft dependencies as similar. In our example, the Background would simply be: I have a dashboard in place.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;&lt;em&gt;I want to see a list of notifications at the top of the page&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Again, this implies some kind of soft dependency, so the background for this ticket may be: There is a notification mechanism in place. The other questions surrounding this part of the story relate to the Acceptance Criteria. How should the notifications look? How many should there be? What determines the &lt;em&gt;top&lt;/em&gt; of the page? These questions should all be answered within the AC for the story.&lt;/p&gt;
 
-&lt;h3 id=&quot;example_of_good_acceptance_criteria&quot;&gt;Example of good Acceptance Criteria&lt;/h3&gt;
+&lt;h3 id=&quot;example-of-good-acceptance-criteria&quot;&gt;Example of good Acceptance Criteria&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;Notifications should appear in an unordered list.&lt;/li&gt;
-
-&lt;li&gt;The list should appear at the top of the page, directly beneath the fixed menu.&lt;/li&gt;
-
-&lt;li&gt;There should be a maximum of 5 notifications displayed.&lt;/li&gt;
-
-&lt;li&gt;The text of the notifications should be black using the default font of the site.&lt;/li&gt;
+  &lt;li&gt;Notifications should appear in an unordered list.&lt;/li&gt;
+  &lt;li&gt;The list should appear at the top of the page, directly beneath the fixed menu.&lt;/li&gt;
+  &lt;li&gt;There should be a maximum of 5 notifications displayed.&lt;/li&gt;
+  &lt;li&gt;The text of the notifications should be black using the default font of the site.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;You get the idea. The level of detail here is up to the product owner. Some may want complete control over their definition of done, down to pixel sizes and font styles. Others may simply be happy with something a bit more high level.&lt;/p&gt;
@@ -101,19 +94,19 @@
 
 &lt;p&gt;I don’t have too much to say on planning. I think if you have good user stories planning is a lot easier. Planning should be short and simple if you’re doing it right. If your stories aren’t good, then planning can end up taking a long time and be fairly painful.&lt;/p&gt;
 
-&lt;p&gt;Estimation can probably be seen as a part of planning. For my money the best way of estimating is affinity estimation. Whether you do this against the backlog at the beginning of the project or in planning at the beginning of each sprint, I don’t think matters too much. I think it makes more sense to do it before each sprint as you will gain more insight of the product and your estimations are likely to be more realistic. However, I can understand that sometimes you need to do it before the project to get an idea of scope.&lt;/p&gt;
+&lt;p&gt;Estimation can probably be seen as a part of planning. For my money the best way of estimating is &lt;a href=&quot;http://www.boxuk.com/blog/affinity-estimation-what-is-it/&quot;&gt;affinity estimation&lt;/a&gt;. Whether you do this against the backlog at the beginning of the project or in planning at the beginning of each sprint, I don’t think matters too much. I think it makes more sense to do it before each sprint as you will gain more insight of the product and your estimations are likely to be more realistic. However, I can understand that sometimes you need to do it before the project to get an idea of scope.&lt;/p&gt;
 
 &lt;p&gt;Planning is all about green fields, so try and have some fun with it if you can. Fun sprint names, a sense of competitiveness in increasing velocity are all ok in my eyes.&lt;/p&gt;
 
-&lt;h2 id=&quot;its_all_about_the_big_game&quot;&gt;It’s all about the big game&lt;/h2&gt;
+&lt;h2 id=&quot;its-all-about-the-big-game&quot;&gt;It’s all about the big game&lt;/h2&gt;
 
 &lt;p&gt;For me, as a developer, the demo is &lt;em&gt;the&lt;/em&gt; most important part of the entire process. It is your chance to show off to the product owner and/or client what you have done this sprint. As a keen Football (Soccer) fan I see this very much like the big game at the end of a week of rigorous training.&lt;/p&gt;
 
 &lt;p&gt;I think each sprint should be focussed on the demo. It is where you are shipping the features you’ve been working on. Take pride in this time slot you have, show off a little, be enthusiastic, encourage questions, engage with the audience. I’ve been into demo’s embarrassed at how little there was to show, or worried that something is unfinished, worried it will undoubtedly break in front of an audience. I’m now firmly of the belief that if you find yourself in that situation, you’re doing things wrong.&lt;/p&gt;
 
-&lt;p&gt;If you can’t demonstrate something which you feel is good, working software then you’re sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn’t deliver. Perhaps you’re sprint period was too little, 2 weeks seem to be the norm but if you’re features are too big, consider increasing this period? More likely, you’re user stories were poor, which comes back to why User Stories are king.&lt;/p&gt;
+&lt;p&gt;If you can’t demonstrate something which you feel is good, working software then your sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn’t deliver. Perhaps your sprint period was too little, 2 weeks seem to be the norm but if you’re features are too big, consider increasing this period? More likely, your user stories were poor, which comes back to why User Stories are king.&lt;/p&gt;
 
-&lt;h2 id=&quot;retrospectives_are_vital&quot;&gt;Retrospectives are vital&lt;/h2&gt;
+&lt;h2 id=&quot;retrospectives-are-vital&quot;&gt;Retrospectives are vital&lt;/h2&gt;
 
 &lt;p&gt;Sometimes when you feel there is a lot to do, it can be tempting to skip the retrospectives. It’s often seen as a non mandatory part of the process where we all just pat ourselves on the back or if things haven’t gone right, play the blame game. I disagree with this.&lt;/p&gt;
 
@@ -121,9 +114,9 @@
 
 &lt;p&gt;They should be fun and action focussed.&lt;/p&gt;
 
-&lt;p&gt;I would highly recommend taking a look at &lt;a href=&quot;http://www.plans-for-retrospectives.com&quot;&gt;plans-for-retrospectives.com&lt;/a&gt; for some ideas of fun ‘games’ you can play in your retrospective. We’ve bought some of the hard copies for the office and they’ve been brilliant. The best thing I like about them is that they’re fun but very action focussed. So you don’t just feel like you’re wasting time gassing about the project, you’re actually put down actions as to how to make things better.&lt;/p&gt;
+&lt;p&gt;I would highly recommend taking a look at &lt;a href=&quot;http://www.plans-for-retrospectives.com&quot;&gt;plans-for-retrospectives.com&lt;/a&gt; for some ideas of fun ‘games’ you can play in your retrospective. We’ve bought some of the hard copies for the office and they’ve been brilliant. The best thing I like about them is that they’re fun but very action focussed. So you don’t just feel like you’re wasting time gassing about the project, you’re actually putting down actions as to how to make things better.&lt;/p&gt;
 
-&lt;h2 id=&quot;jira_is_actually_pretty_great&quot;&gt;Jira is actually pretty great&lt;/h2&gt;
+&lt;h2 id=&quot;jira-is-actually-pretty-great&quot;&gt;Jira is actually pretty great&lt;/h2&gt;
 
 &lt;p&gt;It almost pains me to say it because it’s so frickin expensive, but Jira is actually pretty great. Well, more accurately the Agile (formerly Greenhopper) plugin for Jira is great.&lt;/p&gt;
 
@@ -136,16 +129,15 @@
 &lt;p&gt;I have a habit of waffling, so I hope this all makes sense, I can probably sum up with the following bullet points:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;User stories are king.&lt;/li&gt;
-
-&lt;li&gt;Each sprint should focus on the demo, which for me is the most important part of the process.&lt;/li&gt;
-
-&lt;li&gt;Retrospectives are important.&lt;/li&gt;
-
-&lt;li&gt;Use Jira (if you can)&lt;/li&gt;
+  &lt;li&gt;User stories are king.&lt;/li&gt;
+  &lt;li&gt;Each sprint should focus on the demo, which for me is the most important part of the process.&lt;/li&gt;
+  &lt;li&gt;Retrospectives are important.&lt;/li&gt;
+  &lt;li&gt;Use Jira (if you can)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Of course, your experiences may be different, and I would love to hear about them.&lt;/p&gt;</content>
+&lt;p&gt;Of course, your experiences may be different, and I would love to hear about them!&lt;/p&gt;
+
+</content>
  </entry>
  
  <entry>
@@ -153,9 +145,10 @@
    <link href="http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app"/>
    <updated>2013-12-06T00:00:00+00:00</updated>
    <id>http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</id>
-   <content type="html">&lt;p&gt;I’ve been hearing good things about &lt;a href=&quot;http://bower.io&quot;&gt;bower&lt;/a&gt; for a while now but never really had the chance to try it. So having recently started a new Symfony2 side project I thought I would take a look at integrating it. It turned out to be very very easy.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;I’ve been hearing good things about &lt;a href=&quot;http://bower.io&quot;&gt;bower&lt;/a&gt; for a while now but never really had the chance to try it. So having recently started a new Symfony2 side project I thought I would take a look at integrating it. It turned out to be very very easy.&lt;/p&gt;
 
-&lt;h2 id=&quot;setting_up&quot;&gt;Setting up&lt;/h2&gt;
+&lt;h2 id=&quot;setting-up&quot;&gt;Setting up&lt;/h2&gt;
 
 &lt;p&gt;Well, obviously I needed to install it first. Pretty easy:&lt;/p&gt;
 
@@ -170,10 +163,12 @@
 &lt;p&gt;This will take you through each step of adding the necessary fields, much like the composer equivalent (&lt;code&gt;composer init&lt;/code&gt; naturally).&lt;/p&gt;
 
 &lt;p&gt;Once I had done that, I had a bower.json file looking something like:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/jenkoian/7833778.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/7833778.js&quot;&gt; &lt;/script&gt;
+
 &lt;p&gt;I won’t go in to too much detail about how bower works, there is some pretty decent docs &lt;a href=&quot;http://bower.io&quot;&gt;on the website&lt;/a&gt; but essentially it is &lt;code&gt;composer&lt;/code&gt; for your front end dependencies.&lt;/p&gt;
 
-&lt;h2 id=&quot;integrating_bower_with_symfony2&quot;&gt;Integrating bower with Symfony2&lt;/h2&gt;
+&lt;h2 id=&quot;integrating-bower-with-symfony2&quot;&gt;Integrating bower with Symfony2&lt;/h2&gt;
 
 &lt;p&gt;So how did I set this all up in a Symfony2 app? Well very easily, probably easy enough that it doesn’t really require a blog post, but hey, I need to blog more and had some free time.&lt;/p&gt;
 
@@ -184,8 +179,10 @@
 &lt;p&gt;Sweet, that was easy! Wait though, what is this &lt;code&gt;bower_components&lt;/code&gt; nonsense. I could do without this littering the root of my project. Particularly as the standard in Symfony2 apps is to install front end assets in a &lt;code&gt;Resources/public&lt;/code&gt; location.&lt;/p&gt;
 
 &lt;p&gt;I needed to tell bower to install my assets somewhere else. This was actually really easy too. I needed another file in the root of my project, this time a &lt;code&gt;.bowerrc&lt;/code&gt; file. Here it is:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/jenkoian/7833818.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
-&lt;p&gt;Pretty neat!&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/7833818.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Pretty neat! &lt;/p&gt;
 
 &lt;p&gt;I was a bit torn as to which was the correct directory for this. I ended up going with &lt;code&gt;src/Acme/Bundle/DemoBundle/Resources/public/vendor&lt;/code&gt; in my main website bundle, but you may decide to put it in &lt;code&gt;app/Resources/public/vendor&lt;/code&gt; or somewhere else altogether, i.e. YMMV.&lt;/p&gt;
 
@@ -195,39 +192,41 @@
 
 &lt;p&gt;This works more or less exactly like &lt;code&gt;composer require&lt;/code&gt;. It will install the dependency into your specified directory. The &lt;code&gt;--save&lt;/code&gt; switch will ensure it will be added as a dependency to your &lt;code&gt;bower.json&lt;/code&gt; also (I’m not sure why you &lt;em&gt;wouldn’t&lt;/em&gt; want this?!). You can specify a version, but if omitted the latest version will be assumed.&lt;/p&gt;
 
-&lt;h2 id=&quot;using_your_front_end_dependencies&quot;&gt;Using your front end dependencies&lt;/h2&gt;
+&lt;h2 id=&quot;using-your-front-end-dependencies&quot;&gt;Using your front end dependencies&lt;/h2&gt;
 
 &lt;p&gt;So we have bower all set up, let’s see how we include these things within our templates.&lt;/p&gt;
 
 &lt;p&gt;Well, pretty much just how you would include CSS/JS normally.&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/jenkoian/7833806.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
-&lt;h2 id=&quot;summing_up&quot;&gt;Summing up&lt;/h2&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/7833806.js&quot;&gt; &lt;/script&gt;
+
+&lt;h2 id=&quot;summing-up&quot;&gt;Summing up&lt;/h2&gt;
 
 &lt;p&gt;That’s pretty much all there is too it. One thing that I was wondering about at first was the lack of &lt;code&gt;bower.lock&lt;/code&gt; file or equivalent. Without this it means that you can’t rely on libraries being the same versions on different environments (ok you can set exact version numbers, but still). This is a bit of a problem if you want to use bower in production as part of a deploy script for example. &lt;a href=&quot;https://github.com/bower/bower/issues/505&quot;&gt;There is some discussion on this&lt;/a&gt;, but if this is an issue for you, you essentially have 3 options:&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Use exact version numbers&lt;/li&gt;
-
-&lt;li&gt;Commit front end assets&lt;/li&gt;
-
-&lt;li&gt;Just accept the possibility of a variation in assets across environments&lt;/li&gt;
+  &lt;li&gt;Use exact version numbers&lt;/li&gt;
+  &lt;li&gt;Commit front end assets&lt;/li&gt;
+  &lt;li&gt;Just accept the possibility of a variation in assets across environments&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;For my side project, option 3 is fine and I happily set the assets directory in my .gitignore file, but I do think a .lock file function is a must for bower going forward.&lt;/p&gt;
 
 &lt;p&gt;All in all though, I think bower is very nice. It does exactly for front end development what composer does for PHP development. It makes managing front end dependencies much much nicer. Hopefully gone are the days of downloading zip files and boshing into your web app.&lt;/p&gt;
 
-&lt;h2 id=&quot;going_further&quot;&gt;Going further&lt;/h2&gt;
+&lt;h2 id=&quot;going-further&quot;&gt;Going further&lt;/h2&gt;
 
-&lt;p&gt;There is an interesting looking Symfony2 bundle for bower, called &lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;SpBowerBundle&lt;/a&gt;. I didn’t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle.&lt;/p&gt;
+&lt;p&gt;There is an interesting looking Symfony2 bundle for bower, called &lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;SpBowerBundle&lt;/a&gt;. I didn’t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle. &lt;/p&gt;
 
 &lt;p&gt;However, having taken a quick look, the bundle looks very nice. I can see it being particularly useful if you want to manage front end dependencies across multiple bundles. The assetic integration also looks good.&lt;/p&gt;
 
 &lt;p&gt;Finally, there was a recent discussion started about the state of the front end and Symfony2 which ultimately led to &lt;a href=&quot;https://github.com/kriswallsmith/assetic/issues/529&quot;&gt;this github issue&lt;/a&gt; so definitely worth keeping your eye on that if you’re interested in this.&lt;/p&gt;
 
-&lt;h2 id=&quot;related_links&quot;&gt;Related links:&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://bower.io&quot;&gt;http://bower.io&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&quot;&gt;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&lt;/a&gt; &lt;br /&gt;&lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;https://github.com/Spea/SpBowerBundle&lt;/a&gt;&lt;/p&gt;</content>
+&lt;h2 id=&quot;related-links&quot;&gt;Related links:&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://bower.io&quot;&gt;http://bower.io&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&quot;&gt;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;https://github.com/Spea/SpBowerBundle&lt;/a&gt;   &lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -235,7 +234,8 @@
    <link href="http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api"/>
    <updated>2013-01-29T00:00:00+00:00</updated>
    <id>http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</id>
-   <content type="html">&lt;p&gt;As part of a project I’m currently working on, I needed to create a Rest API as a facade into an old legacy database.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;As part of a project I’m currently working on, I needed to create a Rest API as a facade into an old legacy database.&lt;/p&gt;
 
 &lt;p&gt;Some of the data I was retrieving from this legacy database was quite large and quite complex, one particular endpoint for example would take approx. 10 seconds to load. This is simply far to slow to service the client that would be consuming this data and so it soon became obvious that some caching was required to ensure that data was loaded quickly.&lt;/p&gt;
 
@@ -251,33 +251,44 @@
 
 &lt;p&gt;It should &lt;strong&gt;always&lt;/strong&gt; return a cached version of &lt;em&gt;things&lt;/em&gt;, unless a &lt;em&gt;thing&lt;/em&gt; has been updated since the last time the endpoint was called.&lt;/p&gt;
 
-&lt;p&gt;So what I needed to do was to work out when a &lt;em&gt;thing&lt;/em&gt; was last updated &lt;strong&gt;before&lt;/strong&gt; the main query was run and change the response.&lt;/p&gt;
+&lt;p&gt;So what I needed to do was to work out when a &lt;em&gt;thing&lt;/em&gt; was last updated &lt;strong&gt;before&lt;/strong&gt; the main query was run and change the response. &lt;/p&gt;
 
-&lt;h2 id=&quot;getting_the_last_modified_date&quot;&gt;Getting the last modified date&lt;/h2&gt;
+&lt;h2 id=&quot;getting-the-last-modified-date&quot;&gt;Getting the last modified date&lt;/h2&gt;
 
 &lt;p&gt;This was simple enough, just add something along the lines of the following to the appropriate repository class:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/4667994.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/4667994.js&quot;&gt; &lt;/script&gt;
+
 &lt;p&gt;So now we have a cheap way of getting the the last modified thing, or a last modified date for our endpoint.&lt;/p&gt;
 
-&lt;h2 id=&quot;using_last_modified_date_to_alter_the_response&quot;&gt;Using last modified date to alter the response&lt;/h2&gt;
+&lt;h2 id=&quot;using-last-modified-date-to-alter-the-response&quot;&gt;Using last modified date to alter the response&lt;/h2&gt;
 
-&lt;p&gt;The problem I had now was how to look up this date and alter the response if necessary.&lt;/p&gt;
+&lt;p&gt;The problem I had now was how to look up this date and alter the response if necessary. &lt;/p&gt;
 
 &lt;p&gt;I could have done what they have in &lt;a href=&quot;http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header&quot;&gt;the example on the Symfony docs&lt;/a&gt; however this wasn’t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something much more flexible. I wanted to make a controller cacheable with minimum effort required.&lt;/p&gt;
 
 &lt;p&gt;My solution for this was to use a listener:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/4668158.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/4668158.js&quot;&gt; &lt;/script&gt;
+
 &lt;p&gt;What this does is before the controller is used, checks to see if it implements “Cacheable” and if it does will check the last modified date and then change the action it will call on the controller (and thus the response) accordingly.&lt;/p&gt;
 
 &lt;p&gt;Here is the code for the interface:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/4668261.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/4668261.js&quot;&gt; &lt;/script&gt;
+
 &lt;p&gt;So all that’s left to do then is to add three methods as stipulated in our interface - isNotModified(), getLastModifiedDate() and getLastModifiedResponse().&lt;/p&gt;
 
 &lt;p&gt;It makes sense for isNotModified() and getLastModifiedResponse() to live in an abstract parent class as these are unlikely to change across multiple controllers:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/4668398.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/4668398.js&quot;&gt; &lt;/script&gt;
+
 &lt;p&gt;It is simply then a case of adding a getLastModifiedDate() to the children controllers, for example:&lt;/p&gt;
-&lt;script src=&#39;https://gist.github.com/4668420.js&#39;&gt;&lt;![CDATA[ ]]&gt;&lt;/script&gt;
-&lt;p&gt;You should now have an unobtrusive way of setting a 304 response for endpoints on your API. Of course this relies on the appropriate headers being sent by the client consuming this service. This is easy using something like Guzzle, but more on that in another post.&lt;/p&gt;</content>
+
+&lt;script src=&quot;https://gist.github.com/4668420.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;You should now have an unobtrusive way of setting a 304 response for endpoints on your API. Of course this relies on the appropriate headers being sent by the client consuming this service. This is easy using something like Guzzle, but more on that in another post.&lt;/p&gt;
+</content>
  </entry>
  
  <entry>
@@ -285,21 +296,22 @@
    <link href="http://jenko.me/opinion/2013/01/20/silicon-valleys"/>
    <updated>2013-01-20T00:00:00+00:00</updated>
    <id>http://jenko.me/opinion/2013/01/20/silicon-valleys</id>
-   <content type="html">&lt;p&gt;A little while ago (ok a long while ago, I procrastinate a lot) &lt;a href=&quot;https://twitter.com/drewm/status/265523881446629376&quot;&gt;I noticed someone from the web industry crowd sourcing for somewhere to live&lt;/a&gt;. I looked at the responses they received and noticed a few &lt;a href=&quot;https://twitter.com/emmaboulton/status/265534744857550848&quot;&gt;people recommend South Wales&lt;/a&gt;. As a born and bred South Walian it obviously perked my interest, but it also got me thinking; would South Wales be a good place to live for a web professional? In this post I aim to answer that very question and to also reflect on why I enjoy living and working in South Wales as a web professional.&lt;/p&gt;
+   <content type="html">
+&lt;p&gt;A little while ago (ok a long while ago, I procrastinate a lot) &lt;a href=&quot;https://twitter.com/drewm/status/265523881446629376&quot;&gt;I noticed someone from the web industry crowd sourcing for somewhere to live&lt;/a&gt;. I looked at the responses they received and noticed a few &lt;a href=&quot;https://twitter.com/emmaboulton/status/265534744857550848&quot;&gt;people recommend South Wales&lt;/a&gt;. As a born and bred South Walian it obviously perked my interest, but it also got me thinking; would South Wales be a good place to live for a web professional?  In this post I aim to answer that very question and to also reflect on why I enjoy living and working in South Wales as a web professional.&lt;/p&gt;
 
-&lt;h2 id=&quot;the_people&quot;&gt;The people&lt;/h2&gt;
+&lt;h2 id=&quot;the-people&quot;&gt;The people&lt;/h2&gt;
 
 &lt;p&gt;The welsh are renowned for there passion, and I could talk about how this is true and even drop a mention for the great welsh rugby team, but as this is a techy blog I will try and keep it relevant.&lt;/p&gt;
 
 &lt;p&gt;There are hard working people all over the world. I’m sure you will be able to find people who work hard wherever you are, nothing here sets Wales apart from the rest. However, nothing should set other places above Wales in this regard either. There is a wide net of passionate developers and designers (UX’ers, content writers, marketeers, managers etc. etc.) throughout South Wales. You will not be short of good people when looking for someone to help you work on that idea you have or when arranging a meet up to discuss that new bit of tech you’ve been experimenting with.&lt;/p&gt;
 
-&lt;h2 id=&quot;the_community&quot;&gt;The community&lt;/h2&gt;
+&lt;h2 id=&quot;the-community&quot;&gt;The community&lt;/h2&gt;
 
 &lt;p&gt;Speaking of meet ups there are a number available for whatever you’re interest may be. Speaking as a developer, there is an excellent meet up called &lt;a href=&quot;http://unifieddiff.co.uk/&quot;&gt;Unified.Diff&lt;/a&gt;, which I’ve had the pleasure of speaking at and would recommend whole heartedly for anyone wanting to learn/speak about software development. If you’re a designer there are a number of conferences and smaller meet ups available, the recent emergence of the &lt;a href=&quot;http://port80events.co.uk/&quot;&gt;Port80&lt;/a&gt; and &lt;a href=&quot;http://www.handheldconf.com/&quot;&gt;Handheld&lt;/a&gt; conferences, both of which received excellent feedback, stand out. There is also the Port80 localhost events and the &lt;a href=&quot;http://www.meetup.com/Cardiff-UX-Bookclub/&quot;&gt;UX book club&lt;/a&gt; if you’re looking for something on a smaller scale.&lt;/p&gt;
 
 &lt;p&gt;If you’re a freelancer you may be looking for co-working space or people in a similar situation as you to have some community when seemingly working alone. The excellent &lt;a href=&quot;http://indycube.com/&quot;&gt;indyCube&lt;/a&gt; is just what you need. &lt;a href=&quot;http://indycube.com/&quot;&gt;IndyCube&lt;/a&gt; is a set of premises set up for freelancers to pay a small fee to use as their office, you get internet access, a desk, chair, the all important tea and coffee facilities and more importantly, people just like you to share an office with and who knows, maybe make new friends/acquaintances/colleagues.&lt;/p&gt;
 
-&lt;h2 id=&quot;the_company&quot;&gt;The company&lt;/h2&gt;
+&lt;h2 id=&quot;the-company&quot;&gt;The company&lt;/h2&gt;
 
 &lt;p&gt;You may have heard about &lt;a href=&quot;http://www.bbc.co.uk/news/business-13969338&quot;&gt;Specific Media buying Myspace with a little help from a certain Mr. Timberlake&lt;/a&gt;. As part of this take over, it was decided that much of &lt;a href=&quot;https://new.myspace.com/&quot;&gt;the new Myspace&lt;/a&gt; development was to be undertaken in the UK. In London you may think, isn’t there some kind of silicon roundabout or something? Well no, a large chunk of the new myspace is being developed right here in South Wales. If it’s good enough for Timberlake, it may just be good enough for you too?&lt;/p&gt;
 
@@ -307,7 +319,7 @@
 
 &lt;p&gt;From &lt;a href=&quot;http://markboultondesign.com/&quot;&gt;influential designers&lt;/a&gt;, to &lt;a href=&quot;http://boxuk.com&quot;&gt;innovative developers&lt;/a&gt; it really is no coincidence that &lt;a href=&quot;http://www.cs.cf.ac.uk/movies/&quot;&gt;one of the most famous websites started right here in the capital city&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;the_infrastructure&quot;&gt;The infrastructure&lt;/h2&gt;
+&lt;h2 id=&quot;the-infrastructure&quot;&gt;The infrastructure&lt;/h2&gt;
 
 &lt;p&gt;This is a crucial area as to why South Wales and in particular Cardiff is a great place to start a new chapter in your digital career. As well as being among one of the &lt;a href=&quot;http://yourcardiff.walesonline.co.uk/2012/07/03/cardiff-to-get-fibre-broadband-on-demandif-there-is-any/&quot;&gt;first cities in the UK to get super fast, fibre optic broadband&lt;/a&gt;, Cardiff was also listed among the &lt;a href=&quot;http://www.walesonline.co.uk/news/wales-news/2012/10/30/superfast-4g-mobile-phone-technology-to-be-launched-in-cardiff-today-91466-32128590/&quot;&gt;first cities in the UK to have 4G internet access&lt;/a&gt;.&lt;/p&gt;
 
@@ -317,9 +329,10 @@
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;I’m sure working in South Wales is not perfect, it is probably still some way off San Francisco or possibly even &lt;a href=&quot;http://www.siliconroundabout.org.uk/about/&quot;&gt;Shoreditch&lt;/a&gt;, however I think it should be given a lot of consideration if you work in the web and are looking for somewhere to setup home in the UK.&lt;/p&gt;
+&lt;p&gt;I’m sure working in South Wales is not perfect, it is probably still some way off San Francisco or possibly even &lt;a href=&quot;http://www.siliconroundabout.org.uk/about/&quot;&gt;Shoreditch&lt;/a&gt;, however I think it should be given a lot of consideration if you work in the web and are looking for somewhere to setup home in the UK. &lt;/p&gt;
 
-&lt;p&gt;If you don’t mind having to see everything in Welsh as well as English, like being surrounded by passionate people and want a digital infrastructure that’s first class, then come on over, we’ll get the kettle on.&lt;/p&gt;</content>
+&lt;p&gt;If you don’t mind having to see everything in Welsh as well as English, like being surrounded by passionate people and want a digital infrastructure that’s first class, then come on over, we’ll get the kettle on.&lt;/p&gt;
+</content>
  </entry>
  
  
