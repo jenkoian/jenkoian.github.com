@@ -79,7 +79,7 @@ You get the idea. The level of detail here is up to the product owner. Some may 
 
 I don't have too much to say on planning. I think if you have good user stories planning is a lot easier. Planning should be short and simple if you're doing it right. If your stories aren't good, then planning can end up taking a long time and be fairly painful.
 
-Estimation can probably be seen as a part of planning. For my money the best way of estimating is affinity estimation. Whether you do this against the backlog at the beginning of the project or in planning at the beginning of each sprint, I don't think matters too much. I think it makes more sense to do it before each sprint as you will gain more insight of the product and your estimations are likely to be more realistic. However, I can understand that sometimes you need to do it before the project to get an idea of scope.
+Estimation can probably be seen as a part of planning. For my money the best way of estimating is [affinity estimation](http://www.boxuk.com/blog/affinity-estimation-what-is-it/). Whether you do this against the backlog at the beginning of the project or in planning at the beginning of each sprint, I don't think matters too much. I think it makes more sense to do it before each sprint as you will gain more insight of the product and your estimations are likely to be more realistic. However, I can understand that sometimes you need to do it before the project to get an idea of scope.
 
 Planning is all about green fields, so try and have some fun with it if you can. Fun sprint names, a sense of competitiveness in increasing velocity are all ok in my eyes.
 
@@ -89,7 +89,7 @@ For me, as a developer, the demo is *the* most important part of the entire proc
 
 I think each sprint should be focussed on the demo. It is where you are shipping the features you've been working on. Take pride in this time slot you have, show off a little, be enthusiastic, encourage questions, engage with the audience. I've been into demo's embarrassed at how little there was to show, or worried that something is unfinished, worried it will undoubtedly break in front of an audience. I'm now firmly of the belief that if you find yourself in that situation, you're doing things wrong.
 
-If you can't demonstrate something which you feel is good, working software then you're sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn't deliver. Perhaps you're sprint period was too little, 2 weeks seem to be the norm but if you're features are too big, consider increasing this period? More likely, you're user stories were poor, which comes back to why User Stories are king.
+If you can't demonstrate something which you feel is good, working software then your sprint has gone wrong. Perhaps you committed yourself to too much work which you couldn't deliver. Perhaps your sprint period was too little, 2 weeks seem to be the norm but if you're features are too big, consider increasing this period? More likely, your user stories were poor, which comes back to why User Stories are king.
 
 ## Retrospectives are vital
 
@@ -99,7 +99,7 @@ I think Retrospectives are vital in the health of an agile project. They highlig
 
 They should be fun and action focussed.
 
-I would highly recommend taking a look at [plans-for-retrospectives.com](http://www.plans-for-retrospectives.com) for some ideas of fun 'games' you can play in your retrospective. We've bought some of the hard copies for the office and they've been brilliant. The best thing I like about them is that they're fun but very action focussed. So you don't just feel like you're wasting time gassing about the project, you're actually put down actions as to how to make things better.
+I would highly recommend taking a look at [plans-for-retrospectives.com](http://www.plans-for-retrospectives.com) for some ideas of fun 'games' you can play in your retrospective. We've bought some of the hard copies for the office and they've been brilliant. The best thing I like about them is that they're fun but very action focussed. So you don't just feel like you're wasting time gassing about the project, you're actually putting down actions as to how to make things better.
 
 ## Jira is actually pretty great
 
@@ -119,6 +119,6 @@ I have a habit of waffling, so I hope this all makes sense, I can probably sum u
 * Use Jira (if you can)
 
 
-Of course, your experiences may be different, and I would love to hear about them.
+Of course, your experiences may be different, and I would love to hear about them!
 
 {% include JB/setup %}
