@@ -8,6 +8,7 @@ http://jenko.me/sitemap.txt
 http://jenko.me/tags.html
 http://jenko.me//rss.xml
 
+http://jenko.me/ddd/2015/01/23/building-a-house-with-ddd
 http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile
 http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app
 http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api

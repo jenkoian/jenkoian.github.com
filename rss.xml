@@ -8,7 +8,16 @@
     <title>Jenko</title>
     <link>http://jenko.me</link>
     <description>Words &amp; Code</description>
-    <pubDate>Fri, 08 Aug 2014 00:00:00 +0100</pubDate>
+    <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
+    <item>
+      <title>Building a house with DDD</title>
+      <link>http://jenko.me/ddd/2015/01/23/building-a-house-with-ddd</link>
+      <description>&lt;p&gt;For the past, I dunno, year or so, I’ve been reading a lot about &lt;a href=&quot;http://en.wikipedia.org/wiki/Domain-driven_design&quot;&gt;Domain Driven Design (DDD)&lt;/a&gt; and even got to try it out on some projects. There are a number of resources which helped me out with this journey, but there are two stand out resources which really got me into it.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
+      <dc:date>2015-01-23T00:00:00+00:00</dc:date>
+    </item>
     <item>
       <title>Some thoughts on Agile</title>
       <link>http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</link>
@@ -45,6 +54,6 @@
       <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
       <dc:date>2013-01-20T00:00:00+00:00</dc:date>
     </item>
-    <dc:date>2014-08-08T00:00:00+01:00</dc:date>
+    <dc:date>2015-01-23T00:00:00+00:00</dc:date>
   </channel>
 </rss>
