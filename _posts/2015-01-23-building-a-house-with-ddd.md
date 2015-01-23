@@ -16,7 +16,7 @@ Everything seemed to be clicking into place and so I wanted to try it all out. S
 
 ## So here is how I built a house using DDD
 
-*Note: I thought it’d be cool to do this commit by commit, give s a nice view of how each change was made etc. Unfortunately I only thought of this half way through writing it, so I am basically now the king of rebasing. Anyway, after I did this I came across [a similar project created by Everzet which takes a similar approach](https://github.com/MarcelloDuarte/pick-my-talks), it’s probably a better example of Modelling by Example (it was his thing after all!), although it doesn’t cover Command Handling etc. it’s __definitely__ worth checking out.*
+*Note: I thought it’d be cool to do this commit by commit, gives a nice view of how each change was made etc. Unfortunately I only thought of this half way through writing it, so I am basically now the king of rebasing. Anyway, after I did this I came across [a similar project created by Everzet which takes a similar approach](https://github.com/MarcelloDuarte/pick-my-talks), it’s probably a better example of Modelling by Example (it was his thing after all!), although it doesn’t cover Command Handling etc. it’s __definitely__ worth checking out.*
 
 [Version0](https://github.com/jenkoian/ddd-house/commit/ba1160626505e1f3a5df963bfa974178e6fc391d)
 
@@ -45,7 +45,7 @@ Once this is done, I run `bin/behat —append-snippets` to fill the context file
 
 Here I start designing my model. The use of [Named Constructors](http://verraes.net/2014/06/named-constructors-in-php/) really helps here. It allows me to think purely about the domain at the interface level. This, for me, is where the true power of Modelling by Example is. It's BDD and indeed TDD in its truest form.
 
-The fundamental thing to look at, is the language of the model and how it maps so directly the conversation with the client `$this->house->enterRoom($room)` etc. It's DDD at play, and is a big step forward to the `$this->house->setRoom($room)` I may have done in the past.
+The fundamental thing to look at, is the language of the model and how it maps so directly the conversation with the client `$this->house->enterRoom($room)` etc. It's DDD at play, and is a big step forward to the `$this->house->setRoom($room)` I may have done in the past.
 
 It also helps point out gaps in the initial story, considerations that haven't come up previously and thus making your model more resilient.
 
@@ -193,7 +193,7 @@ to Handler.
 
 Adding a command bus and separate out command handling from domain.
 
-If you’re unsure what a command is or does, [I’d recommend Shawn McCools excellent post on them](http://shawnmc.cool/command-bus).
+If you’re unsure what a command bus is or does, [I’d recommend Shawn McCools excellent post on them](http://shawnmc.cool/command-bus).
 
 After initially considering [CommanderBundle](https://github.com/tabbi89/CommanderBundle) I eventually opted for [SimpleBus](https://github.com/SimpleBus) because I liked the simplicity and have a lot of respect for it's maintainer Mathias. I did have [some misgivings over the use of a type hint for commands](https://github.com/SimpleBus/CommandBus/pull/2), but generally it suited what I needed to do well, it also forced me to create an explicit CommandHandling layer, which I think works quite well. It's been completely changed in version 2 now anyway, and is [more of a generic 'MessageBus' now](https://github.com/SimpleBus/MessageBus).
 
