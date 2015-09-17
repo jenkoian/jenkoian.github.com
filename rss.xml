@@ -8,7 +8,16 @@
     <title>Jenko</title>
     <link>http://jenko.me</link>
     <description>Words &amp; Code</description>
-    <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
+    <pubDate>Thu, 17 Sep 2015 00:00:00 +0100</pubDate>
+    <item>
+      <title>Memoirs of a UDiffer</title>
+      <link>http://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer</link>
+      <description>&lt;p&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Thu, 17 Sep 2015 00:00:00 +0100</pubDate>
+      <dc:date>2015-09-17T00:00:00+01:00</dc:date>
+    </item>
     <item>
       <title>Building a house with DDD</title>
       <link>http://jenko.me/ddd/2015/01/23/building-a-house-with-ddd</link>
@@ -54,6 +63,6 @@
       <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
       <dc:date>2013-01-20T00:00:00+00:00</dc:date>
     </item>
-    <dc:date>2015-01-23T00:00:00+00:00</dc:date>
+    <dc:date>2015-09-17T00:00:00+01:00</dc:date>
   </channel>
 </rss>

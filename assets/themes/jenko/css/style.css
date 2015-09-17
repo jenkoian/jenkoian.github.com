@@ -72,6 +72,11 @@ p {
 	margin-bottom: 2rem;
 }
 
+iframe {
+	margin-bottom: 20px;
+	margin-bottom: 2rem;
+}
+
 h4 {
 	font-style: italic;
 	font-weight: 400;
@@ -119,9 +124,9 @@ img {
 }
 
 @media only screen and (max-width: 768px) {
-	.container {
-		width: 80%;
-	}
+		.container {
+			width: 80%;
+		}
 }
 
 header {
