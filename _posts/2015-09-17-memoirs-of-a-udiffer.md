@@ -45,7 +45,7 @@ There were a few flash in the pan venues such as the Promised Land, which was de
 
 We then settled on [Porters](http://www.porterscardiff.com/) for a time, which was pretty good. They had a small cinema-esque room which worked well, but the the venue wasn’t free and was a small walk outside of the city centre. There were some brilliant talks there though, [one that sticks in the memory](https://vimeo.com/83487514) is [Dayle Rees’](http://twitter.com/daylerees) introduction to [Laravel](http://laravel.com) with a live (not actually live) link up with it’s creator [Taylor Otwell](http://twitter.com/taylorotwell).
 
-![Cinema Room in Porters](http://photos2.meetupstatic.com/photos/event/5/0/b/6/600_306200662.jpeg)
+![Cinema Room in Porters]({{ site.url }}/assets/img/600_306200662.jpeg)
 
 ## Settling down
 
@@ -53,7 +53,7 @@ The tail end of 2013 saw the opening of a great new collaborative open space for
 
 UDiff & Founders Hub felt like a match made in heaven. We were all geeks talking geeky stuff together in a place decked out for geeks (there were floppy disks blue tacked to the walls for Pete’s sake!). Attendances here were good, [Craig](http://twitter.com/craiginwales) and [Amie](http://twitter.com/amienlockwood), the owners of Founders Hub, often kindly ran a small bar and the space was great for chatting to people and getting to know one another.
 
-![UDiff @ Founders Hub](http://photos4.meetupstatic.com/photos/event/a/3/e/600_377102622.jpeg)
+![UDiff @ Founders Hub]({{ site.url }}/assets/img/600_377102622.jpeg)
 
 There were some great talks here on a wide range of topics from [3D printing](https://vimeo.com/106176421) to [SEO](https://vimeo.com/99744479) to the incredibly successful ‘AWS night’. If I had to pick a favourite talk from this era it was probably [James Cryer’ talk on ‘Janky’](https://vimeo.com/90738845) as it opened my eyes up to stuff I didn’t really know about yet.
 
@@ -103,4 +103,4 @@ However, I think we’re going out on a high and you never know, there could be 
 
 "Let’s just do an indefinite hiatus like all the best bands do."
 
-![Craig & Rod](http://photos2.meetupstatic.com/photos/event/2/d/f/c/600_276671772.jpeg)
+![Craig & Rod]({{ site.url }}/assets/img/600_276671772.jpeg)

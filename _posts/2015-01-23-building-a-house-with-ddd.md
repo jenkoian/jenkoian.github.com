@@ -122,11 +122,11 @@ Before I move on to the more tactical parts of DDD, let’s stop and think about
 
 We essentially have a *Raspberry Pi without any ports*.
 
-![Raspberry Pi without any ports](https://dl.dropboxusercontent.com/u/2200349/dddhouse-blog-post/pi_bare.jpg)
+![Raspberry Pi without any ports]({{ site.url }}/assets/img/pi_bare.jpg)
 
 If you think about [the clean architecture](http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html) diagram below, we have our middle layer.
 
-![Clean architecture](http://blog.8thlight.com/uncle-bob/images/2012-08-13-the-clean-architecture/CleanArchitecture.jpg)
+![Clean architecture]({{ site.url }}/assets/img/CleanArchitecture.jpg)
 
 It’s time now to work out from the middle into the other layers. So let’s add some ports onto our Raspberry Pi so we can connect it to something to make it useful.
 
@@ -168,7 +168,7 @@ As I am using Symfony it made sense to me to use the Symfony event dispatcher. H
 
 Therefore, I needed to create an adapter. Going back to the Raspberry Pi analogy made in a previous version. I needed a Serial to USB adapter, or something like that. I’m starting to add some ports on to my Pi.
 
-![Raspberry Pi with ports](https://dl.dropboxusercontent.com/u/2200349/dddhouse-blog-post/pi_ports.jpg)
+![Raspberry Pi with ports]({{ site.url }}/assets/img/pi_ports.jpg)
 
 I also wanted to use my own Dispatcher interface, because what if I wanted to stop using the Symfony dispatcher and replace it with something else? I want to be able to continue using the same interface but just add a new adapter and change my DI. I want to be decoupled.
 
@@ -187,7 +187,7 @@ To show off the benefits of decoupling domain from the framework I wanted to sho
 Symfony makes it trivial to add CLI programs, and you can see from this commit how exactly it works. Essentially it's the same deal as controllers. Request in -> Create command -> Pass off
 to Handler.
 
-![CLI version of the house](https://dl.dropboxusercontent.com/u/2200349/dddhouse-blog-post/dddhouse-cli.gif)
+![CLI version of the house]({{ site.url }}/assets/img/dddhouse-cli.gif)
 
 [Version25](https://github.com/jenkoian/ddd-house/commit/a9ca03a9d882cf03d1e8ca48f17f9780a62ec1f5)
 
@@ -223,7 +223,7 @@ Ok, it’s not going to win any design awards, but with a bit of imagination you
 
 We’ve gone from components to a Raspberry Pi logic board, to a Raspberry Pi with Ports, to a Raspberry Pi with a case - the next step would be to a Raspberry Pi with a fancy case (the JS whizzy version I alluded to above).
 
-![Raspberry Pi Cycle](https://dl.dropboxusercontent.com/u/2200349/dddhouse-blog-post/pi_cycle.png)
+![Raspberry Pi Cycle]({{ site.url }}/assets/img/pi_cycle.png)
 
 ## Where do we go from here?
 
