@@ -116,6 +116,10 @@ img {
 	width: 100%;
 }
 
+em.prologue {
+	color: #a1a1a1;
+}
+
 /* Layout ------------------------------ */
 
 .container {
