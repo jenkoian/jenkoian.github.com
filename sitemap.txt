@@ -8,6 +8,7 @@ http://jenko.me/sitemap.txt
 http://jenko.me/tags.html
 http://jenko.me//rss.xml
 
+http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel
 http://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer
 http://jenko.me/ddd/2015/01/23/building-a-house-with-ddd
 http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile

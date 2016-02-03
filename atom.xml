@@ -4,13 +4,89 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2015-10-06T18:08:17+01:00</updated>
+ <updated>2016-02-03T12:59:37+00:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
    <email>ian@jenkins-web.co.uk</email>
  </author>
 
+ 
+ <entry>
+   <title>An escape route from legacy with StackPHP and the Symfony MicroKernel</title>
+   <link href="http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel"/>
+   <updated>2016-02-03T00:00:00+00:00</updated>
+   <id>http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</id>
+   <content type="html">
+&lt;p&gt;&lt;em class=&quot;prologue&quot;&gt;I came to, slightly dazed, I was cold and confused, where am I? I tried to take in my surroundings, reams of commented out code to my left, singletons to my right. I don’t know how I got here, but I knew at that point. I was. I was in legacy hell.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Although developers generally want to always be working with the latest and greatest, the new shiny if you will, it can’t always be fresh daisies and green fields, every now and again, in fact, probably more often than not, developers have to deal with legacy code, i.e. code written in the past, either by an (&lt;em&gt;obviously inferior&lt;/em&gt;) dev, or even worse themselves. &lt;/p&gt;
+
+&lt;p&gt;Yep, legacy is some what of an occupational hazard. So when I had recently taken ownership of a particularly iniquitous legacy codebase, I wanted to steer clear of it as much as I could, poke it with a stick, give it snide looks, that kind of thing. So this is how I managed to work with modern tech whilst fighting this thankless battle.&lt;/p&gt;
+
+&lt;h2 id=&quot;using-stackphp-to-separate-the-old-from-the-new&quot;&gt;Using StackPHP to separate the old from the new&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://stackphp.com/&quot;&gt;StackPHP&lt;/a&gt; is a convention for composing middlewares in PHP. It works with Symfony’s HttpKernelInterface and basically allows you to apply decorators to your application. This idea has become so popular in the PHP community that a &lt;a href=&quot;http://www.php-fig.org/psr/psr-7/&quot;&gt;PSR standard has been adopted&lt;/a&gt; with one of the aims to make it easier to build standardised middlewares. &lt;/p&gt;
+
+&lt;p&gt;We can make use of this approach to easily split requests between a legacy codebase and something more modern, like a Symfony app. Carlos Buenosvinos wrote a brilliant blog post about this which is required reading if this post is proving of any interest: &lt;a href=&quot;http://carlosbuenosvinos.com/migrating-progressively-to-symfony-without-pain-with-stackphp/&quot;&gt;http://carlosbuenosvinos.com/migrating-progressively-to-symfony-without-pain-with-stackphp/&lt;/a&gt;&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/641dcca3e47fc321825e.js&quot;&gt;&lt;/script&gt;
+
+&lt;h2 id=&quot;where-the-microkernel-fits-in&quot;&gt;Where the MicroKernel fits in&lt;/h2&gt;
+
+&lt;p&gt;The legacy codebase I was dealing with was already large and convoluted with many directories and sub-directories. Adding in an app, a web, a src and whatever other directories seemed overkill and counter intuitive. I know that’s a minor detail and I could have just put them in a separate directory under the root and all probably would have been fine, but even so I wanted to bring in Symfony with the lowest foot print I could. &lt;/p&gt;
+
+&lt;p&gt;Despite always being able to be used as a micro framework, Symfony formally introduced &lt;a href=&quot;http://symfony.com/blog/new-in-symfony-2-8-symfony-as-a-microframework&quot;&gt;‘Symfony as a Microframework’&lt;/a&gt; with a  new MicroKernel trait which allows you create an entire Symfony application from a single class. This fitted my use case perfectly, as it meant I could have a fully functional Symfony with minimal number of files. What was also really nice was that it could grow along with the development of the app. As I start to do more and more work in the Symfony part of the application the more of the framework I can use and the more files and directories I can create.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/6e00d8a8569ce4afa99f.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;So now I have this lightweight, small footprint Symfony app I needed it to fit in with the legacy app. To the user it should be transparent. On the whole this wasn’t too difficult, the main structure of the page was just HTML which I could just copy into some simple twig templates. The layout did have a few complicated bits though. Firstly, a global language switcher.&lt;/p&gt;
+
+&lt;h2 id=&quot;changing-the-locale-across-the-entire-app&quot;&gt;Changing the locale across the entire app&lt;/h2&gt;
+
+&lt;p&gt;As the existing legacy app already had a mechanism for setting and changing locale, we needed to hook into that in order to set the locale for our Symfony app. This was fairly trivial via a listener. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/f79c6984eba54271d7b4.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;It’s worth noting here the importance of creating interface and adapters for everything we do with regards the legacy app (and in general really). By doing so we can quite easily swap out the implementation to something newer when we no longer need to support the legacy app. It’s also a great way of ensuring we can add tests without relying on legacy classes. It’s a good refactoring technique too, in his &lt;a href=&quot;http://www.amazon.co.uk/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052&quot;&gt;seminal book on legacy&lt;/a&gt;, Michael Feathers refers to this as the ‘Extract Interface’ technique.&lt;/p&gt;
+
+&lt;h2 id=&quot;authenticating-the-user-across-the-entire-app&quot;&gt;Authenticating the user across the entire app&lt;/h2&gt;
+
+&lt;p&gt;The last thing I needed to do was handle authentication. It needed to work seamlessly across both the legacy side of the application and the Symfony application.&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;http://symfony.com/doc/current/book/security.html&quot;&gt;security component&lt;/a&gt; within Symfony is super flexible but can be a complicated beast. Fortunately, some work was recently undertaken to simplify it a little and a new component called &lt;a href=&quot;http://symfony.com/blog/new-in-symfony-2-8-guard-authentication-component&quot;&gt;‘Guard’&lt;/a&gt; was created to help.&lt;/p&gt;
+
+&lt;p&gt;There is an excellent cookbook entry on &lt;a href=&quot;http://symfony.com/doc/current/cookbook/security/guard-authentication.html&quot;&gt;‘How to Create a Custom Authentication System with Guard’&lt;/a&gt; which gave me everything I needed. I was basically treating the legacy authentication system like a third party API in this case. It boils down to creating the following: A User class, a UserProvider class, and an Authenticator class. All is covered in excellent detail in the cookbook entry and the &lt;a href=&quot;http://api.symfony.com/3.0/Symfony/Component/Security/Guard/GuardAuthenticatorInterface.html&quot;&gt;docblock of the GuardAuthenticatorInterface&lt;/a&gt;. Here’s mine.&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/731628f51b1ea89002e9.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/e66744a3af7125e5670f.js&quot;&gt;&lt;/script&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/9dacbc175bf6fd163096.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Most of it is self explanatory and explained well in the documentation. One thing to note for my use case is the following. &lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/33e87298a93f5eb17f02.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;This is a simple method which maps roles from the existing authentication system to the new User class used by Symfony. This will ensure the user in Symfony land has the appropriate roles set and means you can make use of Symfony features such as &lt;a href=&quot;http://symfony.com/doc/current/cookbook/security/voters.html&quot;&gt;Voters&lt;/a&gt; and what not.  It means you can do things like &lt;code&gt;if is_granted(‘ROLE_MODERATOR’)&lt;/code&gt; and also use the access control stuff which you can see in the security config in AppKernel.&lt;/p&gt;
+
+&lt;p&gt;So now we have all the elements for the Guard authentication it’s time to hook it all together with some basic config. Here is mine:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/e8a6d4f908c314e8c3f7.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;As you can see we have access to all the powerful features of the Symfony security component with only a few small classes and crucially, without making any changes to the existing codebase or functionality.&lt;/p&gt;
+
+&lt;h2 id=&quot;summing-up&quot;&gt;Summing up&lt;/h2&gt;
+
+&lt;p&gt;When faced with the original daunting task of taking on, maintaining and adding new features to this spaghetti bolognese of legacy code I was worried. Having used some OOP techniques and with help from a few nice PHP and Symfony libraries, I feel not only less worried about the future of this project but also enthused and, dare I say, excited to work on it.&lt;/p&gt;
+
+&lt;p&gt;Finally, I saw a tweet just before starting this piece of work which summed up perfectly what I was hoping to achieve and I think sums up this blog post perfectly as well.&lt;/p&gt;
+
+&lt;blockquote class=&quot;twitter-tweet&quot; data-lang=&quot;en&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;How do you make greenfield project with legacy? 1. pretend you&amp;#39;re greenfield 2. write an adapter.&lt;/p&gt;&amp;mdash; Alberto Brandolini (@ziobrando) &lt;a href=&quot;https://twitter.com/ziobrando/status/675305573127208960&quot;&gt;December 11, 2015&lt;/a&gt;&lt;/blockquote&gt;
+&lt;script async=&quot;&quot; src=&quot;//platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Memoirs of a UDiffer</title>
