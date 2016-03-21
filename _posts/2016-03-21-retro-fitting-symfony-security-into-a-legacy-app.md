@@ -37,7 +37,7 @@ However, in my scenario it wasn’t quite this easy. I needed to give the client
 
 In other words, I needed the permissions to be mapped to the routes rather than the role. 
 
-To achieve this I needed to use a custom RequestMatcher as described in this [excellent blog post from Mathias Nolback](http://php-and-symfony.matthiasnoback.nl/2012/07/symfony2-security-using-advanced-request-matchers-to-activate-firewalls/). For this to work I simply set up a static map of permissions to roles, I used a php array, but could just as easily be yaml, xml, whatever.
+To achieve this I needed to use a custom RequestMatcher as described in this [excellent blog post from Matthias Noback](http://php-and-symfony.matthiasnoback.nl/2012/07/symfony2-security-using-advanced-request-matchers-to-activate-firewalls/). For this to work I simply set up a static map of permissions to roles, I used a php array, but could just as easily be yaml, xml, whatever.
 
 <script src="https://gist.github.com/jenkoian/5fda9fad505e12186bb5.js"></script>
 
@@ -45,7 +45,7 @@ My `RequestMatcher` then looked something like:
 
 <script src="https://gist.github.com/jenkoian/e5c4d717b2cdb1d8bd97.js"></script>
 
-Then as Nolback points out, this all gets configured via a compiler pass:
+Then as Noback points out, this all gets configured via a compiler pass:
 
 <script src="https://gist.github.com/jenkoian/bf5ff2c80179b0583285.js"></script>
 
