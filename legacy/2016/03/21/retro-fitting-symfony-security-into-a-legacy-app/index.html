@@ -3,8 +3,8 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Jenko: Words & Code</title>
-    
+    <title>Retro fitting Symfony Security into a Legacy App: Words & Code</title>
+    <meta name="description" content="">
     <meta name="author" content="Ian jenkins">
 
     <!--[if lt IE 9]>
@@ -33,15 +33,13 @@
       <div class="content">
         <article>
           
-
-
-
 <header class="clearfix">
-    <span class="date">21 March 2016</span>
-    <h1><a href="/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app">Retro fitting Symfony Security into a Legacy App</a></h1>
-    <span class="category"><a href="/categories.html#legacy-ref">legacy</a></span>
-    <span class="time">5 minutes and 15 seconds</span>
-  </header>
+  <span class="date">21 March 2016</span>
+  <h1><a href="">Retro fitting Symfony Security into a Legacy App</a></h1>
+  <span class="category"><a href="/categories.html#-ref">legacy</a></span>
+  <span class="time">5 minutes and 15 seconds</span>
+</header>
+
 
 <p>In <a href="http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel/">my last blog post</a> I talked about how I had escaped legacy by leveraging the Symfony MicroKernel as well as the new Guard authentication component. Once this was all in place, my next task was to migrate the legacy, home-baked, role based access control to Symfony, so I could make extended use of <a href="http://symfony.com/doc/current/book/security.html">Symfony’s fantastic Security component</a>.</p>
 
@@ -169,9 +167,29 @@
 
 <p>Another neat thing you could do is use <a href="https://github.com/daylerees/scientist">Scientist</a> to perform ‘experiments’ of this new security code against the existing ‘controlled’ code. This would allow you to ‘trial’ this new security code in production before rolling it out for real. It has things such as journals and reports to allow you to see how your new approach is working out, whether it’s performing in unexpected ways for instance or if it’s performing slower than it’s counterpart. </p>
 
-<p><a href="/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app#disqus_thread">Add comment</a></p>
 
-<p><a href="/archive.html">all posts</a></p>
+<hr />
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_developer = 1;
+    var disqus_shortname = 'jenko'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
 
 
         </article>
