@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2016-03-21T11:15:03+00:00</updated>
+ <updated>2016-03-21T14:44:16+00:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
@@ -78,7 +78,7 @@
 
 &lt;p&gt;In other words, I needed the permissions to be mapped to the routes rather than the role. &lt;/p&gt;
 
-&lt;p&gt;To achieve this I needed to use a custom RequestMatcher as described in this &lt;a href=&quot;http://php-and-symfony.matthiasnoback.nl/2012/07/symfony2-security-using-advanced-request-matchers-to-activate-firewalls/&quot;&gt;excellent blog post from Mathias Nolback&lt;/a&gt;. For this to work I simply set up a static map of permissions to roles, I used a php array, but could just as easily be yaml, xml, whatever.&lt;/p&gt;
+&lt;p&gt;To achieve this I needed to use a custom RequestMatcher as described in this &lt;a href=&quot;http://php-and-symfony.matthiasnoback.nl/2012/07/symfony2-security-using-advanced-request-matchers-to-activate-firewalls/&quot;&gt;excellent blog post from Matthias Noback&lt;/a&gt;. For this to work I simply set up a static map of permissions to roles, I used a php array, but could just as easily be yaml, xml, whatever.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/5fda9fad505e12186bb5.js&quot;&gt;&lt;/script&gt;
 
@@ -86,7 +86,7 @@
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/e5c4d717b2cdb1d8bd97.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Then as Nolback points out, this all gets configured via a compiler pass:&lt;/p&gt;
+&lt;p&gt;Then as Noback points out, this all gets configured via a compiler pass:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/bf5ff2c80179b0583285.js&quot;&gt;&lt;/script&gt;
 
