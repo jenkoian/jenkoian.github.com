@@ -78,7 +78,7 @@
   </tbody>
 </table>
 
-<p>Now I knew which roles and permissions I needed to set up, there was going to be two ways in which I needed to protect the app. </p>
+<p>Now I knew which roles and permissions I needed to set up, there was going to be two ways in which I needed to protect the app.</p>
 
 <ul>
   <li>
@@ -99,7 +99,7 @@
 
 <script src="https://gist.github.com/jenkoian/098695ae18feb8a5c67d.js"></script>
 
-<p>In other words, I needed the permissions to be mapped to the routes rather than the role. </p>
+<p>In other words, I needed the permissions to be mapped to the routes rather than the role.</p>
 
 <p>To achieve this I needed to use a custom RequestMatcher as described in this <a href="http://php-and-symfony.matthiasnoback.nl/2012/07/symfony2-security-using-advanced-request-matchers-to-activate-firewalls/">excellent blog post from Matthias Noback</a>. For this to work I simply set up a static map of permissions to roles, I used a php array, but could just as easily be yaml, xml, whatever.</p>
 
@@ -121,7 +121,7 @@
 
 <script src="https://gist.github.com/jenkoian/aa182c799aec96f30bed.js"></script>
 
-<p>This allows the client to easily see which permissions apply to which role(s) and, if you throw in a basic page with an <a href="https://ace.c9.io/">ace-editor</a> on, make changes to. </p>
+<p>This allows the client to easily see which permissions apply to which role(s) and, if you throw in a basic page with an <a href="https://ace.c9.io/">ace-editor</a> on, make changes to.</p>
 
 <p>So all done on route protection right? Well, pretty much. As I have my Symfony application sat alongside the legacy application using <a href="http://stackphp.com/">Stack</a>, it basically attempts to hit the route in the Symfony app, if it encounters a <code>NotFoundException</code> falls back to the legacy application. The problem with this is that Symfony will forgo the security stuff completely if the route simply doesn’t exist in the Symfony app. The solution for this was relatively straight forward. Define a ‘catch all’ route in the Symfony app so that each request will get through the Symfony routing and into the Security system. It will of course throw a <code>NotFoundException</code> eventually when it realises there is no controller set up for the route.</p>
 
@@ -145,7 +145,7 @@
 
 <p>This basically checks the users’ role, checks it against the configuration file and votes accordingly.</p>
 
-<p>So now we have working template protection in the Symfony app, but how about the legacy app? Well, unfortunately it isn’t using Twig so we can’t use the nice Twig extension, nor does it know anything about the Symfony application at all, so we can’t easily grab things out of the container or anything. </p>
+<p>So now we have working template protection in the Symfony app, but how about the legacy app? Well, unfortunately it isn’t using Twig so we can’t use the nice Twig extension, nor does it know anything about the Symfony application at all, so we can’t easily grab things out of the container or anything.</p>
 
 <p>My solution was to create a static facade into the Symfony security bit that does the <code>is_granted</code> check. For this to work, I ended up having to use the (sorry mum) global keyword to expose the kernel to the legacy app.</p>
 
@@ -161,11 +161,11 @@
 
 <h3 id="testing">Testing</h3>
 
-<p>One last thing I wanted to touch on is testing. </p>
+<p>One last thing I wanted to touch on is testing.</p>
 
-<p><a href="http://symfony.com/doc/current/cookbook/security/voters.html">Symfony voters</a> are quite easy to test, I’d recommend looking into <a href="https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleVoterTest.php">how some of the core voters are tested</a> if interested in this. Ideally though, you’d have some functional tests which tested the routes that are protected before the security was migrated to the Symfony stuff, i.e. go to this page with this user and make sure you get a 403 response then try with this user and make sure you get a 200 response. </p>
+<p><a href="http://symfony.com/doc/current/cookbook/security/voters.html">Symfony voters</a> are quite easy to test, I’d recommend looking into <a href="https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleVoterTest.php">how some of the core voters are tested</a> if interested in this. Ideally though, you’d have some functional tests which tested the routes that are protected before the security was migrated to the Symfony stuff, i.e. go to this page with this user and make sure you get a 403 response then try with this user and make sure you get a 200 response.</p>
 
-<p>Another neat thing you could do is use <a href="https://github.com/daylerees/scientist">Scientist</a> to perform ‘experiments’ of this new security code against the existing ‘controlled’ code. This would allow you to ‘trial’ this new security code in production before rolling it out for real. It has things such as journals and reports to allow you to see how your new approach is working out, whether it’s performing in unexpected ways for instance or if it’s performing slower than it’s counterpart. </p>
+<p>Another neat thing you could do is use <a href="https://github.com/daylerees/scientist">Scientist</a> to perform ‘experiments’ of this new security code against the existing ‘controlled’ code. This would allow you to ‘trial’ this new security code in production before rolling it out for real. It has things such as journals and reports to allow you to see how your new approach is working out, whether it’s performing in unexpected ways for instance or if it’s performing slower than it’s counterpart.</p>
 
 
 <hr />
@@ -200,7 +200,7 @@
     <footer>
       <article>
         <span class="left"><a href="http://github.com/jenkoian/jenkoian.github.com" target="_blank">View on Github</a></span>
-        <span class="right">&copy; Ian jenkins 2016</span>
+        <span class="right">&copy; Ian jenkins 2017</span>
         <br />
         <span class="right"><a href="http://twitter.com/jenko" target="_blank">@jenko</a></span>
       </article>

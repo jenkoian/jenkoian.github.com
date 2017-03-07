@@ -43,13 +43,13 @@
 
 <p><em class="prologue">I came to, slightly dazed, I was cold and confused, where am I? I tried to take in my surroundings, reams of commented out code to my left, singletons to my right. I don’t know how I got here, but I knew at that point. I was. I was in legacy hell.</em></p>
 
-<p>Although developers generally want to always be working with the latest and greatest, the new shiny if you will, it can’t always be fresh daisies and green fields, every now and again, in fact, probably more often than not, developers have to deal with legacy code, i.e. code written in the past, either by an (<em>obviously inferior</em>) dev, or even worse themselves. </p>
+<p>Although developers generally want to always be working with the latest and greatest, the new shiny if you will, it can’t always be fresh daisies and green fields, every now and again, in fact, probably more often than not, developers have to deal with legacy code, i.e. code written in the past, either by an (<em>obviously inferior</em>) dev, or even worse themselves.</p>
 
 <p>Yep, legacy is some what of an occupational hazard. So when I had recently taken ownership of a particularly iniquitous legacy codebase, I wanted to steer clear of it as much as I could, poke it with a stick, give it snide looks, that kind of thing. So this is how I managed to work with modern tech whilst fighting this thankless battle.</p>
 
 <h2 id="using-stackphp-to-separate-the-old-from-the-new">Using StackPHP to separate the old from the new</h2>
 
-<p><a href="http://stackphp.com/">StackPHP</a> is a convention for composing middlewares in PHP. It works with Symfony’s HttpKernelInterface and basically allows you to apply decorators to your application. This idea has become so popular in the PHP community that a <a href="http://www.php-fig.org/psr/psr-7/">PSR standard has been adopted</a> with one of the aims to make it easier to build standardised middlewares. </p>
+<p><a href="http://stackphp.com/">StackPHP</a> is a convention for composing middlewares in PHP. It works with Symfony’s HttpKernelInterface and basically allows you to apply decorators to your application. This idea has become so popular in the PHP community that a <a href="http://www.php-fig.org/psr/psr-7/">PSR standard has been adopted</a> with one of the aims to make it easier to build standardised middlewares.</p>
 
 <p>We can make use of this approach to easily split requests between a legacy codebase and something more modern, like a Symfony app. Carlos Buenosvinos wrote a brilliant blog post about this which is required reading if this post is proving of any interest: <a href="http://carlosbuenosvinos.com/migrating-progressively-to-symfony-without-pain-with-stackphp/">http://carlosbuenosvinos.com/migrating-progressively-to-symfony-without-pain-with-stackphp/</a></p>
 
@@ -57,7 +57,7 @@
 
 <h2 id="where-the-microkernel-fits-in">Where the MicroKernel fits in</h2>
 
-<p>The legacy codebase I was dealing with was already large and convoluted with many directories and sub-directories. Adding in an app, a web, a src and whatever other directories seemed overkill and counter intuitive. I know that’s a minor detail and I could have just put them in a separate directory under the root and all probably would have been fine, but even so I wanted to bring in Symfony with the lowest foot print I could. </p>
+<p>The legacy codebase I was dealing with was already large and convoluted with many directories and sub-directories. Adding in an app, a web, a src and whatever other directories seemed overkill and counter intuitive. I know that’s a minor detail and I could have just put them in a separate directory under the root and all probably would have been fine, but even so I wanted to bring in Symfony with the lowest foot print I could.</p>
 
 <p>Despite always being able to be used as a micro framework, Symfony formally introduced <a href="http://symfony.com/blog/new-in-symfony-2-8-symfony-as-a-microframework">‘Symfony as a Microframework’</a> with a  new MicroKernel trait which allows you create an entire Symfony application from a single class. This fitted my use case perfectly, as it meant I could have a fully functional Symfony with minimal number of files. What was also really nice was that it could grow along with the development of the app. As I start to do more and more work in the Symfony part of the application the more of the framework I can use and the more files and directories I can create.</p>
 
@@ -67,7 +67,7 @@
 
 <h2 id="changing-the-locale-across-the-entire-app">Changing the locale across the entire app</h2>
 
-<p>As the existing legacy app already had a mechanism for setting and changing locale, we needed to hook into that in order to set the locale for our Symfony app. This was fairly trivial via a listener. </p>
+<p>As the existing legacy app already had a mechanism for setting and changing locale, we needed to hook into that in order to set the locale for our Symfony app. This was fairly trivial via a listener.</p>
 
 <script src="https://gist.github.com/jenkoian/f79c6984eba54271d7b4.js"></script>
 
@@ -87,7 +87,7 @@
 
 <script src="https://gist.github.com/jenkoian/9dacbc175bf6fd163096.js"></script>
 
-<p>Most of it is self explanatory and explained well in the documentation. One thing to note for my use case is the following. </p>
+<p>Most of it is self explanatory and explained well in the documentation. One thing to note for my use case is the following.</p>
 
 <script src="https://gist.github.com/jenkoian/33e87298a93f5eb17f02.js"></script>
 
@@ -142,7 +142,7 @@
     <footer>
       <article>
         <span class="left"><a href="http://github.com/jenkoian/jenkoian.github.com" target="_blank">View on Github</a></span>
-        <span class="right">&copy; Ian jenkins 2016</span>
+        <span class="right">&copy; Ian jenkins 2017</span>
         <br />
         <span class="right"><a href="http://twitter.com/jenko" target="_blank">@jenko</a></span>
       </article>

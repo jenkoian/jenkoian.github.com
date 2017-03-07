@@ -8,6 +8,7 @@ http://jenko.me/sitemap.txt
 http://jenko.me/tags.html
 http://jenko.me//rss.xml
 
+http://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again
 http://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app
 http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel
 http://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer

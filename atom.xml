@@ -4,13 +4,52 @@
  <title>Jenko</title>
  <link href="http://jenko.me/atom.xml" rel="self"/>
  <link href="http://jenko.me"/>
- <updated>2016-03-21T14:44:16+00:00</updated>
+ <updated>2017-03-07T10:04:52+00:00</updated>
  <id>http://jenko.me</id>
  <author>
    <name>Ian jenkins</name>
    <email>ian@jenkins-web.co.uk</email>
  </author>
 
+ 
+ <entry>
+   <title>From Gaufrette to Flysystem and back again</title>
+   <link href="http://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again"/>
+   <updated>2017-03-07T00:00:00+00:00</updated>
+   <id>http://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</id>
+   <content type="html">
+&lt;p&gt;When I saw &lt;a href=&quot;https://github.com/KnpLabs/Gaufrette/pull/390&quot;&gt;Gaufrette added a Flysystem adapter&lt;/a&gt; (a year ago to this day!) 
+it somewhat captured my imagination and it seemed only right that &lt;a href=&quot;https://github.com/jenkoian/flysystem-gaufrette&quot;&gt;Flysystem should have a Gaufrette adapter&lt;/a&gt; and the two 
+file-system abstraction layers could work completely bi-directional.&lt;/p&gt;
+
+&lt;p&gt;It was mostly a bit of fun, although I could potentially see a use case even if that use case hadn’t crept up on me yet.
+&lt;strong&gt;Until now!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I recently worked on a legacy project which made use of &lt;a href=&quot;https://github.com/KnpLabs/Gaufrette&quot;&gt;Gaufrette&lt;/a&gt; and we were taking &lt;a href=&quot;https://twitter.com/ziobrando/status/675305573127208960&quot;&gt;my favourite approach to tackling legacy&lt;/a&gt;.
+We were working completely on new code and writing adapters to old stuff which handled a lot of the existing heavy
+lifting. So, in the case of file-system abstraction we were writing an adapter to the old Gaufrette stuff, 
+but due to a few reasons we were also keen on trying to make use of &lt;a href=&quot;https://github.com/thephpleague/flysystem&quot;&gt;Flysystem&lt;/a&gt;. 
+Then I remembered, this silly little library I had created!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“You mean we could work with Flysystem whilst not having to rewrite all of these touch points with Gaufrette”&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;We were using Symfony, so actually used &lt;a href=&quot;https://github.com/1up-lab/OneupFlysystemBundle&quot;&gt;this bundle&lt;/a&gt; to hook up Flysystem but essentially it just worked like this:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/b2c40bc307d30a4e398935382fb67812.js&quot;&gt;&lt;/script&gt;
+
+&lt;p&gt;Pretty neat!&lt;/p&gt;
+
+&lt;p&gt;Obviously, having two file-system abstraction layers is a bit pointless, so eventually it would be nice to completely
+move away from Gaufrette, but as a nice compromise to ease over the transition this came in really handy.&lt;/p&gt;
+
+&lt;p&gt;So if you’re in a similar boat and want to transition from Gaufrette to Flysystem give my silly little library a try.&lt;/p&gt;
+
+&lt;p&gt;Finally, I’m not advocating that Flysystem is better than Gaufrette or anything, just that our needs for this particular 
+project meant Flysystem was a better fit. They are equally as good as one another and I’m sure in some scenarios Gaufrette 
+might have the edge. Indeed, if you wish to transition in the other direction you can always use the &lt;a href=&quot;https://github.com/KnpLabs/Gaufrette/blob/master/doc/adapters/flysystem.md&quot;&gt;Gaufrette Flysystem adapter&lt;/a&gt; :).&lt;/p&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Retro fitting Symfony Security into a Legacy App</title>
@@ -55,7 +94,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Now I knew which roles and permissions I needed to set up, there was going to be two ways in which I needed to protect the app. &lt;/p&gt;
+&lt;p&gt;Now I knew which roles and permissions I needed to set up, there was going to be two ways in which I needed to protect the app.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;
@@ -76,7 +115,7 @@
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/098695ae18feb8a5c67d.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;In other words, I needed the permissions to be mapped to the routes rather than the role. &lt;/p&gt;
+&lt;p&gt;In other words, I needed the permissions to be mapped to the routes rather than the role.&lt;/p&gt;
 
 &lt;p&gt;To achieve this I needed to use a custom RequestMatcher as described in this &lt;a href=&quot;http://php-and-symfony.matthiasnoback.nl/2012/07/symfony2-security-using-advanced-request-matchers-to-activate-firewalls/&quot;&gt;excellent blog post from Matthias Noback&lt;/a&gt;. For this to work I simply set up a static map of permissions to roles, I used a php array, but could just as easily be yaml, xml, whatever.&lt;/p&gt;
 
@@ -98,7 +137,7 @@
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/aa182c799aec96f30bed.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;This allows the client to easily see which permissions apply to which role(s) and, if you throw in a basic page with an &lt;a href=&quot;https://ace.c9.io/&quot;&gt;ace-editor&lt;/a&gt; on, make changes to. &lt;/p&gt;
+&lt;p&gt;This allows the client to easily see which permissions apply to which role(s) and, if you throw in a basic page with an &lt;a href=&quot;https://ace.c9.io/&quot;&gt;ace-editor&lt;/a&gt; on, make changes to.&lt;/p&gt;
 
 &lt;p&gt;So all done on route protection right? Well, pretty much. As I have my Symfony application sat alongside the legacy application using &lt;a href=&quot;http://stackphp.com/&quot;&gt;Stack&lt;/a&gt;, it basically attempts to hit the route in the Symfony app, if it encounters a &lt;code&gt;NotFoundException&lt;/code&gt; falls back to the legacy application. The problem with this is that Symfony will forgo the security stuff completely if the route simply doesn’t exist in the Symfony app. The solution for this was relatively straight forward. Define a ‘catch all’ route in the Symfony app so that each request will get through the Symfony routing and into the Security system. It will of course throw a &lt;code&gt;NotFoundException&lt;/code&gt; eventually when it realises there is no controller set up for the route.&lt;/p&gt;
 
@@ -122,7 +161,7 @@
 
 &lt;p&gt;This basically checks the users’ role, checks it against the configuration file and votes accordingly.&lt;/p&gt;
 
-&lt;p&gt;So now we have working template protection in the Symfony app, but how about the legacy app? Well, unfortunately it isn’t using Twig so we can’t use the nice Twig extension, nor does it know anything about the Symfony application at all, so we can’t easily grab things out of the container or anything. &lt;/p&gt;
+&lt;p&gt;So now we have working template protection in the Symfony app, but how about the legacy app? Well, unfortunately it isn’t using Twig so we can’t use the nice Twig extension, nor does it know anything about the Symfony application at all, so we can’t easily grab things out of the container or anything.&lt;/p&gt;
 
 &lt;p&gt;My solution was to create a static facade into the Symfony security bit that does the &lt;code&gt;is_granted&lt;/code&gt; check. For this to work, I ended up having to use the (sorry mum) global keyword to expose the kernel to the legacy app.&lt;/p&gt;
 
@@ -138,11 +177,11 @@
 
 &lt;h3 id=&quot;testing&quot;&gt;Testing&lt;/h3&gt;
 
-&lt;p&gt;One last thing I wanted to touch on is testing. &lt;/p&gt;
+&lt;p&gt;One last thing I wanted to touch on is testing.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://symfony.com/doc/current/cookbook/security/voters.html&quot;&gt;Symfony voters&lt;/a&gt; are quite easy to test, I’d recommend looking into &lt;a href=&quot;https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleVoterTest.php&quot;&gt;how some of the core voters are tested&lt;/a&gt; if interested in this. Ideally though, you’d have some functional tests which tested the routes that are protected before the security was migrated to the Symfony stuff, i.e. go to this page with this user and make sure you get a 403 response then try with this user and make sure you get a 200 response. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://symfony.com/doc/current/cookbook/security/voters.html&quot;&gt;Symfony voters&lt;/a&gt; are quite easy to test, I’d recommend looking into &lt;a href=&quot;https://github.com/symfony/symfony/blob/master/src/Symfony/Component/Security/Core/Tests/Authorization/Voter/RoleVoterTest.php&quot;&gt;how some of the core voters are tested&lt;/a&gt; if interested in this. Ideally though, you’d have some functional tests which tested the routes that are protected before the security was migrated to the Symfony stuff, i.e. go to this page with this user and make sure you get a 403 response then try with this user and make sure you get a 200 response.&lt;/p&gt;
 
-&lt;p&gt;Another neat thing you could do is use &lt;a href=&quot;https://github.com/daylerees/scientist&quot;&gt;Scientist&lt;/a&gt; to perform ‘experiments’ of this new security code against the existing ‘controlled’ code. This would allow you to ‘trial’ this new security code in production before rolling it out for real. It has things such as journals and reports to allow you to see how your new approach is working out, whether it’s performing in unexpected ways for instance or if it’s performing slower than it’s counterpart. &lt;/p&gt;
+&lt;p&gt;Another neat thing you could do is use &lt;a href=&quot;https://github.com/daylerees/scientist&quot;&gt;Scientist&lt;/a&gt; to perform ‘experiments’ of this new security code against the existing ‘controlled’ code. This would allow you to ‘trial’ this new security code in production before rolling it out for real. It has things such as journals and reports to allow you to see how your new approach is working out, whether it’s performing in unexpected ways for instance or if it’s performing slower than it’s counterpart.&lt;/p&gt;
 </content>
  </entry>
  
@@ -154,13 +193,13 @@
    <content type="html">
 &lt;p&gt;&lt;em class=&quot;prologue&quot;&gt;I came to, slightly dazed, I was cold and confused, where am I? I tried to take in my surroundings, reams of commented out code to my left, singletons to my right. I don’t know how I got here, but I knew at that point. I was. I was in legacy hell.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Although developers generally want to always be working with the latest and greatest, the new shiny if you will, it can’t always be fresh daisies and green fields, every now and again, in fact, probably more often than not, developers have to deal with legacy code, i.e. code written in the past, either by an (&lt;em&gt;obviously inferior&lt;/em&gt;) dev, or even worse themselves. &lt;/p&gt;
+&lt;p&gt;Although developers generally want to always be working with the latest and greatest, the new shiny if you will, it can’t always be fresh daisies and green fields, every now and again, in fact, probably more often than not, developers have to deal with legacy code, i.e. code written in the past, either by an (&lt;em&gt;obviously inferior&lt;/em&gt;) dev, or even worse themselves.&lt;/p&gt;
 
 &lt;p&gt;Yep, legacy is some what of an occupational hazard. So when I had recently taken ownership of a particularly iniquitous legacy codebase, I wanted to steer clear of it as much as I could, poke it with a stick, give it snide looks, that kind of thing. So this is how I managed to work with modern tech whilst fighting this thankless battle.&lt;/p&gt;
 
 &lt;h2 id=&quot;using-stackphp-to-separate-the-old-from-the-new&quot;&gt;Using StackPHP to separate the old from the new&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://stackphp.com/&quot;&gt;StackPHP&lt;/a&gt; is a convention for composing middlewares in PHP. It works with Symfony’s HttpKernelInterface and basically allows you to apply decorators to your application. This idea has become so popular in the PHP community that a &lt;a href=&quot;http://www.php-fig.org/psr/psr-7/&quot;&gt;PSR standard has been adopted&lt;/a&gt; with one of the aims to make it easier to build standardised middlewares. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://stackphp.com/&quot;&gt;StackPHP&lt;/a&gt; is a convention for composing middlewares in PHP. It works with Symfony’s HttpKernelInterface and basically allows you to apply decorators to your application. This idea has become so popular in the PHP community that a &lt;a href=&quot;http://www.php-fig.org/psr/psr-7/&quot;&gt;PSR standard has been adopted&lt;/a&gt; with one of the aims to make it easier to build standardised middlewares.&lt;/p&gt;
 
 &lt;p&gt;We can make use of this approach to easily split requests between a legacy codebase and something more modern, like a Symfony app. Carlos Buenosvinos wrote a brilliant blog post about this which is required reading if this post is proving of any interest: &lt;a href=&quot;http://carlosbuenosvinos.com/migrating-progressively-to-symfony-without-pain-with-stackphp/&quot;&gt;http://carlosbuenosvinos.com/migrating-progressively-to-symfony-without-pain-with-stackphp/&lt;/a&gt;&lt;/p&gt;
 
@@ -168,7 +207,7 @@
 
 &lt;h2 id=&quot;where-the-microkernel-fits-in&quot;&gt;Where the MicroKernel fits in&lt;/h2&gt;
 
-&lt;p&gt;The legacy codebase I was dealing with was already large and convoluted with many directories and sub-directories. Adding in an app, a web, a src and whatever other directories seemed overkill and counter intuitive. I know that’s a minor detail and I could have just put them in a separate directory under the root and all probably would have been fine, but even so I wanted to bring in Symfony with the lowest foot print I could. &lt;/p&gt;
+&lt;p&gt;The legacy codebase I was dealing with was already large and convoluted with many directories and sub-directories. Adding in an app, a web, a src and whatever other directories seemed overkill and counter intuitive. I know that’s a minor detail and I could have just put them in a separate directory under the root and all probably would have been fine, but even so I wanted to bring in Symfony with the lowest foot print I could.&lt;/p&gt;
 
 &lt;p&gt;Despite always being able to be used as a micro framework, Symfony formally introduced &lt;a href=&quot;http://symfony.com/blog/new-in-symfony-2-8-symfony-as-a-microframework&quot;&gt;‘Symfony as a Microframework’&lt;/a&gt; with a  new MicroKernel trait which allows you create an entire Symfony application from a single class. This fitted my use case perfectly, as it meant I could have a fully functional Symfony with minimal number of files. What was also really nice was that it could grow along with the development of the app. As I start to do more and more work in the Symfony part of the application the more of the framework I can use and the more files and directories I can create.&lt;/p&gt;
 
@@ -178,7 +217,7 @@
 
 &lt;h2 id=&quot;changing-the-locale-across-the-entire-app&quot;&gt;Changing the locale across the entire app&lt;/h2&gt;
 
-&lt;p&gt;As the existing legacy app already had a mechanism for setting and changing locale, we needed to hook into that in order to set the locale for our Symfony app. This was fairly trivial via a listener. &lt;/p&gt;
+&lt;p&gt;As the existing legacy app already had a mechanism for setting and changing locale, we needed to hook into that in order to set the locale for our Symfony app. This was fairly trivial via a listener.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/f79c6984eba54271d7b4.js&quot;&gt;&lt;/script&gt;
 
@@ -198,7 +237,7 @@
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/9dacbc175bf6fd163096.js&quot;&gt;&lt;/script&gt;
 
-&lt;p&gt;Most of it is self explanatory and explained well in the documentation. One thing to note for my use case is the following. &lt;/p&gt;
+&lt;p&gt;Most of it is self explanatory and explained well in the documentation. One thing to note for my use case is the following.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/33e87298a93f5eb17f02.js&quot;&gt;&lt;/script&gt;
 
@@ -236,7 +275,7 @@
 
 &lt;h2 id=&quot;the-early-years&quot;&gt;The Early Years&lt;/h2&gt;
 
-&lt;p&gt;Back in 2012, a tech meet up in Cardiff was badly needed, other than the smaller niche meet ups like &lt;a href=&quot;http://swlug.org.uk/&quot;&gt;SWLUG&lt;/a&gt; and &lt;a href=&quot;http://www.cardiffrb.com/&quot;&gt;Cardiff RB&lt;/a&gt; there wasn’t really anything to serve the wider tech community. UDiff aimed to fill that void. &lt;/p&gt;
+&lt;p&gt;Back in 2012, a tech meet up in Cardiff was badly needed, other than the smaller niche meet ups like &lt;a href=&quot;http://swlug.org.uk/&quot;&gt;SWLUG&lt;/a&gt; and &lt;a href=&quot;http://www.cardiffrb.com/&quot;&gt;Cardiff RB&lt;/a&gt; there wasn’t really anything to serve the wider tech community. UDiff aimed to fill that void.&lt;/p&gt;
 
 &lt;p&gt;The first couple of meet ups were fantastic. We chose a small O’Neills bar, which worked out quite well. In fact I think, for me at least, this was the golden generation of UDiff, I really enjoyed the ‘bar camp’ feel of them which I don’t think we managed to recreate elsewhere. It allowed people to relax, have a drink, get some food if they wished. It also had a good screen and was a perfect size.&lt;/p&gt;
 
@@ -244,9 +283,9 @@
 
 &lt;p&gt;There were many good talks throughout the O’Neills days, from interesting panel discussions with legends like &lt;a href=&quot;http://twitter.com/stuherbert&quot;&gt;Stu Herbert&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/penllawen&quot;&gt;Richard Gaywood&lt;/a&gt;, to grand reveals of MySpace projects that never materialised.&lt;/p&gt;
 
-&lt;p&gt;The other thing about O’Neills is that it gave me my first experience of public speaking. I had came up with a (somewhat silly) talk idea on a long car journey. &lt;/p&gt;
+&lt;p&gt;The other thing about O’Neills is that it gave me my first experience of public speaking. I had came up with a (somewhat silly) talk idea on a long car journey.&lt;/p&gt;
 
-&lt;p&gt;I had started looking into front end tools a little bit having been solely interested in server side stuff previously so thought I’d give a quick run down of what the in tools were at the time. Nothing too technical just a nice little overview of tools and techniques that were previously completely new to me. &lt;/p&gt;
+&lt;p&gt;I had started looking into front end tools a little bit having been solely interested in server side stuff previously so thought I’d give a quick run down of what the in tools were at the time. Nothing too technical just a nice little overview of tools and techniques that were previously completely new to me.&lt;/p&gt;
 
 &lt;p&gt;I wanted to inject a bit of personality into a pretty dull topic so I came up with the title ‘Frontend Awesome SHit Any Nerd can Use’ or ‘FASHANU’ if you will. It basically allowed me to sprinkle in a bunch of &lt;a href=&quot;https://en.wikipedia.org/wiki/John_Fashanu&quot;&gt;John Fashanu&lt;/a&gt; facts and anecdotes to keep the audience from falling asleep. What I thought would be really fun was if I could actually get John to turn up (!?) as a surprise guest and although I knew it was a long shot I thought I’d give it a go anyway. Here is the email exchange between me and his agent in it’s entirety (with some redacting):&lt;/p&gt;
 
@@ -258,7 +297,7 @@
 
 &lt;h2 id=&quot;the-awkward-adolescence&quot;&gt;The Awkward Adolescence&lt;/h2&gt;
 
-&lt;p&gt;After Warren and Carey managed to get us barred from O’Neills (and a speaker pulling out of talking because the whole experience ruined his zen) we embarked on our teenage phase by meandering around a few venues. &lt;/p&gt;
+&lt;p&gt;After Warren and Carey managed to get us barred from O’Neills (and a speaker pulling out of talking because the whole experience ruined his zen) we embarked on our teenage phase by meandering around a few venues.&lt;/p&gt;
 
 &lt;p&gt;There were a few flash in the pan venues such as the Promised Land, which was decent but a little small and required Rod to haul a projector half way across Cardiff. Followed by Fire Island (now the &lt;a href=&quot;http://www.urbantaphouse.co.uk/&quot;&gt;Urban Tap House&lt;/a&gt;) which I think held a few events. My good friend &lt;a href=&quot;http://twitter.com/a_thieriot&quot;&gt;Aurélien&lt;/a&gt; talking about &lt;a href=&quot;http://www.scala-lang.org/&quot;&gt;Scala&lt;/a&gt; in the pitch black is a fond memory as is my second go at public speaking when I talked about Breaking Bad, I mean &lt;a href=&quot;http://jenko.me/breaking-bugs&quot;&gt;Bugs&lt;/a&gt;.&lt;/p&gt;
 
@@ -284,7 +323,7 @@
 
 &lt;p&gt;With Founders Hub gone, the future of UDiff was up for discussion and although we came close to calling it a day then, we decided to keep it going and we got lucky with a &lt;a href=&quot;http://www.acornpeople.com/&quot;&gt;local recruitment company&lt;/a&gt; offering us a space to run the meet ups with free food and drink. We had been nervous of including recruiters in the past due to the ‘from the community, for the community’ vibe we were going for but we were ensured that there would be minimal sales speak or ‘networking’ and to be fair they were true to their word.&lt;/p&gt;
 
-&lt;p&gt;Although a good size, the venue at Acorn wasn’t perfect. The projector wasn’t brilliant and we struggled a bit with the lighting, particularly as it was Summer. However, the food and drinks provided were brilliant and I’m sure helped get people involved. Also, there were some really strong talks. In fact looking back I don’t think there were any weak ones, they were all really really strong and I’m struggling to pick a favourite but I think &lt;a href=&quot;https://vimeo.com/133746104&quot;&gt;Warren’s talk on Monads&lt;/a&gt; stands out to me, mainly because I really liked his ego-free explanation of it all. &lt;/p&gt;
+&lt;p&gt;Although a good size, the venue at Acorn wasn’t perfect. The projector wasn’t brilliant and we struggled a bit with the lighting, particularly as it was Summer. However, the food and drinks provided were brilliant and I’m sure helped get people involved. Also, there were some really strong talks. In fact looking back I don’t think there were any weak ones, they were all really really strong and I’m struggling to pick a favourite but I think &lt;a href=&quot;https://vimeo.com/133746104&quot;&gt;Warren’s talk on Monads&lt;/a&gt; stands out to me, mainly because I really liked his ego-free explanation of it all.&lt;/p&gt;
 
 &lt;iframe class=&quot;iframe-video&quot; src=&quot;//player.vimeo.com/video/133746104?title=0&amp;amp;byline=0&amp;amp;portrait=0&quot; width=&quot;600&quot; height=&quot;400&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
 
@@ -316,9 +355,9 @@
 
 &lt;h2 id=&quot;see-you-later&quot;&gt;See you later&lt;/h2&gt;
 
-&lt;p&gt;To sum up, UDiff has been brilliant over the 3 (nearly 4) years it has been running. It has felt like mission accomplished in many respects as there are now loads more tech meet ups in Cardiff which I like to think UDiff at least influenced. &lt;/p&gt;
+&lt;p&gt;To sum up, UDiff has been brilliant over the 3 (nearly 4) years it has been running. It has felt like mission accomplished in many respects as there are now loads more tech meet ups in Cardiff which I like to think UDiff at least influenced.&lt;/p&gt;
 
-&lt;p&gt;The timing of all this seems apt. All the guys organising are in a much different place to where they were when all this started, people have got married, had babies and so on. It’s a lot harder to find the time and energy basically. &lt;/p&gt;
+&lt;p&gt;The timing of all this seems apt. All the guys organising are in a much different place to where they were when all this started, people have got married, had babies and so on. It’s a lot harder to find the time and energy basically.&lt;/p&gt;
 
 &lt;p&gt;However, I think we’re going out on a high and you never know, there could be a come back. With that in mind, I’ll end this with how Craig so succinctly put it in our email thread about this decision:&lt;/p&gt;
 
@@ -749,7 +788,7 @@ to Handler.&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/jenkoian/7833818.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;Pretty neat! &lt;/p&gt;
+&lt;p&gt;Pretty neat!&lt;/p&gt;
 
 &lt;p&gt;I was a bit torn as to which was the correct directory for this. I ended up going with &lt;code&gt;src/Acme/Bundle/DemoBundle/Resources/public/vendor&lt;/code&gt; in my main website bundle, but you may decide to put it in &lt;code&gt;app/Resources/public/vendor&lt;/code&gt; or somewhere else altogether, i.e. YMMV.&lt;/p&gt;
 
@@ -783,7 +822,7 @@ to Handler.&lt;/p&gt;
 
 &lt;h2 id=&quot;going-further&quot;&gt;Going further&lt;/h2&gt;
 
-&lt;p&gt;There is an interesting looking Symfony2 bundle for bower, called &lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;SpBowerBundle&lt;/a&gt;. I didn’t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle. &lt;/p&gt;
+&lt;p&gt;There is an interesting looking Symfony2 bundle for bower, called &lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;SpBowerBundle&lt;/a&gt;. I didn’t use this in my case as I was after a simple solution and wanted to ensure I was learning about bower rather than a bundle.&lt;/p&gt;
 
 &lt;p&gt;However, having taken a quick look, the bundle looks very nice. I can see it being particularly useful if you want to manage front end dependencies across multiple bundles. The assetic integration also looks good.&lt;/p&gt;
 
@@ -792,7 +831,7 @@ to Handler.&lt;/p&gt;
 &lt;h2 id=&quot;related-links&quot;&gt;Related links:&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://bower.io&quot;&gt;http://bower.io&lt;/a&gt; &lt;br /&gt;
 &lt;a href=&quot;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&quot;&gt;http://williamdurand.fr/2012/12/24/being-a-frontend-developer-for-a-weekend/&lt;/a&gt; &lt;br /&gt;
-&lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;https://github.com/Spea/SpBowerBundle&lt;/a&gt;   &lt;/p&gt;
+&lt;a href=&quot;https://github.com/Spea/SpBowerBundle&quot;&gt;https://github.com/Spea/SpBowerBundle&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -818,7 +857,7 @@ to Handler.&lt;/p&gt;
 
 &lt;p&gt;It should &lt;strong&gt;always&lt;/strong&gt; return a cached version of &lt;em&gt;things&lt;/em&gt;, unless a &lt;em&gt;thing&lt;/em&gt; has been updated since the last time the endpoint was called.&lt;/p&gt;
 
-&lt;p&gt;So what I needed to do was to work out when a &lt;em&gt;thing&lt;/em&gt; was last updated &lt;strong&gt;before&lt;/strong&gt; the main query was run and change the response. &lt;/p&gt;
+&lt;p&gt;So what I needed to do was to work out when a &lt;em&gt;thing&lt;/em&gt; was last updated &lt;strong&gt;before&lt;/strong&gt; the main query was run and change the response.&lt;/p&gt;
 
 &lt;h2 id=&quot;getting-the-last-modified-date&quot;&gt;Getting the last modified date&lt;/h2&gt;
 
@@ -830,7 +869,7 @@ to Handler.&lt;/p&gt;
 
 &lt;h2 id=&quot;using-last-modified-date-to-alter-the-response&quot;&gt;Using last modified date to alter the response&lt;/h2&gt;
 
-&lt;p&gt;The problem I had now was how to look up this date and alter the response if necessary. &lt;/p&gt;
+&lt;p&gt;The problem I had now was how to look up this date and alter the response if necessary.&lt;/p&gt;
 
 &lt;p&gt;I could have done what they have in &lt;a href=&quot;http://symfony.com/doc/current/book/http_cache.html#validation-with-the-last-modified-header&quot;&gt;the example on the Symfony docs&lt;/a&gt; however this wasn’t very flexible, as it meant adding a lot of duplicated code to every action. I wanted something much more flexible. I wanted to make a controller cacheable with minimum effort required.&lt;/p&gt;
 
@@ -896,7 +935,7 @@ to Handler.&lt;/p&gt;
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;I’m sure working in South Wales is not perfect, it is probably still some way off San Francisco or possibly even &lt;a href=&quot;http://www.siliconroundabout.org.uk/about/&quot;&gt;Shoreditch&lt;/a&gt;, however I think it should be given a lot of consideration if you work in the web and are looking for somewhere to setup home in the UK. &lt;/p&gt;
+&lt;p&gt;I’m sure working in South Wales is not perfect, it is probably still some way off San Francisco or possibly even &lt;a href=&quot;http://www.siliconroundabout.org.uk/about/&quot;&gt;Shoreditch&lt;/a&gt;, however I think it should be given a lot of consideration if you work in the web and are looking for somewhere to setup home in the UK.&lt;/p&gt;
 
 &lt;p&gt;If you don’t mind having to see everything in Welsh as well as English, like being surrounded by passionate people and want a digital infrastructure that’s first class, then come on over, we’ll get the kettle on.&lt;/p&gt;
 </content>
