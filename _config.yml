@@ -19,7 +19,7 @@ author :
 
 name: Jenko
 description: Words & Code
-url: http://jenko.me
+url: https://jenko.me
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -29,7 +29,7 @@ url: http://jenko.me
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://jenko.me
+production_url : https://jenko.me
 
 plugins: ["jekyll-sitemap", "readingtime"]
 
