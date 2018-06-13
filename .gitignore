@@ -1,8 +1,20 @@
 _site/*
 _theme_packages/*
+_drafts/*
+_includes/*
+_layouts/*
+_plugins/*
+_posts/*
 
 Thumbs.db
 .DS_Store
 
 .rbenv-version
 .rvmrc
+Gemfile
+Gemfile.lock
+History.markdown
+LICENSE
+assets/*
+!assets/jenko/*
+
