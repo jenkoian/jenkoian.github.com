@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  
  <title>Jenko</title>
- <link href="http://jenko.me/atom.xml" rel="self"/>
- <link href="http://jenko.me"/>
- <updated>2018-06-13T10:37:19+01:00</updated>
- <id>http://jenko.me</id>
+ <link href="https://jenko.me/atom.xml" rel="self"/>
+ <link href="https://jenko.me"/>
+ <updated>2018-06-13T10:53:26+01:00</updated>
+ <id>https://jenko.me</id>
  <author>
    <name>Ian Jenkins</name>
    <email>ian@jenkins-web.co.uk</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>From Gaufrette to Flysystem and back again</title>
-   <link href="http://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again"/>
+   <link href="https://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again"/>
    <updated>2017-03-07T00:00:00+00:00</updated>
-   <id>http://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</id>
+   <id>https://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</id>
    <content type="html">
 &lt;p&gt;When I saw &lt;a href=&quot;https://github.com/KnpLabs/Gaufrette/pull/390&quot;&gt;Gaufrette added a Flysystem adapter&lt;/a&gt; (a year ago to this day!) 
 it somewhat captured my imagination and it seemed only right that &lt;a href=&quot;https://github.com/jenkoian/flysystem-gaufrette&quot;&gt;Flysystem should have a Gaufrette adapter&lt;/a&gt; and the two 
@@ -53,9 +53,9 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
  
  <entry>
    <title>Retro fitting Symfony Security into a Legacy App</title>
-   <link href="http://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app"/>
+   <link href="https://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app"/>
    <updated>2016-03-21T00:00:00+00:00</updated>
-   <id>http://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app</id>
+   <id>https://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app</id>
    <content type="html">
 &lt;p&gt;In &lt;a href=&quot;http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel/&quot;&gt;my last blog post&lt;/a&gt; I talked about how I had escaped legacy by leveraging the Symfony MicroKernel as well as the new Guard authentication component. Once this was all in place, my next task was to migrate the legacy, home-baked, role based access control to Symfony, so I could make extended use of &lt;a href=&quot;http://symfony.com/doc/current/book/security.html&quot;&gt;Symfony’s fantastic Security component&lt;/a&gt;.&lt;/p&gt;
 
@@ -187,9 +187,9 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
  
  <entry>
    <title>An escape route from legacy with StackPHP and the Symfony MicroKernel</title>
-   <link href="http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel"/>
+   <link href="https://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel"/>
    <updated>2016-02-03T00:00:00+00:00</updated>
-   <id>http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</id>
+   <id>https://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</id>
    <content type="html">
 &lt;p&gt;&lt;em class=&quot;prologue&quot;&gt;I came to, slightly dazed, I was cold and confused, where am I? I tried to take in my surroundings, reams of commented out code to my left, singletons to my right. I don’t know how I got here, but I knew at that point. I was. I was in legacy hell.&lt;/em&gt;&lt;/p&gt;
 
@@ -263,9 +263,9 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
  
  <entry>
    <title>Memoirs of a UDiffer</title>
-   <link href="http://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer"/>
+   <link href="https://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer"/>
    <updated>2015-09-17T00:00:00+01:00</updated>
-   <id>http://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer</id>
+   <id>https://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer</id>
    <content type="html">
 &lt;p&gt;This evening will see the 34th(?) and final &lt;a href=&quot;http://unifieddiff.co.uk&quot;&gt;Unified Diff&lt;/a&gt;. Unified Diff, or  UDiff as us old timers call it, has been a staple part of my life for the past 3 and a bit years so I wanted to take a bit of time to write up some of my experiences/memoirs of this time. An Ode to UDiff if you will.&lt;/p&gt;
 
@@ -305,7 +305,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;We then settled on &lt;a href=&quot;http://www.porterscardiff.com/&quot;&gt;Porters&lt;/a&gt; for a time, which was pretty good. They had a small cinema-esque room which worked well, but the the venue wasn’t free and was a small walk outside of the city centre. There were some brilliant talks there though, &lt;a href=&quot;https://vimeo.com/83487514&quot;&gt;one that sticks in the memory&lt;/a&gt; is &lt;a href=&quot;http://twitter.com/daylerees&quot;&gt;Dayle Rees’&lt;/a&gt; introduction to &lt;a href=&quot;http://laravel.com&quot;&gt;Laravel&lt;/a&gt; with a live (not actually live) link up with it’s creator &lt;a href=&quot;http://twitter.com/taylorotwell&quot;&gt;Taylor Otwell&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_306200662.jpeg&quot; alt=&quot;Cinema Room in Porters&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_306200662.jpeg&quot; alt=&quot;Cinema Room in Porters&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;settling-down&quot;&gt;Settling down&lt;/h2&gt;
 
@@ -313,7 +313,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;UDiff &amp;amp; Founders Hub felt like a match made in heaven. We were all geeks talking geeky stuff together in a place decked out for geeks (there were floppy disks blue tacked to the walls for Pete’s sake!). Attendances here were good, &lt;a href=&quot;http://twitter.com/craiginwales&quot;&gt;Craig&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/amienlockwood&quot;&gt;Amie&lt;/a&gt;, the owners of Founders Hub, often kindly ran a small bar and the space was great for chatting to people and getting to know one another.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_377102622.jpeg&quot; alt=&quot;UDiff @ Founders Hub&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_377102622.jpeg&quot; alt=&quot;UDiff @ Founders Hub&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There were some great talks here on a wide range of topics from &lt;a href=&quot;https://vimeo.com/106176421&quot;&gt;3D printing&lt;/a&gt; to &lt;a href=&quot;https://vimeo.com/99744479&quot;&gt;SEO&lt;/a&gt; to the incredibly successful ‘AWS night’. If I had to pick a favourite talk from this era it was probably &lt;a href=&quot;https://vimeo.com/90738845&quot;&gt;James Cryer’ talk on ‘Janky’&lt;/a&gt; as it opened my eyes up to stuff I didn’t really know about yet.&lt;/p&gt;
 
@@ -363,15 +363,15 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;“Let’s just do an indefinite hiatus like all the best bands do.”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_276671772.jpeg&quot; alt=&quot;Craig &amp;amp; Rod&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_276671772.jpeg&quot; alt=&quot;Craig &amp;amp; Rod&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>Building a house with DDD</title>
-   <link href="http://jenko.me/ddd/2015/01/23/building-a-house-with-ddd"/>
+   <link href="https://jenko.me/ddd/2015/01/23/building-a-house-with-ddd"/>
    <updated>2015-01-23T00:00:00+00:00</updated>
-   <id>http://jenko.me/ddd/2015/01/23/building-a-house-with-ddd</id>
+   <id>https://jenko.me/ddd/2015/01/23/building-a-house-with-ddd</id>
    <content type="html">&lt;p&gt;For the past, I dunno, year or so, I’ve been reading a lot about &lt;a href=&quot;http://en.wikipedia.org/wiki/Domain-driven_design&quot;&gt;Domain Driven Design (DDD)&lt;/a&gt; and even got to try it out on some projects. There are a number of resources which helped me out with this journey, but there are two stand out resources which really got me into it.&lt;/p&gt;
 
 &lt;p&gt;The first was &lt;a href=&quot;https://www.youtube.com/watch?v=ajhqScWECMo&quot;&gt;Ross Tuck’s excellent talk about Models &amp;amp; Service Layers&lt;/a&gt;, if you haven’t watched it yet, then definitely, definitely do. This got me thinking about the tactical parts of DDD such as commands, handlers and &lt;a href=&quot;http://martinfowler.com/bliki/CQRS.html&quot;&gt;CQRS&lt;/a&gt;.&lt;/p&gt;
@@ -490,11 +490,11 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 
 &lt;p&gt;We essentially have a &lt;em&gt;Raspberry Pi without any ports&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_bare.jpg&quot; alt=&quot;Raspberry Pi without any ports&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_bare.jpg&quot; alt=&quot;Raspberry Pi without any ports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you think about &lt;a href=&quot;http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html&quot;&gt;the clean architecture&lt;/a&gt; diagram below, we have our middle layer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/CleanArchitecture.jpg&quot; alt=&quot;Clean architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/CleanArchitecture.jpg&quot; alt=&quot;Clean architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It’s time now to work out from the middle into the other layers. So let’s add some ports onto our Raspberry Pi so we can connect it to something to make it useful.&lt;/p&gt;
 
@@ -536,7 +536,7 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 
 &lt;p&gt;Therefore, I needed to create an adapter. Going back to the Raspberry Pi analogy made in a previous version. I needed a Serial to USB adapter, or something like that. I’m starting to add some ports on to my Pi.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_ports.jpg&quot; alt=&quot;Raspberry Pi with ports&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_ports.jpg&quot; alt=&quot;Raspberry Pi with ports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I also wanted to use my own Dispatcher interface, because what if I wanted to stop using the Symfony dispatcher and replace it with something else? I want to be able to continue using the same interface but just add a new adapter and change my DI. I want to be decoupled.&lt;/p&gt;
 
@@ -555,7 +555,7 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 &lt;p&gt;Symfony makes it trivial to add CLI programs, and you can see from this commit how exactly it works. Essentially it’s the same deal as controllers. Request in -&amp;gt; Create command -&amp;gt; Pass off
 to Handler.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/dddhouse-cli.gif&quot; alt=&quot;CLI version of the house&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/dddhouse-cli.gif&quot; alt=&quot;CLI version of the house&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jenkoian/ddd-house/commit/a9ca03a9d882cf03d1e8ca48f17f9780a62ec1f5&quot;&gt;Version25&lt;/a&gt;&lt;/p&gt;
 
@@ -593,7 +593,7 @@ to Handler.&lt;/p&gt;
 
 &lt;p&gt;We’ve gone from components to a Raspberry Pi logic board, to a Raspberry Pi with Ports, to a Raspberry Pi with a case - the next step would be to a Raspberry Pi with a fancy case (the JS whizzy version I alluded to above).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_cycle.png&quot; alt=&quot;Raspberry Pi Cycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_cycle.png&quot; alt=&quot;Raspberry Pi Cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;where-do-we-go-from-here&quot;&gt;Where do we go from here?&lt;/h2&gt;
 
@@ -620,9 +620,9 @@ to Handler.&lt;/p&gt;
  
  <entry>
    <title>Some thoughts on Agile</title>
-   <link href="http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile"/>
+   <link href="https://jenko.me/opinion/2014/08/08/some-thoughts-on-agile"/>
    <updated>2014-08-08T00:00:00+01:00</updated>
-   <id>http://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</id>
+   <id>https://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</id>
    <content type="html">&lt;p&gt;I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.&lt;/p&gt;
 
 &lt;h2 id=&quot;kanban-and-scrum&quot;&gt;Kanban and Scrum&lt;/h2&gt;
@@ -748,9 +748,9 @@ to Handler.&lt;/p&gt;
  
  <entry>
    <title>Using Bower in a Symfony2 app</title>
-   <link href="http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app"/>
+   <link href="https://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app"/>
    <updated>2013-12-06T00:00:00+00:00</updated>
-   <id>http://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</id>
+   <id>https://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</id>
    <content type="html">
 &lt;p&gt;I’ve been hearing good things about &lt;a href=&quot;http://bower.io&quot;&gt;bower&lt;/a&gt; for a while now but never really had the chance to try it. So having recently started a new Symfony2 side project I thought I would take a look at integrating it. It turned out to be very very easy.&lt;/p&gt;
 
@@ -837,9 +837,9 @@ to Handler.&lt;/p&gt;
  
  <entry>
    <title>Symfony2: Caching a Rest API</title>
-   <link href="http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api"/>
+   <link href="https://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api"/>
    <updated>2013-01-29T00:00:00+00:00</updated>
-   <id>http://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</id>
+   <id>https://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</id>
    <content type="html">
 &lt;p&gt;As part of a project I’m currently working on, I needed to create a Rest API as a facade into an old legacy database.&lt;/p&gt;
 
@@ -899,9 +899,9 @@ to Handler.&lt;/p&gt;
  
  <entry>
    <title>Silicon Valleys?</title>
-   <link href="http://jenko.me/opinion/2013/01/20/silicon-valleys"/>
+   <link href="https://jenko.me/opinion/2013/01/20/silicon-valleys"/>
    <updated>2013-01-20T00:00:00+00:00</updated>
-   <id>http://jenko.me/opinion/2013/01/20/silicon-valleys</id>
+   <id>https://jenko.me/opinion/2013/01/20/silicon-valleys</id>
    <content type="html">
 &lt;p&gt;A little while ago (ok a long while ago, I procrastinate a lot) &lt;a href=&quot;https://twitter.com/drewm/status/265523881446629376&quot;&gt;I noticed someone from the web industry crowd sourcing for somewhere to live&lt;/a&gt;. I looked at the responses they received and noticed a few &lt;a href=&quot;https://twitter.com/emmaboulton/status/265534744857550848&quot;&gt;people recommend South Wales&lt;/a&gt;. As a born and bred South Walian it obviously perked my interest, but it also got me thinking; would South Wales be a good place to live for a web professional?  In this post I aim to answer that very question and to also reflect on why I enjoy living and working in South Wales as a web professional.&lt;/p&gt;
 

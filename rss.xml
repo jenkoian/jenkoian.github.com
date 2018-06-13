@@ -6,16 +6,16 @@
   xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
   <channel>
     <title>Jenko</title>
-    <link>http://localhost:4000</link>
+    <link>https://jenko.me</link>
     <description>Words & Code</description>
     <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
     <item>
       <title>From Gaufrette to Flysystem and back again</title>
-      <link>http://localhost:4000/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</link>
+      <link>https://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Tue, 07 Mar 2017 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</guid>
+      <guid>https://jenko.me/legacy/2017/03/07/from-gaufrette-to-flysystem-and-back-again</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 When I saw [Gaufrette added a Flysystem adapter](https://github.com/KnpLabs/Gaufrette/pull/390) (a year ago to this day!) 
@@ -56,11 +56,11 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
     </item>
     <item>
       <title>Retro fitting Symfony Security into a Legacy App</title>
-      <link>http://localhost:4000/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app</link>
+      <link>https://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Mon, 21 Mar 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app</guid>
+      <guid>https://jenko.me/legacy/2016/03/21/retro-fitting-symfony-security-into-a-legacy-app</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 In [my last blog post](http://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel/) I talked about how I had escaped legacy by leveraging the Symfony MicroKernel as well as the new Guard authentication component. Once this was all in place, my next task was to migrate the legacy, home-baked, role based access control to Symfony, so I could make extended use of [Symfony’s fantastic Security component](http://symfony.com/doc/current/book/security.html).
@@ -163,11 +163,11 @@ Another neat thing you could do is use [Scientist](https://github.com/daylerees/
     </item>
     <item>
       <title>An escape route from legacy with StackPHP and the Symfony MicroKernel</title>
-      <link>http://localhost:4000/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</link>
+      <link>https://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Wed, 03 Feb 2016 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</guid>
+      <guid>https://jenko.me/legacy/2016/02/03/an-escape-route-from-legacy-with-stackphp-and-the-symfony-microkernel</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 
@@ -243,11 +243,11 @@ Finally, I saw a tweet just before starting this piece of work which summed up p
     </item>
     <item>
       <title>Memoirs of a UDiffer</title>
-      <link>http://localhost:4000/opinion/2015/09/17/memoirs-of-a-udiffer</link>
+      <link>https://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Thu, 17 Sep 2015 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000/opinion/2015/09/17/memoirs-of-a-udiffer</guid>
+      <guid>https://jenko.me/opinion/2015/09/17/memoirs-of-a-udiffer</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 This evening will see the 34th(?) and final [Unified Diff](http://unifieddiff.co.uk). Unified Diff, or  UDiff as us old timers call it, has been a staple part of my life for the past 3 and a bit years so I wanted to take a bit of time to write up some of my experiences/memoirs of this time. An Ode to UDiff if you will.
@@ -352,12 +352,12 @@ However, I think we’re going out on a high and you never know, there could be 
     </item>
     <item>
       <title>Building a house with DDD</title>
-      <link>http://localhost:4000/ddd/2015/01/23/building-a-house-with-ddd</link>
+      <link>https://jenko.me/ddd/2015/01/23/building-a-house-with-ddd</link>
       <description><![CDATA[For the past, I dunno, year or so, I’ve been reading a lot about Domain Driven Design (DDD) and even got to try it out on some projects. There are a number of resources which helped me out with this journey, but there are two stand out resources which really got me into it.
 
 ]]></description>
       <pubDate>Fri, 23 Jan 2015 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/ddd/2015/01/23/building-a-house-with-ddd</guid>
+      <guid>https://jenko.me/ddd/2015/01/23/building-a-house-with-ddd</guid>
       <content:encoded><![CDATA[For the past, I dunno, year or so, I’ve been reading a lot about [Domain Driven Design (DDD)](http://en.wikipedia.org/wiki/Domain-driven_design) and even got to try it out on some projects. There are a number of resources which helped me out with this journey, but there are two stand out resources which really got me into it.
 
 The first was [Ross Tuck’s excellent talk about Models & Service Layers](https://www.youtube.com/watch?v=ajhqScWECMo), if you haven’t watched it yet, then definitely, definitely do. This got me thinking about the tactical parts of DDD such as commands, handlers and [CQRS](http://martinfowler.com/bliki/CQRS.html).
@@ -603,12 +603,12 @@ Finally, the other brilliant thing about all this is the excellent community beh
     </item>
     <item>
       <title>Some thoughts on Agile</title>
-      <link>http://localhost:4000/opinion/2014/08/08/some-thoughts-on-agile</link>
+      <link>https://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</link>
       <description><![CDATA[I would in no way describe myself as an evangelist of Agile practices, I’m not a certified scrum master and I’ve never had any formal training or anything on Agile practices. However, over the last few years the company I’ve worked for has adopted an agile methodology and so I’ve had no choice but to have had some experience with Agile. Here are some of my thoughts on ‘Agile’, or working with ‘Agility’ or whatever the hell you wanna call it.
 
 ]]></description>
       <pubDate>Fri, 08 Aug 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000/opinion/2014/08/08/some-thoughts-on-agile</guid>
+      <guid>https://jenko.me/opinion/2014/08/08/some-thoughts-on-agile</guid>
       <content:encoded><![CDATA[I would in no way describe myself as an evangelist of Agile practices, I'm not a certified scrum master and I've never had any formal training or anything on Agile practices. However, over the last few years the company I've worked for has adopted an agile methodology and so I've had no choice but to have had some experience with Agile. Here are some of my thoughts on 'Agile', or working with 'Agility' or whatever the hell you wanna call it.
 
 ## Kanban and Scrum
@@ -730,11 +730,11 @@ Of course, your experiences may be different, and I would love to hear about the
     </item>
     <item>
       <title>Using Bower in a Symfony2 app</title>
-      <link>http://localhost:4000/symfony2/2013/12/06/using-bower-in-a-symfony2-app</link>
+      <link>https://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Fri, 06 Dec 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/symfony2/2013/12/06/using-bower-in-a-symfony2-app</guid>
+      <guid>https://jenko.me/symfony2/2013/12/06/using-bower-in-a-symfony2-app</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 I've been hearing good things about [bower](http://bower.io) for a while now but never really had the chance to try it. So having recently started a new Symfony2 side project I thought I would take a look at integrating it. It turned out to be very very easy.
@@ -820,11 +820,11 @@ Finally, there was a recent discussion started about the state of the front end 
     </item>
     <item>
       <title>Symfony2: Caching a Rest API</title>
-      <link>http://localhost:4000/symfony2/2013/01/29/symfony2-caching-a-rest-api</link>
+      <link>https://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/symfony2/2013/01/29/symfony2-caching-a-rest-api</guid>
+      <guid>https://jenko.me/symfony2/2013/01/29/symfony2-caching-a-rest-api</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 As part of a project I'm currently working on, I needed to create a Rest API as a facade into an old legacy database.
@@ -884,11 +884,11 @@ You should now have an unobtrusive way of setting a 304 response for endpoints o
     </item>
     <item>
       <title>Silicon Valleys?</title>
-      <link>http://localhost:4000/opinion/2013/01/20/silicon-valleys</link>
+      <link>https://jenko.me/opinion/2013/01/20/silicon-valleys</link>
       <description><![CDATA[
 ]]></description>
       <pubDate>Sun, 20 Jan 2013 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4000/opinion/2013/01/20/silicon-valleys</guid>
+      <guid>https://jenko.me/opinion/2013/01/20/silicon-valleys</guid>
       <content:encoded><![CDATA[{% include JB/setup %}
 
 A little while ago (ok a long while ago, I procrastinate a lot) [I noticed someone from the web industry crowd sourcing for somewhere to live](https://twitter.com/drewm/status/265523881446629376). I looked at the responses they received and noticed a few [people recommend South Wales](https://twitter.com/emmaboulton/status/265534744857550848). As a born and bred South Walian it obviously perked my interest, but it also got me thinking; would South Wales be a good place to live for a web professional?  In this post I aim to answer that very question and to also reflect on why I enjoy living and working in South Wales as a web professional.
