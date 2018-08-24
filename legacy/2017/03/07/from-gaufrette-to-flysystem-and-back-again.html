@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>From Gaufrette to Flysystem and back again: Words & Code</title>
+    <meta name="description" content="">
+    <meta name="author" content="Ian Jenkins">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="/assets/themes/jenko/css/reset.css" rel="stylesheet">
+    <link href="/assets/themes/jenko/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+
+    <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQEAYAAABPYyMiAAAABmJLR0T///////8JWPfcAAAACXBIWXMAAABIAAAASABGyWs+AAAAF0lEQVRIx2NgGAWjYBSMglEwCkbBSAcACBAAAeaR9cIAAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
+
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,700,400italic' rel='stylesheet' type='text/css'>    
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,300' rel='stylesheet' type='text/css'>
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml" />
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <header>
+        <h1><a href="/">Jenko  <small>Words & Code</small></a></h1>
+      </header>
+
+      <div class="content">
+        <article>
+          
+
+<header class="clearfix">
+  <span class="date">07 March 2017</span>
+  <h1><a href="">From Gaufrette to Flysystem and back again</a></h1>
+  <span class="category"><a href="/categories.html#-ref">legacy</a></span>
+  <span class="time">1 minutes and 41 seconds</span>
+</header>
+
+
+<p>When I saw <a href="https://github.com/KnpLabs/Gaufrette/pull/390">Gaufrette added a Flysystem adapter</a> (a year ago to this day!) 
+it somewhat captured my imagination and it seemed only right that <a href="https://github.com/jenkoian/flysystem-gaufrette">Flysystem should have a Gaufrette adapter</a> and the two 
+file-system abstraction layers could work completely bi-directional.</p>
+
+<p>It was mostly a bit of fun, although I could potentially see a use case even if that use case hadn’t crept up on me yet.
+<strong>Until now!</strong></p>
+
+<p>I recently worked on a legacy project which made use of <a href="https://github.com/KnpLabs/Gaufrette">Gaufrette</a> and we were taking <a href="https://twitter.com/ziobrando/status/675305573127208960">my favourite approach to tackling legacy</a>.
+We were working completely on new code and writing adapters to old stuff which handled a lot of the existing heavy
+lifting. So, in the case of file-system abstraction we were writing an adapter to the old Gaufrette stuff, 
+but due to a few reasons we were also keen on trying to make use of <a href="https://github.com/thephpleague/flysystem">Flysystem</a>. 
+Then I remembered, this silly little library I had created!</p>
+
+<p><em>“You mean we could work with Flysystem whilst not having to rewrite all of these touch points with Gaufrette”</em></p>
+
+<p>We were using Symfony, so actually used <a href="https://github.com/1up-lab/OneupFlysystemBundle">this bundle</a> to hook up Flysystem but essentially it just worked like this:</p>
+
+<script src="https://gist.github.com/jenkoian/b2c40bc307d30a4e398935382fb67812.js"></script>
+
+<p>Pretty neat!</p>
+
+<p>Obviously, having two file-system abstraction layers is a bit pointless, so eventually it would be nice to completely
+move away from Gaufrette, but as a nice compromise to ease over the transition this came in really handy.</p>
+
+<p>So if you’re in a similar boat and want to transition from Gaufrette to Flysystem give my silly little library a try.</p>
+
+<p>Finally, I’m not advocating that Flysystem is better than Gaufrette or anything, just that our needs for this particular 
+project meant Flysystem was a better fit. They are equally as good as one another and I’m sure in some scenarios Gaufrette 
+might have the edge. Indeed, if you wish to transition in the other direction you can always use the <a href="https://github.com/KnpLabs/Gaufrette/blob/master/doc/adapters/flysystem.md">Gaufrette Flysystem adapter</a> :).</p>
+
+
+
+<hr />
+
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    
+    var disqus_developer = 1;
+    var disqus_shortname = 'jenko'; // required: replace example with your forum shortname
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+
+
+
+        </article>
+      </div>
+
+    </div> <!-- /container -->
+
+    <footer>
+      <article>
+        <span class="left"><a href="http://github.com/jenkoian/jenkoian.github.com" target="_blank">View on Github</a></span>
+        <span class="right">&copy; Ian Jenkins 2018</span>
+        <br />
+        <span class="right"><a href="http://twitter.com/jenko" target="_blank">@jenko</a></span>
+      </article>
+    </footer>    
+
+    <!-- 
+
+
+ -->
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-39144556-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+  </body>
+</html>
+

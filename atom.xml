@@ -4,13 +4,63 @@
  <title>Jenko</title>
  <link href="https://jenko.me/atom.xml" rel="self"/>
  <link href="https://jenko.me"/>
- <updated>2018-06-13T10:53:26+01:00</updated>
+ <updated>2018-08-24T09:21:35+01:00</updated>
  <id>https://jenko.me</id>
  <author>
    <name>Ian Jenkins</name>
    <email>ian@jenkins-web.co.uk</email>
  </author>
 
+ 
+ <entry>
+   <title>The Developer CV</title>
+   <link href="https://jenko.me/opinion/2018/08/24/the-developer-cv"/>
+   <updated>2018-08-24T00:00:00+01:00</updated>
+   <id>https://jenko.me/opinion/2018/08/24/the-developer-cv</id>
+   <content type="html">
+&lt;h1 id=&quot;the-developer-cv&quot;&gt;The Developer CV&lt;/h1&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I put myself off writing this post for a long time due to fear as coming across a bit ostentatious (isn’t it ironic that the word ostentatious is itself very ostentatious, anyway..) however, &lt;a href=&quot;https://medium.com/@dominicwhite/i-hire-software-developers-your-resume-is-the-reason-youre-not-getting-interviews-dc7b2520a2f1&quot;&gt;I came across this medium post&lt;/a&gt; recently 
+and as it aligns quite closely to my own thoughts I thought I may as well publish. Hopefully, someone will find it useful, if it just comes across as me being picky then fair enough.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ve been reviewing developer CVs a fair bit over the last few years, due to a recent recruitment drive, even more so over the past week or two. I don’t work for a big silicon valley tech giant or anything like that, but there are some little things which I see time and time again which I’d like to just pass comment on, I guess you could call them ‘tips’ but I dunno, just things I’ve noticed.&lt;/p&gt;
+
+&lt;h2 id=&quot;length--girth&quot;&gt;Length &amp;amp; Girth&lt;/h2&gt;
+
+&lt;p&gt;This isn’t anything new, I’m sure I got told this in year 11 careers advice class but there is absolutely no reason whatsoever to have a CV more than 1 page. 2 pages at an absolute push, anything more than 2, the person reading that CV is already resenting you.&lt;/p&gt;
+
+&lt;p&gt;At the risk of coming across harsh, nobody cares that you got an A at GCSE French and worked one summer in Tesco Express. Keep it relevant, read the job ad and show off what skills you have in order to do that job.&lt;/p&gt;
+
+&lt;p&gt;You don’t need to list every job you’ve ever done, only the last (most relevant few) even then you don’t need to list everything about each job. Maybe go into a bit of detail about your current/previous role but roles before that, just list the achievements.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-the-order-right&quot;&gt;Get the order right&lt;/h2&gt;
+
+&lt;p&gt;I’ve seen so many CVs that start off with qualifications at the top (in chronological order) followed by experience, then finally touching on skills. This is completely backward to me. You want to start the CV with the headlines, the things that are going to have the person at the other end take notice and want to finish reading your CV. Go skills first, read the job ad. If the ad suggets it is looking for developers with experience in Symfony, start off your CV showing off everything you know about Symfony and surrounding ecosystem.&lt;/p&gt;
+
+&lt;h2 id=&quot;go-easy-on-the-buzzwords&quot;&gt;Go easy on the buzzwords&lt;/h2&gt;
+
+&lt;p&gt;If you’re reading a CV and the person has done nothing more than list a bunch of technologies/buzzwords, you’re gonna think they’ve just put it on the CV for the sake of it, if I see a big list of tech with little to no explanation of any it’s an immediate red flag for me. What is much much better is a small set of relevant technologies with an explanation next to each one as to how you used that tech to solve a problem.&lt;/p&gt;
+
+&lt;h2 id=&quot;keep-it-simple&quot;&gt;Keep it simple&lt;/h2&gt;
+
+&lt;p&gt;Black text on white is absolutely fine, preferred even. You don’t need to make your CV look like a website, it doesn’t need colour, those things are merely a distraction (possibly different if you’re going for a design role?).&lt;/p&gt;
+
+&lt;p&gt;Some people include a picture of themselves, if you can do it in a subtle way without causing a distraction then fine, but I don’t think it’s particularly necessary to include a pic.&lt;/p&gt;
+
+&lt;p&gt;Oh and for the love of god don’t submit a CV in a proprietary format, this includes Microsoft Word. Just use PDF if in any doubt.&lt;/p&gt;
+
+&lt;h2 id=&quot;my-ideal-cv&quot;&gt;My ideal CV&lt;/h2&gt;
+
+&lt;p&gt;Prob easier if you just see what I think would be my ideal CV:&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;script src=&quot;https://gist.github.com/jenkoian/c2b0809aa2abd11d8bf5ced6adf837ea.js&quot;&gt;&lt;/script&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>From Gaufrette to Flysystem and back again</title>
@@ -305,7 +355,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;We then settled on &lt;a href=&quot;http://www.porterscardiff.com/&quot;&gt;Porters&lt;/a&gt; for a time, which was pretty good. They had a small cinema-esque room which worked well, but the the venue wasn’t free and was a small walk outside of the city centre. There were some brilliant talks there though, &lt;a href=&quot;https://vimeo.com/83487514&quot;&gt;one that sticks in the memory&lt;/a&gt; is &lt;a href=&quot;http://twitter.com/daylerees&quot;&gt;Dayle Rees’&lt;/a&gt; introduction to &lt;a href=&quot;http://laravel.com&quot;&gt;Laravel&lt;/a&gt; with a live (not actually live) link up with it’s creator &lt;a href=&quot;http://twitter.com/taylorotwell&quot;&gt;Taylor Otwell&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_306200662.jpeg&quot; alt=&quot;Cinema Room in Porters&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_306200662.jpeg&quot; alt=&quot;Cinema Room in Porters&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;settling-down&quot;&gt;Settling down&lt;/h2&gt;
 
@@ -313,7 +363,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;UDiff &amp;amp; Founders Hub felt like a match made in heaven. We were all geeks talking geeky stuff together in a place decked out for geeks (there were floppy disks blue tacked to the walls for Pete’s sake!). Attendances here were good, &lt;a href=&quot;http://twitter.com/craiginwales&quot;&gt;Craig&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/amienlockwood&quot;&gt;Amie&lt;/a&gt;, the owners of Founders Hub, often kindly ran a small bar and the space was great for chatting to people and getting to know one another.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_377102622.jpeg&quot; alt=&quot;UDiff @ Founders Hub&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_377102622.jpeg&quot; alt=&quot;UDiff @ Founders Hub&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There were some great talks here on a wide range of topics from &lt;a href=&quot;https://vimeo.com/106176421&quot;&gt;3D printing&lt;/a&gt; to &lt;a href=&quot;https://vimeo.com/99744479&quot;&gt;SEO&lt;/a&gt; to the incredibly successful ‘AWS night’. If I had to pick a favourite talk from this era it was probably &lt;a href=&quot;https://vimeo.com/90738845&quot;&gt;James Cryer’ talk on ‘Janky’&lt;/a&gt; as it opened my eyes up to stuff I didn’t really know about yet.&lt;/p&gt;
 
@@ -363,7 +413,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;“Let’s just do an indefinite hiatus like all the best bands do.”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_276671772.jpeg&quot; alt=&quot;Craig &amp;amp; Rod&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_276671772.jpeg&quot; alt=&quot;Craig &amp;amp; Rod&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -490,11 +540,11 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 
 &lt;p&gt;We essentially have a &lt;em&gt;Raspberry Pi without any ports&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_bare.jpg&quot; alt=&quot;Raspberry Pi without any ports&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_bare.jpg&quot; alt=&quot;Raspberry Pi without any ports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you think about &lt;a href=&quot;http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html&quot;&gt;the clean architecture&lt;/a&gt; diagram below, we have our middle layer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/CleanArchitecture.jpg&quot; alt=&quot;Clean architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/CleanArchitecture.jpg&quot; alt=&quot;Clean architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It’s time now to work out from the middle into the other layers. So let’s add some ports onto our Raspberry Pi so we can connect it to something to make it useful.&lt;/p&gt;
 
@@ -536,7 +586,7 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 
 &lt;p&gt;Therefore, I needed to create an adapter. Going back to the Raspberry Pi analogy made in a previous version. I needed a Serial to USB adapter, or something like that. I’m starting to add some ports on to my Pi.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_ports.jpg&quot; alt=&quot;Raspberry Pi with ports&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_ports.jpg&quot; alt=&quot;Raspberry Pi with ports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I also wanted to use my own Dispatcher interface, because what if I wanted to stop using the Symfony dispatcher and replace it with something else? I want to be able to continue using the same interface but just add a new adapter and change my DI. I want to be decoupled.&lt;/p&gt;
 
@@ -555,7 +605,7 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 &lt;p&gt;Symfony makes it trivial to add CLI programs, and you can see from this commit how exactly it works. Essentially it’s the same deal as controllers. Request in -&amp;gt; Create command -&amp;gt; Pass off
 to Handler.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/dddhouse-cli.gif&quot; alt=&quot;CLI version of the house&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/dddhouse-cli.gif&quot; alt=&quot;CLI version of the house&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jenkoian/ddd-house/commit/a9ca03a9d882cf03d1e8ca48f17f9780a62ec1f5&quot;&gt;Version25&lt;/a&gt;&lt;/p&gt;
 
@@ -593,7 +643,7 @@ to Handler.&lt;/p&gt;
 
 &lt;p&gt;We’ve gone from components to a Raspberry Pi logic board, to a Raspberry Pi with Ports, to a Raspberry Pi with a case - the next step would be to a Raspberry Pi with a fancy case (the JS whizzy version I alluded to above).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_cycle.png&quot; alt=&quot;Raspberry Pi Cycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_cycle.png&quot; alt=&quot;Raspberry Pi Cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;where-do-we-go-from-here&quot;&gt;Where do we go from here?&lt;/h2&gt;
 
