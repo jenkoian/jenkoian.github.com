@@ -160,11 +160,11 @@ framework at all of course. Start with your domain.</p>
 
 <p>We essentially have a <em>Raspberry Pi without any ports</em>.</p>
 
-<p><img src="http://localhost:4000/assets/img/pi_bare.jpg" alt="Raspberry Pi without any ports" /></p>
+<p><img src="https://jenko.me/assets/img/pi_bare.jpg" alt="Raspberry Pi without any ports" /></p>
 
 <p>If you think about <a href="http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html">the clean architecture</a> diagram below, we have our middle layer.</p>
 
-<p><img src="http://localhost:4000/assets/img/CleanArchitecture.jpg" alt="Clean architecture" /></p>
+<p><img src="https://jenko.me/assets/img/CleanArchitecture.jpg" alt="Clean architecture" /></p>
 
 <p>It’s time now to work out from the middle into the other layers. So let’s add some ports onto our Raspberry Pi so we can connect it to something to make it useful.</p>
 
@@ -206,7 +206,7 @@ framework at all of course. Start with your domain.</p>
 
 <p>Therefore, I needed to create an adapter. Going back to the Raspberry Pi analogy made in a previous version. I needed a Serial to USB adapter, or something like that. I’m starting to add some ports on to my Pi.</p>
 
-<p><img src="http://localhost:4000/assets/img/pi_ports.jpg" alt="Raspberry Pi with ports" /></p>
+<p><img src="https://jenko.me/assets/img/pi_ports.jpg" alt="Raspberry Pi with ports" /></p>
 
 <p>I also wanted to use my own Dispatcher interface, because what if I wanted to stop using the Symfony dispatcher and replace it with something else? I want to be able to continue using the same interface but just add a new adapter and change my DI. I want to be decoupled.</p>
 
@@ -225,7 +225,7 @@ framework at all of course. Start with your domain.</p>
 <p>Symfony makes it trivial to add CLI programs, and you can see from this commit how exactly it works. Essentially it’s the same deal as controllers. Request in -&gt; Create command -&gt; Pass off
 to Handler.</p>
 
-<p><img src="http://localhost:4000/assets/img/dddhouse-cli.gif" alt="CLI version of the house" /></p>
+<p><img src="https://jenko.me/assets/img/dddhouse-cli.gif" alt="CLI version of the house" /></p>
 
 <p><a href="https://github.com/jenkoian/ddd-house/commit/a9ca03a9d882cf03d1e8ca48f17f9780a62ec1f5">Version25</a></p>
 
@@ -263,7 +263,7 @@ to Handler.</p>
 
 <p>We’ve gone from components to a Raspberry Pi logic board, to a Raspberry Pi with Ports, to a Raspberry Pi with a case - the next step would be to a Raspberry Pi with a fancy case (the JS whizzy version I alluded to above).</p>
 
-<p><img src="http://localhost:4000/assets/img/pi_cycle.png" alt="Raspberry Pi Cycle" /></p>
+<p><img src="https://jenko.me/assets/img/pi_cycle.png" alt="Raspberry Pi Cycle" /></p>
 
 <h2 id="where-do-we-go-from-here">Where do we go from here?</h2>
 

@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="https://jenko.me/atom.xml" rel="self"/>
  <link href="https://jenko.me"/>
- <updated>2018-08-24T09:38:31+01:00</updated>
+ <updated>2018-08-24T09:42:41+01:00</updated>
  <id>https://jenko.me</id>
  <author>
    <name>Ian Jenkins</name>
@@ -353,7 +353,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;We then settled on &lt;a href=&quot;http://www.porterscardiff.com/&quot;&gt;Porters&lt;/a&gt; for a time, which was pretty good. They had a small cinema-esque room which worked well, but the the venue wasn’t free and was a small walk outside of the city centre. There were some brilliant talks there though, &lt;a href=&quot;https://vimeo.com/83487514&quot;&gt;one that sticks in the memory&lt;/a&gt; is &lt;a href=&quot;http://twitter.com/daylerees&quot;&gt;Dayle Rees’&lt;/a&gt; introduction to &lt;a href=&quot;http://laravel.com&quot;&gt;Laravel&lt;/a&gt; with a live (not actually live) link up with it’s creator &lt;a href=&quot;http://twitter.com/taylorotwell&quot;&gt;Taylor Otwell&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_306200662.jpeg&quot; alt=&quot;Cinema Room in Porters&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_306200662.jpeg&quot; alt=&quot;Cinema Room in Porters&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;settling-down&quot;&gt;Settling down&lt;/h2&gt;
 
@@ -361,7 +361,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;UDiff &amp;amp; Founders Hub felt like a match made in heaven. We were all geeks talking geeky stuff together in a place decked out for geeks (there were floppy disks blue tacked to the walls for Pete’s sake!). Attendances here were good, &lt;a href=&quot;http://twitter.com/craiginwales&quot;&gt;Craig&lt;/a&gt; and &lt;a href=&quot;http://twitter.com/amienlockwood&quot;&gt;Amie&lt;/a&gt;, the owners of Founders Hub, often kindly ran a small bar and the space was great for chatting to people and getting to know one another.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_377102622.jpeg&quot; alt=&quot;UDiff @ Founders Hub&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_377102622.jpeg&quot; alt=&quot;UDiff @ Founders Hub&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;There were some great talks here on a wide range of topics from &lt;a href=&quot;https://vimeo.com/106176421&quot;&gt;3D printing&lt;/a&gt; to &lt;a href=&quot;https://vimeo.com/99744479&quot;&gt;SEO&lt;/a&gt; to the incredibly successful ‘AWS night’. If I had to pick a favourite talk from this era it was probably &lt;a href=&quot;https://vimeo.com/90738845&quot;&gt;James Cryer’ talk on ‘Janky’&lt;/a&gt; as it opened my eyes up to stuff I didn’t really know about yet.&lt;/p&gt;
 
@@ -411,7 +411,7 @@ might have the edge. Indeed, if you wish to transition in the other direction yo
 
 &lt;p&gt;“Let’s just do an indefinite hiatus like all the best bands do.”&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/600_276671772.jpeg&quot; alt=&quot;Craig &amp;amp; Rod&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/600_276671772.jpeg&quot; alt=&quot;Craig &amp;amp; Rod&quot; /&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -538,11 +538,11 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 
 &lt;p&gt;We essentially have a &lt;em&gt;Raspberry Pi without any ports&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_bare.jpg&quot; alt=&quot;Raspberry Pi without any ports&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_bare.jpg&quot; alt=&quot;Raspberry Pi without any ports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;If you think about &lt;a href=&quot;http://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html&quot;&gt;the clean architecture&lt;/a&gt; diagram below, we have our middle layer.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/CleanArchitecture.jpg&quot; alt=&quot;Clean architecture&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/CleanArchitecture.jpg&quot; alt=&quot;Clean architecture&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It’s time now to work out from the middle into the other layers. So let’s add some ports onto our Raspberry Pi so we can connect it to something to make it useful.&lt;/p&gt;
 
@@ -584,7 +584,7 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 
 &lt;p&gt;Therefore, I needed to create an adapter. Going back to the Raspberry Pi analogy made in a previous version. I needed a Serial to USB adapter, or something like that. I’m starting to add some ports on to my Pi.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_ports.jpg&quot; alt=&quot;Raspberry Pi with ports&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_ports.jpg&quot; alt=&quot;Raspberry Pi with ports&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;I also wanted to use my own Dispatcher interface, because what if I wanted to stop using the Symfony dispatcher and replace it with something else? I want to be able to continue using the same interface but just add a new adapter and change my DI. I want to be decoupled.&lt;/p&gt;
 
@@ -603,7 +603,7 @@ framework at all of course. Start with your domain.&lt;/p&gt;
 &lt;p&gt;Symfony makes it trivial to add CLI programs, and you can see from this commit how exactly it works. Essentially it’s the same deal as controllers. Request in -&amp;gt; Create command -&amp;gt; Pass off
 to Handler.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/dddhouse-cli.gif&quot; alt=&quot;CLI version of the house&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/dddhouse-cli.gif&quot; alt=&quot;CLI version of the house&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/jenkoian/ddd-house/commit/a9ca03a9d882cf03d1e8ca48f17f9780a62ec1f5&quot;&gt;Version25&lt;/a&gt;&lt;/p&gt;
 
@@ -641,7 +641,7 @@ to Handler.&lt;/p&gt;
 
 &lt;p&gt;We’ve gone from components to a Raspberry Pi logic board, to a Raspberry Pi with Ports, to a Raspberry Pi with a case - the next step would be to a Raspberry Pi with a fancy case (the JS whizzy version I alluded to above).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/img/pi_cycle.png&quot; alt=&quot;Raspberry Pi Cycle&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://jenko.me/assets/img/pi_cycle.png&quot; alt=&quot;Raspberry Pi Cycle&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;where-do-we-go-from-here&quot;&gt;Where do we go from here?&lt;/h2&gt;
 
