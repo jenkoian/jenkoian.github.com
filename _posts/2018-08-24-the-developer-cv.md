@@ -7,8 +7,6 @@ tags: [career, cv]
 ---
 {% include JB/setup %}
 
-# The Developer CV
-
 > I put myself off writing this post for a long time due to fear as coming across a bit ostentatious (isn't it ironic that the word ostentatious is itself very ostentatious, anyway..) however, [I came across this medium post](https://medium.com/@dominicwhite/i-hire-software-developers-your-resume-is-the-reason-youre-not-getting-interviews-dc7b2520a2f1) recently 
 and as it aligns quite closely to my own thoughts I thought I may as well publish. Hopefully, someone will find it useful, if it just comes across as me being picky then fair enough.
 
