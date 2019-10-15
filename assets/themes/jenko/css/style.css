@@ -1,7 +1,7 @@
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/848d6580/stylesheets/chaos.css') (prefers-color-scheme: dark);
 /* General Styles (all sizes)
 
 /* General Typography ------------------------------ */
-
 body {
     font-family: 'Crimson Text', Georgia, Times, 'Times New Roman', serif;
     font-size: 21px;
@@ -11,6 +11,14 @@ body {
     color: rgb(98, 98, 98);
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #1b1b1b;
+        color: rgb(197, 197, 197);
+    }
+}
+
+/* Headings */
 h1 {
     font-size: 44px;
     font-size: 4.4rem;
@@ -67,6 +75,23 @@ h3 {
     margin-bottom: 2rem;
 }
 
+h4 {
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: rgb(56, 56, 56);
+}
+
+@media (prefers-color-scheme: dark) {
+    h1, h2, h3, h4 {
+        color: rgb(228, 227, 227);
+    }
+
+    h1 a {
+        color: #EEE;
+    }
+}
+
 p {
     margin-bottom: 20px;
     margin-bottom: 2rem;
@@ -77,16 +102,15 @@ iframe {
     margin-bottom: 2rem;
 }
 
-h4 {
-    font-style: italic;
-    font-weight: 400;
-    margin-bottom: 0;
-    color: rgb(56, 56, 56);
-}
-
 blockquote {
     margin: 0 2em 1em;
     color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    blockquote {
+        color: rgb(148, 147, 147);
+    }
 }
 
 cite {
@@ -116,6 +140,12 @@ img {
     width: 100%;
 }
 
+@media (prefers-color-scheme: dark) {
+    img {
+        filter: grayscale(30%);
+    }
+}
+
 em.prologue {
     color: #a1a1a1;
 }
@@ -143,6 +173,12 @@ th, td {
 
 th {
     font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+    tr {
+        background-color: #1b1b1b;
+    }
 }
 
 /* Layout ------------------------------ */
@@ -256,4 +292,14 @@ th, td {
 
 th {
     font-weight: bold;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gist .gist-data, .gist .markdown-body pre {
+        background-color: #1b1b1b!important;
+    }
+
+    .gist {
+        color: rgb(197, 197, 197)!important;
+    }
 }
