@@ -15,6 +15,6 @@ Gemfile
 Gemfile.lock
 History.markdown
 LICENSE
-assets/*
+assets/themes/*
 !assets/jenko/*
 
