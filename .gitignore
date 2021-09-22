@@ -15,8 +15,9 @@ Gemfile
 Gemfile.lock
 History.markdown
 LICENSE
-assets/themes/*
 !assets/jenko/*
+!assets/themes/jenko/*
+assets/themes/*
 
 .jekyll-cache
 
