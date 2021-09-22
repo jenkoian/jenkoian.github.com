@@ -1,10 +1,5 @@
 _site/*
 _theme_packages/*
-_drafts/*
-_includes/*
-_layouts/*
-_plugins/*
-_posts/*
 
 Thumbs.db
 .DS_Store
@@ -17,4 +12,6 @@ History.markdown
 LICENSE
 assets/themes/*
 !assets/jenko/*
+.jekyll-metadata
+.jekyll-cache
 
