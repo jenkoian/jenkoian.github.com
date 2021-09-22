@@ -18,3 +18,5 @@ LICENSE
 assets/themes/*
 !assets/jenko/*
 
+.jekyll-cache
+

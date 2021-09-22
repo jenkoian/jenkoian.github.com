@@ -10,3 +10,18 @@
 
 * Implement daylight optimised design
 * Implement 404 page
+
+# Creating a new post (mostly a reminder to myself)
+
+`git checkout source`
+
+`rake post title="Blog title here"`
+
+`rake preview`
+
+Commit post...
+
+`git checkout master`
+
+`./publish.sh`
+
