@@ -116,13 +116,13 @@ Similar concerns to the filter just slightly different in that it isn’t necess
 
 Perhaps a little un-nuanced but `WP_Query` is horrific, I mean I’m sure it’s highly optimised and efficient and all that jazz, but just look at it 😱
 
-https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php
+[https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php](https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php)
 
 If you look at `get_posts` specifically, then [this post from Tom J Nowell sums it up beautifully](https://tomjn.com/2013/08/12/wp_queryget_posts/).
 
 #### Random other stuff
 
-* Lack of namespaces which leads to best practices such as https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything (you can use namespaces I hasten to add, just that they aren’t completely ubiquitous)
+* Lack of namespaces which leads to best practices such as [https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything](https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything) (you can use namespaces I hasten to add, just that they aren’t completely ubiquitous)
 * Lack of types which leads to functions returning things like `string|int|false` etc.
 * Lack of unified autoloading which leads to loads of `require_once` calls or custom autoloaders all over the place
 * Debugging can be difficult - particularly as you start stepping into hooks and things 
@@ -159,7 +159,7 @@ I love using Git and GitHub, it just feels so natural and easy to me. WordPress 
 I should point out that WordPress _is_ on Github, you can submit a pull request however it won’t get merged:
 
 > **Note:** Pull requests on GitHub will **not** be merged. Code changes are still required to be made to the SVN repository by trusted long term contributors granted commit access.
-https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/
+[https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/](https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/)
 
 I don’t know how many contributors prefer GitHub over SVN but the fact they even have this an option suggests to me contributors at least would like to use Git/GitHub. 
 

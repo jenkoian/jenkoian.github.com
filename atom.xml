@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="https://jenko.me/atom.xml" rel="self"/>
  <link href="https://jenko.me"/>
- <updated>2021-09-22T22:36:00+01:00</updated>
+ <updated>2021-09-22T23:04:14+01:00</updated>
  <id>https://jenko.me</id>
  <author>
    <name>Ian Jenkins</name>
@@ -118,14 +118,14 @@
 
 &lt;p&gt;Perhaps a little un-nuanced but &lt;code&gt;WP_Query&lt;/code&gt; is horrific, I mean I’m sure it’s highly optimised and efficient and all that jazz, but just look at it 😱&lt;/p&gt;
 
-&lt;p&gt;https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php&quot;&gt;https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;If you look at &lt;code&gt;get_posts&lt;/code&gt; specifically, then &lt;a href=&quot;https://tomjn.com/2013/08/12/wp_queryget_posts/&quot;&gt;this post from Tom J Nowell sums it up beautifully&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;random-other-stuff&quot;&gt;Random other stuff&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Lack of namespaces which leads to best practices such as https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything (you can use namespaces I hasten to add, just that they aren’t completely ubiquitous)&lt;/li&gt;
+  &lt;li&gt;Lack of namespaces which leads to best practices such as &lt;a href=&quot;https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything&quot;&gt;https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything&lt;/a&gt; (you can use namespaces I hasten to add, just that they aren’t completely ubiquitous)&lt;/li&gt;
   &lt;li&gt;Lack of types which leads to functions returning things like &lt;code&gt;string|int|false&lt;/code&gt; etc.&lt;/li&gt;
   &lt;li&gt;Lack of unified autoloading which leads to loads of &lt;code&gt;require_once&lt;/code&gt; calls or custom autoloaders all over the place&lt;/li&gt;
   &lt;li&gt;Debugging can be difficult - particularly as you start stepping into hooks and things&lt;/li&gt;
@@ -164,7 +164,7 @@
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Pull requests on GitHub will &lt;strong&gt;not&lt;/strong&gt; be merged. Code changes are still required to be made to the SVN repository by trusted long term contributors granted commit access.
-https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/&lt;/p&gt;
+&lt;a href=&quot;https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/&quot;&gt;https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I don’t know how many contributors prefer GitHub over SVN but the fact they even have this an option suggests to me contributors at least would like to use Git/GitHub.&lt;/p&gt;

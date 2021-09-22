@@ -148,14 +148,14 @@
 
 <p>Perhaps a little un-nuanced but <code>WP_Query</code> is horrific, I mean I’m sure it’s highly optimised and efficient and all that jazz, but just look at it 😱</p>
 
-<p>https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php</p>
+<p><a href="https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php">https://github.com/WordPress/WordPress/blob/25daf03a8ea95cf47b9f25ab40336a1f6501cff4/wp-includes/class-wp-query.php</a></p>
 
 <p>If you look at <code>get_posts</code> specifically, then <a href="https://tomjn.com/2013/08/12/wp_queryget_posts/">this post from Tom J Nowell sums it up beautifully</a>.</p>
 
 <h4 id="random-other-stuff">Random other stuff</h4>
 
 <ul>
-  <li>Lack of namespaces which leads to best practices such as https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything (you can use namespaces I hasten to add, just that they aren’t completely ubiquitous)</li>
+  <li>Lack of namespaces which leads to best practices such as <a href="https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything">https://developer.wordpress.org/plugins/plugin-basics/best-practices/#prefix-everything</a> (you can use namespaces I hasten to add, just that they aren’t completely ubiquitous)</li>
   <li>Lack of types which leads to functions returning things like <code>string|int|false</code> etc.</li>
   <li>Lack of unified autoloading which leads to loads of <code>require_once</code> calls or custom autoloaders all over the place</li>
   <li>Debugging can be difficult - particularly as you start stepping into hooks and things</li>
@@ -194,7 +194,7 @@
 
 <blockquote>
   <p><strong>Note:</strong> Pull requests on GitHub will <strong>not</strong> be merged. Code changes are still required to be made to the SVN repository by trusted long term contributors granted commit access.
-https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/</p>
+<a href="https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/">https://make.wordpress.org/core/handbook/contribute/git/github-pull-requests-for-code-review/</a></p>
 </blockquote>
 
 <p>I don’t know how many contributors prefer GitHub over SVN but the fact they even have this an option suggests to me contributors at least would like to use Git/GitHub.</p>
