@@ -7,9 +7,11 @@ tags: [wordpress]
 ---
 {% include JB/setup %}
 
-> I do a lot, pretty much all my work in WordPress these days. This post talks about how that came about, what it’s like working with WordPress from a code point of view and the ecosystem. I discuss on things like the use of globals, composer support as well as things I really like, such as WP-CLI. I also touch on the community and finally on the direction I think WordPress is going and my thoughts on that. 
-> 
-> If you want a really succinct tl;dr it’s probably, I do WordPress and well, I like it.
+<div class="standfirst" markdown="1">
+I do a lot, pretty much all my work in WordPress these days. This post talks about how that came about, what it’s like working with WordPress from a code point of view and the ecosystem. I discuss on things like the use of globals, composer support as well as things I really like, such as WP-CLI. I also touch on the community and finally on the direction I think WordPress is going and my thoughts on that.
+
+If you want a really succinct tl;dr it’s probably, I do WordPress and well, I like it.
+</div>
 
 From approximately 2012 - 2018 I was working predominantly, if not exclusively with [Symfony](https://symfony.com/). When we were pitching for a new e-commerce project in 2018 it therefore felt natural to reach for Symfony. I had used [Sylius](https://sylius.com/) a bit, and had high opinions of it, as did the people I spoke to about it too. Even if we went with a platform such as [Shopify](https://www.shopify.co.uk/), the APIs are so rich and Symfony’s tools for dealing with APIs so rich that this felt like not a problem too. Anyway, the pitch went really well and the client told us they were selecting us as their development partner for the project. Great news. 
 
