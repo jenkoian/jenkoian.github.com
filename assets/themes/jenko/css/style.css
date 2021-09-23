@@ -124,6 +124,7 @@ h2 + p, h3 + p, h4 + p {
 a {
     color: #ff0066;
     text-decoration: none;
+    overflow-wrap: break-word;
 }
 
 a:hover {
