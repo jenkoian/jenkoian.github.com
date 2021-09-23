@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="https://jenko.me/atom.xml" rel="self"/>
  <link href="https://jenko.me"/>
- <updated>2021-09-22T23:04:14+01:00</updated>
+ <updated>2021-09-23T10:02:28+01:00</updated>
  <id>https://jenko.me</id>
  <author>
    <name>Ian Jenkins</name>
@@ -187,7 +187,7 @@
 
 &lt;p&gt;&lt;a href=&quot;https://wpackagist.org/&quot;&gt;WordPress Packagist&lt;/a&gt; mirrors all the plugins and themes listed on the WordPress directory and exposes them to composer through a custom packagist repository. It truly is fantastic, absolute hats off to &lt;a href=&quot;https://outlandish.com/&quot;&gt;Outlandish&lt;/a&gt;, the company behind it. In the age of &lt;a href=&quot;https://poststatus.com/acquisitions/&quot;&gt;mass WordPress acquisitions&lt;/a&gt; I’m amazed Automattic haven’t acquired it.&lt;/p&gt;
 
-&lt;p&gt;WPackagist makes it possible to install plugins and themes just as you would any composer package. WordPress plugins often come in premium flavours though which aren’t listed on the public directory and thus aren’t listed on WPackagist. Some of them (such as Yoast) offer up &lt;a href=&quot;https://yoast.com/help/how-to-install-yoast-plugins-using-composer/&quot;&gt;custom repositories you can use for composer&lt;/a&gt;, but others do not. In this scenario, you have a few options such as https://github.com/Rarst/release-belt or https://github.com/cedaro/satispress for example or you can set just include the plugins in your repository if all else fails.&lt;/p&gt;
+&lt;p&gt;WPackagist makes it possible to install plugins and themes just as you would any composer package. WordPress plugins often come in premium flavours though which aren’t listed on the public directory and thus aren’t listed on WPackagist. Some of them (such as Yoast) offer up &lt;a href=&quot;https://yoast.com/help/how-to-install-yoast-plugins-using-composer/&quot;&gt;custom repositories you can use for composer&lt;/a&gt;, but others do not. In this scenario, you have a few options such as &lt;a href=&quot;https://github.com/Rarst/release-belt&quot;&gt;https://github.com/Rarst/release-belt&lt;/a&gt; or &lt;a href=&quot;https://github.com/cedaro/satispress&quot;&gt;https://github.com/cedaro/satispress&lt;/a&gt; for example or you can set just include the plugins in your repository if all else fails.&lt;/p&gt;
 
 &lt;h3 id=&quot;dependency-injection&quot;&gt;Dependency Injection&lt;/h3&gt;
 
