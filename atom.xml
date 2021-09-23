@@ -4,7 +4,7 @@
  <title>Jenko</title>
  <link href="https://jenko.me/atom.xml" rel="self"/>
  <link href="https://jenko.me"/>
- <updated>2021-09-23T12:31:08+01:00</updated>
+ <updated>2021-09-23T14:31:01+01:00</updated>
  <id>https://jenko.me</id>
  <author>
    <name>Ian Jenkins</name>
@@ -18,11 +18,11 @@
    <updated>2021-09-22T00:00:00+01:00</updated>
    <id>https://jenko.me/wordpress/2021/09/22/i-do-wordpress-now</id>
    <content type="html">
-&lt;blockquote&gt;
+&lt;div class=&quot;standfirst&quot;&gt;
   &lt;p&gt;I do a lot, pretty much all my work in WordPress these days. This post talks about how that came about, what it’s like working with WordPress from a code point of view and the ecosystem. I discuss on things like the use of globals, composer support as well as things I really like, such as WP-CLI. I also touch on the community and finally on the direction I think WordPress is going and my thoughts on that.&lt;/p&gt;
 
   &lt;p&gt;If you want a really succinct tl;dr it’s probably, I do WordPress and well, I like it.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
 
 &lt;p&gt;From approximately 2012 - 2018 I was working predominantly, if not exclusively with &lt;a href=&quot;https://symfony.com/&quot;&gt;Symfony&lt;/a&gt;. When we were pitching for a new e-commerce project in 2018 it therefore felt natural to reach for Symfony. I had used &lt;a href=&quot;https://sylius.com/&quot;&gt;Sylius&lt;/a&gt; a bit, and had high opinions of it, as did the people I spoke to about it too. Even if we went with a platform such as &lt;a href=&quot;https://www.shopify.co.uk/&quot;&gt;Shopify&lt;/a&gt;, the APIs are so rich and Symfony’s tools for dealing with APIs so rich that this felt like not a problem too. Anyway, the pitch went really well and the client told us they were selecting us as their development partner for the project. Great news.&lt;/p&gt;
 
@@ -263,10 +263,9 @@
    <updated>2018-08-24T00:00:00+01:00</updated>
    <id>https://jenko.me/opinion/2018/08/24/the-developer-cv</id>
    <content type="html">
-&lt;blockquote&gt;
-  &lt;p&gt;I put myself off writing this post for a long time due to fear as coming across a bit ostentatious (isn’t it ironic that the word ostentatious is itself very ostentatious, anyway..) however, &lt;a href=&quot;https://medium.com/@dominicwhite/i-hire-software-developers-your-resume-is-the-reason-youre-not-getting-interviews-dc7b2520a2f1&quot;&gt;I came across this medium post&lt;/a&gt; recently 
-and as it aligns quite closely to my own thoughts I thought I may as well publish. Hopefully, someone will find it useful, if it just comes across as me being picky then fair enough.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;standfirst&quot;&gt;
+  &lt;p&gt;I put myself off writing this post for a long time due to fear as coming across a bit ostentatious (isn’t it ironic that the word ostentatious is itself very ostentatious, anyway..) however, &lt;a href=&quot;https://medium.com/@dominicwhite/i-hire-software-developers-your-resume-is-the-reason-youre-not-getting-interviews-dc7b2520a2f1&quot;&gt;I came across this medium post&lt;/a&gt; recently and as it aligns quite closely to my own thoughts I thought I may as well publish. Hopefully, someone will find it useful, if it just comes across as me being picky then fair enough.&lt;/p&gt;
+&lt;/div&gt;
 
 &lt;p&gt;I’ve been reviewing developer CVs a fair bit over the last few years, due to a recent recruitment drive, even more so over the past week or two. I don’t work for a big silicon valley tech giant or anything like that, but there are some little things which I see time and time again which I’d like to just pass comment on, I guess you could call them ‘tips’ but I dunno, just things I’ve noticed.&lt;/p&gt;
 
